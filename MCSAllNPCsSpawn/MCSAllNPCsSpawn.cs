@@ -32,6 +32,150 @@ namespace MCSAllNPCsSpawn
             Harmony.CreateAndPatchAll(typeof(MCSAllNPCsSpawn), null);
         }
 
+        private class NPC
+        {
+            private int id;
+            private List<int> Status;
+            private bool isImportant;
+            private string Name;
+            private bool isTag;
+            private string FirstName;
+            private int face;
+            private int fightFace;
+            private int XingGe;
+            private int NPCTag;
+            private int IsKnowPlayer;
+            private int HuaShenLingYu;
+            private int QingFen;
+            private List<int> CyList;
+            private List<int> TuPoMiShu;
+            private string Title;
+            private int ChengHaoID;
+            private int GongXian;
+            private int SexType;
+            private int AvatarType;
+            private int Level;
+            private int WuDaoValue;
+            private int WuDaoValueLevel;
+            private int EWWuDaoDian;
+            private int HP;
+            private int dunSu;
+            private int ziZhi;
+            private int wuXin;
+            private int shengShi;
+            private int shaQi;
+            private int shouYuan;
+            private int NextExp;
+            private int equipList;
+            private List<int> skills;
+            private List<int> staticSkills;
+            private List<int> JinDanType;
+            private List<int> LingGen;
+            private int equipWeapon;
+            private int equipClothing;
+            private int equipRing;
+            private int Type;
+            private int LiuPai;
+            private int MenPai;
+            private List<int> equipWeaponPianHao;
+            private List<int> equipWeapon2PianHao;
+            private List<int> equipClothingPianHao;
+            private int yuanying;
+            private int canjiaPaiMai;
+            private List<int> paimaifenzu;
+            private int xiuLianSpeed;
+            private int MoneyType;
+            private int IsRefresh;
+            private int dropType;
+            private int wudaoType;
+            private int XinQuType;
+            private int gudingjiage;
+            private int sellPercent;
+            private List<int> useItem;
+            private List<List<object>> NoteBook;
+            private List<int> wuDaoSkillList;
+            private List<object> wuDaoJson;
+            private int mybangding;
+            private int age;
+            private int ActionId;
+            private int IsNeedHelp;
+            private int isTanChaUnlock;
+            private int exp;
+            private getNPCData()
+            {
+                List<object> NPCData = {
+                    this.id,
+                    this.Statusid,
+                    this.isImportantid,
+                    this.Nameid,
+                    this.isTagid,
+                    this.FirstNameid,
+                    this.faceid,
+                    this.fightFaceid,
+                    this.XingGeid,
+                    this.NPCTagid,
+                    this.IsKnowPlayerid,
+                    this.HuaShenLingYuid,
+                    this.QingFenid,
+                    this.CyListid,
+                    this.TuPoMiShuid,
+                    this.Titleid,
+                    this.ChengHaoIDid,
+                    this.GongXianid,
+                    this.SexTypeid,
+                    this.AvatarTypeid,
+                    this.Levelid,
+                    this.WuDaoValueid,
+                    this.WuDaoValueLevelid,
+                    this.EWWuDaoDianid,
+                    this.HPid,
+                    this.dunSuid,
+                    this.ziZhiid,
+                    this.wuXinid,
+                    this.shengShiid,
+                    this.shaQiid,
+                    this.shouYuanid,
+                    this.NextExpid,
+                    this.equipListid,
+                    this.skillsid,
+                    this.staticSkillsid,
+                    this.JinDanTypeid,
+                    this.LingGenid,
+                    this.equipWeaponid,
+                    this.equipClothingid,
+                    this.equipRingid,
+                    this.Typeid,
+                    this.LiuPaiid,
+                    this.MenPaiid,
+                    this.equipWeaponPianHaoid,
+                    this.equipWeapon2PianHaoid,
+                    this.equipClothingPianHaoid,
+                    this.yuanyingid,
+                    this.canjiaPaiMaiid,
+                    this.paimaifenzuid,
+                    this.xiuLianSpeedid,
+                    this.MoneyTypeid,
+                    this.IsRefreshid,
+                    this.dropTypeid,
+                    this.wudaoTypeid,
+                    this.XinQuTypeid,
+                    this.gudingjiageid,
+                    this.sellPercentid,
+                    this.useItemid,
+                    this.NoteBookid,
+                    this.wuDaoSkillListid,
+                    this.wuDaoJsonid,
+                    this.mybangdingid,
+                    this.ageid,
+                    this.ActionIdid,
+                    this.IsNeedHelpid,
+                    this.isTanChaUnlockid,
+                    this.expid,
+                };
+                return NPCData;
+            }
+        }
+
         [HarmonyPostfix]
         [HarmonyPatch(typeof(NPCFactory), "firstCreateNpcs")]
         private static void NPCFactory_firstCreateNpcs_Postfix(NPCFactory __instance)
@@ -63,8 +207,6 @@ namespace MCSAllNPCsSpawn
             };
                 for (int i = 0; i < jsonData.instance.NPCLeiXingDate.Count; i++)
                 {
-                    var boop = new JSONObject();
-                    LogStuff(boop.Print(true));
                     if (jsonData.instance.NPCLeiXingDate[i]["NPCTag"].Count == 2)
                     {
                         int i2 = jsonData.instance.NPCLeiXingDate[i]["Level"].I;
