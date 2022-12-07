@@ -20,7 +20,7 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using YSGame.TianJiDaBi;
 
-namespace MCS_All_NPCs_Spawn
+namespace MCSAllNPCsSpawn
 {
     // Token: 0x02000002 RID: 2
     [BepInPlugin("Neon_MCS_03", "自用", "1.0.0")]

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MCS_All_NPCs_Spawn
+namespace MCSAllNPCsSpawn
 {
-    internal class Class1
+    internal class MCSAllNPCsSpawn
     {
     }
 }
