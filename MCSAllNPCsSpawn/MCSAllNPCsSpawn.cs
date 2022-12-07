@@ -26,9 +26,17 @@ namespace MCSAllNPCsSpawn
         private void Start()
         {
             MCSAllNPCsSpawn.Inst = this;
+
             MCSAllNPCsSpawn.enableAllNPCsSpawn = base.Config.Bind<bool>("MCSAllNPCsSpawnConfig", "EnableAllNPCsSpawning", true, "Enable this mod (enable all npcs spawning)");
             MCSAllNPCsSpawn.maxSpawnCount = base.Config.Bind<int>("MCSAllNPCsSpawnConfig", "MaxSpawnCount", 30000, "Controls the max amount of NPCs that spawn - Increase this number at your own risk. Personally I have a potato of a computer and it's always entertaining when I can barely move on the map because there are 80,000 NPCs.");
+            MCSAllNPCsSpawn.maxSpawnDeterminedByNPCLevel = base.Config.Bind<bool>("MCSAllNPCsSpawnConfig", "MaxSpawnDeterminedByLevel", true, "Whether to prioritize higher level NPCs (cultivation level) when NPC spawn count is limited. Used in conjunction with MaxSpawnCount. If MaxSpawnCount is -1, this has no effect.");
+            MCSAllNPCsSpawn.enableMonsterSpawns = base.Config.Bind<bool>("MCSAllNPCsSpawnConfig", "EnableMonsterSpawns", true, "Enable Monster Spawning");
+            MCSAllNPCsSpawn.spawnMinMoney = base.Config.Bind<bool>("MCSAllNPCsSpawnConfig", "SpawnMinMoney", 0, "Limit NPC spawning to NPCs withh AT LEAST this wealth level (0-11), NPC entries outside this wealth level won't be spawned -> Greater than or equals");
+            MCSAllNPCsSpawn.spawnMaxMoney = base.Config.Bind<bool>("MCSAllNPCsSpawnConfig", "SpawnMaxMoney", 11, "Limit NPC spawning to NPCs withh AT MOST this wealth level (0-11), NPC entries outside this wealth level won't be spawned -> Less than or equals");
+            MCSAllNPCsSpawn.spawnMinCultivationLevel = base.Config.Bind<bool>("MCSAllNPCsSpawnConfig", "SpawnMinCultivationLevel", true, "Limit NPC spawning to NPCs withh AT LEAST this amount of cultivation (0-15), NPC entries outside this cultivation level won't be spawned -> Greater than or equals");
+            MCSAllNPCsSpawn.spawnMaxCultivationLevel = base.Config.Bind<bool>("MCSAllNPCsSpawnConfig", "SpawnMaxCultivationLevel", true, "Limit NPC spawning to NPCs withh AT MOST this amount of cultivation (0-15), NPC entries outside this cultivation level won't be spawned -> Less than or equals");
             MCSAllNPCsSpawn.npcPowerIncreaseAmount = base.Config.Bind<double>("MCSAllNPCsSpawnConfig", "NPCPowerIncreaseAmount", 1.0, "Not Yet Implemented - Because of the insane amount of NPCs that get spawned into the game, plugins like UniqueCream's ExtraChoicesForTalents plugin which constantly updates NPC data every tick lags the game out immensely. Thought it might be better if NPCs just got a flat increase in the beginning. Again, potato computer reasons.");
+
             Harmony.CreateAndPatchAll(typeof(MCSAllNPCsSpawn), null);
         }
 
@@ -580,6 +588,12 @@ namespace MCSAllNPCsSpawn
         public static MCSAllNPCsSpawn Inst;
         public static ConfigEntry<bool> enableAllNPCsSpawn;
         public static ConfigEntry<int> maxSpawnCount;
+        public static ConfigEntry<bool> maxSpawnDeterminedByNPCLevel;
+        public static ConfigEntry<bool> enableMonsterSpawns;
+        public static ConfigEntry<int> spawnMinMoney; //Greater than or equals
+        public static ConfigEntry<int> spawnMaxMoney; //Less than or equals
+        public static ConfigEntry<int> spawnMinCultivationLevel; //Greater than or equals
+        public static ConfigEntry<int> spawnMaxCultivationLevel; //Less than or equals
         public static ConfigEntry<double> npcPowerIncreaseAmount;
     }
 }
