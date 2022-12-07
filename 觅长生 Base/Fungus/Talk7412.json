@@ -1,0 +1,91 @@
+{
+  "Name": "Talk7412",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2431.193,-1122.775)",
+      "Commands": [
+        {
+          "ItemID": 1184,
+          "CmdType": "CmdSetCameraFollowPlayer"
+        },
+        {
+          "ItemID": 1185,
+          "CmdType": "Fungus.AvatarTransfer"
+        },
+        {
+          "ItemID": 155,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "离开武陵城后，你二人向着西方飞去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 156,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "师兄其实是因为担心倪兄，所以才不让他去的吧？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 157,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 816,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 158,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 816,
+          "AvatarBindKey": "",
+          "StoryText": "若是这次出了什么意外，我确实没有把握保护他的周全。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 159,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1186,
+          "CmdType": "CmdSetCameraFollowPlayer"
+        },
+        {
+          "ItemID": 160,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

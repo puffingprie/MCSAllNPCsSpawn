@@ -1,0 +1,20 @@
+{
+	"buffid":14904,
+	"BuffIcon":14901,
+	"skillEffect":"fx_Summoner_o",
+	"name":"开天印",
+	"Affix":[],
+	"bufftype":7,
+	"seid":[
+		5
+	],
+	"descr":"回合结束，自身受到30点伤害，获得【剑气】*13",
+	"trigger":2,
+	"removeTrigger":7,
+	"script":"Buff",
+	"looptime":1,
+	"totaltime":1,
+	"BuffType":0,
+	"isHide":0,
+	"ShowOnlyOne":1
+}

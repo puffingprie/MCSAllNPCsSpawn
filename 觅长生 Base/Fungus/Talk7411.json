@@ -1,0 +1,292 @@
+{
+  "Name": "Talk7411",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 176,
+      "Name": "后续",
+      "Description": "后续",
+      "Position": "(-2430.282,-978.4361)",
+      "Commands": [
+        {
+          "ItemID": 179,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 816,
+          "AvatarBindKey": "",
+          "StoryText": "够了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 180,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "白帝的声音突然一反常态的严肃起来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 181,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 816,
+          "AvatarBindKey": "",
+          "StoryText": "此番我渡劫无论成功与否，白帝楼都要交到你们这些后辈的手上。若你还如此不识大体，让我如何放心的下？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 182,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "倪旭欣看起来很失落。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 183,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我...我知道了...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 184,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 816,
+          "AvatarBindKey": "",
+          "StoryText": "好了{shidi}，随我来吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 185,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 186,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 170,
+      "Name": "替倪旭欣说话",
+      "Description": "替倪旭欣说话",
+      "Position": "(-2508.912,-1063.214)",
+      "Commands": [
+        {
+          "ItemID": 172,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "师兄便让他去吧，有其他白帝楼和玄道宗的长老留着，应该不会出什么纰漏的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 173,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "师伯你听，连{FirstName}{xiongdi}都这么说了！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "176(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 171,
+      "Name": "沉默不语",
+      "Description": "沉默不语",
+      "Position": "(-2355.091,-1066.165)",
+      "Commands": [
+        {
+          "ItemID": 174,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你眼睛看向别处，装作没听到他叫你的样子。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 175,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{FirstName}{xiongdi}你...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 178,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "176(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2428.562,-1147.775)",
+      "Commands": [
+        {
+          "ItemID": 187,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 188,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 190,
+          "CmdType": "Fungus.SetTaskCompelet"
+        },
+        {
+          "ItemID": 189,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 155,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你刚一走进白帝楼，便听到倪旭欣在大声嚷嚷着什么。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 158,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 157,
+          "CmdType": "CmdSetJiaoHuNPC"
+        },
+        {
+          "ItemID": 159,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 160,
+          "CmdType": "Fungus.If",
+          "Condition": "BigLevel >= 13"
+        },
+        {
+          "ItemID": 156,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "师祖，你就让我和你一起去吧。我现在也突破化神了，肯定不会给你惹麻烦的！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 161,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 162,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "师祖，你就让我和你一起去吧，我早就想看看渡劫是什么样的了！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 816,
+          "AvatarBindKey": "",
+          "StoryText": "此番玄道宗的混元子道友受我所邀为我飞升护法。我和他都不在，若是无人坐镇白帝楼，难免会重蹈上次玄道宗的覆辙。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "可是...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 167,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯？{FirstName}{xiongdi}来了！快帮我劝劝师伯，换别的长老来镇守白帝楼吧！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 168,
+          "CmdType": "Fungus.Menu",
+          "Text": "替倪旭欣说话",
+          "TargetBlockID": "this:170(替倪旭欣说话)"
+        },
+        {
+          "ItemID": 169,
+          "CmdType": "Fungus.Menu",
+          "Text": "沉默不语",
+          "TargetBlockID": "this:171(沉默不语)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,164 @@
+{
+  "Name": "Talk8232",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "241(变量赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 241,
+      "Name": "变量赋值",
+      "Description": "变量赋值",
+      "Position": "(-2426.882,-1130.198)",
+      "Commands": [
+        {
+          "ItemID": 622,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 638,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 642,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "虽是道道雷电直击肉身，但层层暗劲却难奈何你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 643,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "在你击散了雷灵之后，它的核心悬浮于水面之上。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 644,
+          "CmdType": "Fungus.Menu",
+          "Text": "伸手触碰",
+          "TargetBlockID": "this:413(伸手触碰)"
+        }
+      ]
+    },
+    {
+      "ItemID": 623,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2651.685,-1045.629)",
+      "Commands": [
+        {
+          "ItemID": 639,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 640,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 641,
+          "CmdType": "CmdAddSeaTanSuoDu"
+        }
+      ]
+    },
+    {
+      "ItemID": 413,
+      "Name": "伸手触碰",
+      "Description": "伸手触碰",
+      "Position": "(-2426.372,-1041.47)",
+      "Commands": [
+        {
+          "ItemID": 645,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "核心倏地一下钻入了你的掌心，你似乎和先天灵气建立了某种联系。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 646,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 648,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 649,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 647,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "就便是吸收雷晶后，所领悟的锻体法门吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 650,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 651,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "同时，你似乎与九霄雷狱的空间节点产生了一缕微妙的共鸣，但细细探查又被海上狂暴的灵气风暴所阻。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 652,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 653,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 654,
+          "CmdType": "CmdAddSeaTanSuoDu"
+        },
+        {
+          "ItemID": 655,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "呼~看来现在还是难以找到这九霄雷狱之所在。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

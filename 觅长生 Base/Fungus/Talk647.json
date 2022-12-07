@@ -1,0 +1,485 @@
+{
+  "Name": "Talk647",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 250,
+      "Name": "豪气冲天",
+      "Description": "豪气冲天",
+      "Position": "(-2531.379,-1038.862)",
+      "Commands": [
+        {
+          "ItemID": 258,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此刻，你只觉得豪气冲天。你的名字将会成为新的飞升传说，在此界受万人敬仰，千古传唱！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 259,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "想到这里，你不由得放声大笑起来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 260,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "253(飞升)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 253,
+      "Name": "飞升",
+      "Description": "飞升",
+      "Position": "(-2428.819,-957.7848)",
+      "Commands": [
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你愈飞愈高，愈飞愈远，整个宁州、无尽之海几乎都尽收眼底......\n",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "炊烟点点，遁光依旧，灵舟破浪，商旅徐行...一切都已恢复了平静，人们继续忙碌着，草木继续生长着，宁州还是宁州，大海还是大海...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你不再往下看去，而是抬头遥望，望向璀璨的金光，望向九霄之外，你仿佛看到了仙鹤飘飘，耳边似有仙乐阵阵，凤鸣龙吟。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "闭上眼睛，从未如此闲适逍遥，你知道，你将寿敝天地，无有终时，这是自古以来亿万修士的夙愿。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "浮生若梦，过往的点滴回忆好似走马灯一般在你识海中逐个闪过......",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 267,
+          "CmdType": "Fungus.SetTaskCompelet"
+        },
+        {
+          "ItemID": 278,
+          "CmdType": "CmdRecordShengPing"
+        },
+        {
+          "ItemID": 272,
+          "CmdType": "Fungus.steamStat"
+        },
+        {
+          "ItemID": 277,
+          "CmdType": "CmdWarpShengPing"
+        }
+      ]
+    },
+    {
+      "ItemID": 249,
+      "Name": "兴奋激动",
+      "Description": "兴奋激动",
+      "Position": "(-2680.435,-1037.565)",
+      "Commands": [
+        {
+          "ItemID": 255,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此刻，你只觉得内心按捺不住的兴奋，千百年来的苦修、所经所历的一切，都终于有了回报。\n",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 256,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "很快，你便能飞升上界，觅得长生，与天地同寿，成为真正的仙人！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 257,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "253(飞升)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 252,
+      "Name": "无比平和",
+      "Description": "无比平和",
+      "Position": "(-2192.904,-1036.664)",
+      "Commands": [
+        {
+          "ItemID": 264,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此刻，你的心情却并不像想象中的那样兴奋与激动，而是前所未有的平和，仿佛刚刚发生的一切是那么普通。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 265,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "仙凡两隔...自此，凡世间的一切，便再也与你无关了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 266,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "253(飞升)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 321,
+      "Name": "有些孤独",
+      "Description": "有些孤独",
+      "Position": "(-2019.001,-1038.122)",
+      "Commands": [
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此刻，你的心情却并不像想象中的那样兴奋与激动，而是莫名的感到孤独。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "修行千年，飞升时，却还是孤身一人...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "253(飞升)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 251,
+      "Name": "有些哀伤",
+      "Description": "有些哀伤",
+      "Position": "(-2338.873,-1038.565)",
+      "Commands": [
+        {
+          "ItemID": 261,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此刻，你的心情却并不像想象中的那样兴奋与激动，而是带着一丝若有若无的哀伤...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 262,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此去一别...或许再也见不到了吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 263,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "253(飞升)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2430.094,-1121.676)",
+      "Commands": [
+        {
+          "ItemID": 305,
+          "CmdType": "CmdSetBG"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "劫云被你完全打散，再也没能聚集起来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "云销雨霁，彩彻区明。万道光柱穿破云层，轻轻地洒在了地面上......",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "劫云渐渐散去，风轻云淡，万道光柱穿破云层，轻轻地洒在地面上。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 241,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你觉得身体无比轻盈......不，应该说完全感受不到身体的存在一般，被一股至柔的力量牵引着，沐浴着和煦的阳光，慢慢向上飘去......",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 268,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 269,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 242,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3,
+          "AvatarBindKey": "",
+          "StoryText": "你做到了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 276,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一位老人笑脸盈盈的对你说道。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 275,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "是魏无极？他终于重塑了肉身，却又把自己弄成了一副老者的模样...你不禁觉得有些好笑。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 271,
+          "CmdType": "Fungus.steamStat"
+        },
+        {
+          "ItemID": 273,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 274,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "你做到了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 270,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 243,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "是啊，我做到了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "CmdGetNPCLeftListCount"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue == 0"
+        },
+        {
+          "ItemID": 244,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你向远处望去，依稀见到几个陌生的面孔带着敬畏的神情远远的望向这里。此时此刻，你只觉得...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Menu",
+          "Text": "兴奋激动",
+          "TargetBlockID": "this:249(兴奋激动)"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Menu",
+          "Text": "豪气冲天",
+          "TargetBlockID": "this:250(豪气冲天)"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Menu",
+          "Text": "有些哀伤",
+          "TargetBlockID": "this:321(有些孤独)"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Menu",
+          "Text": "无比平和",
+          "TargetBlockID": "this:252(无比平和)"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你向远处望去，看着人群中一张张你熟悉的，或是陌生的面孔。此时此刻，你只觉得...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 245,
+          "CmdType": "Fungus.Menu",
+          "Text": "兴奋激动",
+          "TargetBlockID": "this:249(兴奋激动)"
+        },
+        {
+          "ItemID": 248,
+          "CmdType": "Fungus.Menu",
+          "Text": "豪气冲天",
+          "TargetBlockID": "this:250(豪气冲天)"
+        },
+        {
+          "ItemID": 247,
+          "CmdType": "Fungus.Menu",
+          "Text": "有些哀伤",
+          "TargetBlockID": "this:251(有些哀伤)"
+        },
+        {
+          "ItemID": 246,
+          "CmdType": "Fungus.Menu",
+          "Text": "无比平和",
+          "TargetBlockID": "this:252(无比平和)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

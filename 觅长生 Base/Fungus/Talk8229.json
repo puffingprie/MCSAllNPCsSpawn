@@ -1,0 +1,319 @@
+{
+  "Name": "Talk8229",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "241(变量赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 241,
+      "Name": "变量赋值",
+      "Description": "变量赋值",
+      "Position": "(-2431.44,-1113.76)",
+      "Commands": [
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "312(雷鸣海判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 312,
+      "Name": "雷鸣海判定",
+      "Description": "雷鸣海判定",
+      "Position": "(-2435.269,-1058.621)",
+      "Commands": [
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 3"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 8"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "299(无事发生 (Copy))",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定-初次进入-火灵)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定-初次进入-火灵)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 299,
+      "Name": "无事发生 (Copy)",
+      "Description": "无事发生 (Copy)",
+      "Position": "(-2166.461,-1054.005)",
+      "Commands": [
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.SetEndlessEvent"
+        }
+      ]
+    },
+    {
+      "ItemID": 413,
+      "Name": "剧情",
+      "Description": "剧情",
+      "Position": "(-2428.4,-856.5873)",
+      "Commands": [
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid1",
+          "StoryText": "水面上一团雷云凝而不散，一阵阵波动波动向周围四散，在这气息的影响下似乎平日里狂暴的灵气风暴都有些缓和。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "这雷云看着和周围似乎不大一样。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "npcid1",
+          "StoryText": "嗯，这四散开的灵气似是先天之气。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid1",
+          "StoryText": "此时，那团雷云倏地散开楼漏出一团橙红色的火焰，你能感受到焰心中蕴含着一缕纯净的先天灵气，但一阵阵毁灭气息随着道道火环向外四散。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "CmdRemoveSeaAI"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.CheckSkill"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这就是九霄雷狱中孕育出的九天劫火吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你能感到体内的异火与半空中的火焰以相同的频率跳动。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "这应该是孕育自天地异象之中的先天之火。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.Menu",
+          "Text": "小心靠近",
+          "TargetBlockID": "this:432(小心靠近)"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Menu",
+          "Text": "转身离开",
+          "TargetBlockID": "this:433(转身离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 433,
+      "Name": "转身离开",
+      "Description": "转身离开",
+      "Position": "(-2298.262,-742.8885)",
+      "Commands": []
+    },
+    {
+      "ItemID": 432,
+      "Name": "小心靠近",
+      "Description": "小心靠近",
+      "Position": "(-2559.908,-757.957)",
+      "Commands": [
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "CmdAddSeaTanSuoDu"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "还没等你反应，一阵波动眼前的火焰就消失不见了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 416,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2218.811,-985.3541)",
+      "Commands": []
+    },
+    {
+      "ItemID": 154,
+      "Name": "判定-初次进入-火灵",
+      "Description": "判定-初次进入-火灵",
+      "Position": "(-2452.012,-988.7993)",
+      "Commands": [
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "413(剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "416(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

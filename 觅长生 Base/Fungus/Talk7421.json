@@ -1,0 +1,3199 @@
+{
+  "Name": "Talk7421",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(战后判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 242,
+      "Name": "用不着两败俱伤",
+      "Description": "用不着两败俱伤",
+      "Position": "(-2354.664,-830.884)",
+      "Commands": [
+        {
+          "ItemID": 258,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "对付你，我们还用不着两败俱伤",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 259,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "256(玄骨后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 274,
+      "Name": "拿出什么",
+      "Description": "拿出什么",
+      "Position": "(-2343.413,-602.2145)",
+      "Commands": [
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuangu",
+          "StoryText": "这些年来我也收集到了一些天才地宝，像这木灵三针花，地心淬灵乳还有堕山大圣的妖丹都是极为稀有的六品材料，想必诸位是识货的吧？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xingning",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuangu",
+          "StoryText": "噢...还有这三阳锻魄丹。这可是能够提升神识的六品丹药，星宫主应该刚好用得上吧？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xingning",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuangu",
+          "StoryText": "这...还有这些六品丹药，六品灵舟，六品阵旗，...只要我诸位肯放过我，我都可以双手奉上！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xingning",
+          "StoryText": "本宫看起来这么容易打发么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xingning",
+          "StoryText": "你胸口那颗珠子，怎么不舍得拿出来了？若非凭这这颗宝珠，以你化神初期的修为，能够在本宫手中撑到现在？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuangu",
+          "StoryText": "这...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuangu",
+          "StoryText": "哈...哈...哈...星宫主不说我倒是忘了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuangu",
+          "StoryText": "这枚定神珠可是用六品材料精心炼制而成的上品通天灵宝，以星宫主的眼光，应该知道它的价值。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xingning",
+          "StoryText": "这定神珠对星宫来说也算有些用处，我便带回去了。剩下的东西，都归你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xingning",
+          "StoryText": "{$TmpTalkString}觉得怎么样？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.If",
+          "Condition": "daolv == True"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xingning",
+          "StoryText": "便依凝儿的吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xingning",
+          "StoryText": "便依星宫主的吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "在众人的注视下，玄骨面色铁青的将储物袋掷于你。等你清点完毕示意无误后，才同意放他离开。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 339,
+      "Name": "打输",
+      "Description": "打输",
+      "Position": "(-2247.828,-1138.577)",
+      "Commands": [
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "即使一旁有四个化神相助，你依然在恶饕的攻势下节节败退。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "似乎是看出了你的颓势，白鹿一个闪身到了你的身前，又挡下了恶饕的一击。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "hunyuanzi",
+          "StoryText": "小友你先退下，这里有我们便足够了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "虽说如此，当你退至众人身后，却发现四人的配合越发捉襟见肘起来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "345(白帝轻伤)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "346(白帝重伤)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 241,
+      "Name": "还有我们呢",
+      "Description": "还有我们呢",
+      "Position": "(-2490.485,-830.884)",
+      "Commands": [
+        {
+          "ItemID": 252,
+          "CmdType": "Fungus.If",
+          "Condition": "daolv == True"
+        },
+        {
+          "ItemID": 243,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "凝儿可不是一个人，你是想一个人对付我们那么多人么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 253,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 254,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "星宫主可不是一个人，你是想一个人对付我们那么多人么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 255,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 257,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "256(玄骨后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 155,
+      "Name": "打赢后",
+      "Description": "打赢后",
+      "Position": "(-2429.563,-1069.461)",
+      "Commands": [
+        {
+          "ItemID": 157,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao2",
+          "StoryText": "真是...后生可畏...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 158,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao2",
+          "StoryText": "没想到...小小一个御剑门...留下了这么多的后患...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 159,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "etao2",
+          "StoryText": "御剑门因你而亡，还莫名背负了私通魔门的骂名。当年你设计陷害御剑门时，可曾想过今天？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "etao2",
+          "StoryText": "以你的修为，本不必走这些歪门邪道，所以现在也只不过是自食其果罢了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 160,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao2",
+          "StoryText": "咳咳...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 161,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "恶饕老祖似乎想说些什么，却突然剧烈的咳嗽起来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 162,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "像是有什么东西要从他的体内钻出来一般，他变异的身体突然扭曲起来，鼓起了大大小小的气泡。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao2",
+          "StoryText": "我这副躯体...终究还是没有办法承受神兽的血脉...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao2",
+          "StoryText": "用你那柄剑...给我一个痛快吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Menu",
+          "Text": "如你所愿",
+          "TargetBlockID": "this:167(后续)"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.Menu",
+          "Text": "受死吧！",
+          "TargetBlockID": "this:167(后续)"
+        }
+      ]
+    },
+    {
+      "ItemID": 346,
+      "Name": "白帝重伤",
+      "Description": "白帝重伤",
+      "Position": "(-2088.985,-1072.156)",
+      "Commands": [
+        {
+          "ItemID": 560,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "数道雷劫依次劈下，第八道雷劫带来的压迫力远超之前。白帝稳坐其中，身上的护罩不断明灭，却也始终没有破开。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "这已是第八道雷劫。看来没有我的拖累，渡过雷劫对轩儿来说并不是什么难事。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你闻言看去，只见白帝正闭目盘坐在半空之中，似是在调理自身。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "希望先前的伤势不会对师兄造成影响...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此时天边一道剑气划过，劫云又一次散开。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "bailu",
+          "StoryText": "哼...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "hunyuanzi",
+          "StoryText": "小友当心！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你才将目光移开，身边的战局似乎又起了变化。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此时混元子、明山、白鹿似乎都已负伤，而恶饕单手接住了麒麟的火球，并借力快速向你飞来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "魏无极又祭起诛仙剑，想要挡在你的面前。但你却紧紧握住剑柄，将之收向身后，同时运起灵气，准备自己挡下恶饕这来势汹汹的一击。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao2",
+          "StoryText": "你这是自寻死...啊！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "想象中的攻击并没有落在你是身上，你只看到恶饕停在了你的身前，一个明晃晃的剑尖从他的胸口透出。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao2",
+          "StoryText": "你...你竟敢在渡劫时出手？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "白帝并未多言，取走你手中的诛仙剑后又向恶饕攻去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "恶饕旧伤未愈，新伤又起，扭曲庞大且恐怖的肉体在巨大的剑影之下也显得脆弱不堪。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao2",
+          "StoryText": "诛仙剑阵！起！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只见恶饕匆忙间祭起了手中的三柄魔剑，隐隐之中形成了一个残缺的阵法，霎时间凶煞之气不断地从这剑阵中弥漫而出。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "白帝见状攻势一停，但不曾想到恶饕趁此间隙放出了一道黑雾，飞向白帝。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只见黑雾并未被白帝的护罩阻挡，径直钻入了白帝的丹田之处。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "baidi",
+          "StoryText": "噗！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "白帝猛然喷出一口鲜血。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "baidi",
+          "StoryText": "是魔神蛊，原来是之前偷袭时...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao2",
+          "StoryText": "此时你知道了又能如何？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "说罢，恶饕便借剑阵之威向白帝攻去，白帝也压下伤势反攻。一时之间，凶煞之气与剑气不断碰撞、爆发、泯灭。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "hunyuanzi",
+          "StoryText": "不妙！凌老儿我来助你！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "huoqiling",
+          "StoryText": "吼！恶饕老贼，是时候报这十万年前的仇了！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "言罢，三人合力攻向恶饕，但兴许是三人的配合并不默契，又或是魔神蛊确实重创了白帝，在三人的攻伐之下，恶饕老祖并未落于下风。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "天空的劫云再度凝聚，眼看第九道雷劫也迫在眉睫。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "突然一柄血红色的长剑在白帝攻势的间隙中斜杀出来，刺向恶饕的肋下，这一击显然出乎了所有人的意料，恶饕一惊之下攻势暂缓。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "出手之人竟是血薇。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "血薇...你...哎...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "伴随着一声叹息，一道血色剑气瞬间横跨天空，直直刺进剑阵中，接着一声轰然炸响，灵气狂暴地四散开来，让人看不清其中发生了什么。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 476,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "待到灵气平息下来，你再凝神看去，只看到剑阵已破，血亢手握三柄魔剑浮空而立。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "重伤的恶饕老祖看了看众人，似乎想说些什么，却突然剧烈的咳嗽起来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 477,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "像是有什么东西要从他的体内钻出来一般，他变异的身体突然扭曲起来，鼓起了大大小小的气泡。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 478,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao2",
+          "StoryText": "我这副躯体...终究还是没有办法承受神兽的血脉...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "huoqiling",
+          "StoryText": "恶饕，十万年前你偷袭本座的时候，可曾想到有今天？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 480,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao2",
+          "StoryText": "罢了...给我一个痛快吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "huoqiling",
+          "StoryText": "吼，受死吧！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "接着一个巨大的火球飞出，不再抵抗的恶饕老祖转眼之间便灰飞烟灭...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "“轰隆”",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一道震耳欲聋的雷鸣声打破了你们的对峙，一块覆盖了整片海域的暗红色雷劫终于成型，无数鲜红色的电弧在劫云中若隐若现。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "etao2",
+          "StoryText": "轩儿...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "mingshan",
+          "StoryText": "是最后一道天劫了",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "hunyuanzi",
+          "StoryText": "{size=31}这天地劫可不好应对，凌老儿你可要撑住啊...{/size}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 492,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "xuewei",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 493,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "你还是放不下他。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 494,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "xuewei",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 495,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "放心，凌轩的实力我比你更清楚。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 496,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "红莲尊者，按之前的约定，绝仙剑归你了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "说罢，他便将一柄魔剑抛向红莲。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "xiusha",
+          "StoryText": "红莲，绝仙剑已经到手，留在这里已经没有意义了。白帝若是成功渡劫，可不会放过我们。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 499,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "honglian",
+          "StoryText": "嘁...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "honglian",
+          "StoryText": "我们走！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "红色的雷柱轰然落下，迎接它的是一柄巨大的青色灵剑。灵剑与雷柱接触的一瞬间，爆发出耀眼的闪光，翻涌的灵气四散开来，让人无法看清劫云中心到底发生了什么。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "到底成功了么？这是所有人的疑问。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 506,
+          "CmdType": "CmdSetBG"
+        },
+        {
+          "ItemID": 505,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 507,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "劫云渐渐散去，在那片天空之下，仿佛只有白帝一人。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 508,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "没想到还是让你成功了",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 509,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "baidi",
+          "StoryText": "带着你的人离开这里，我可以放你们一条生路。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "白帝的声音在每个人的耳边淡淡响起，带着不容质疑的威严。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 511,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "哈哈哈哈哈...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 512,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "凌轩，你一点都没变，还是和当年一样自以为是的口吻。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 513,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "不错，我现在的确奈何不了你。但别忘了，当年是薇儿救了你！若是没有我们血剑宫，哪有你凌轩的今日？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 514,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 515,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "此事自有天道来判。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 516,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuewei",
+          "StoryText": "够了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 517,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuewei",
+          "StoryText": "兄长，今日我们只是为戮仙剑而来。如今戮仙剑已在手中，再说这些又有何益。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 518,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "哼，我们走！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 519,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 520,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "白帝就站在那里，静静地看着血剑宫众人化作红色的遁光逐渐远去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 521,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "baidi",
+          "StoryText": "轩儿，你...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 522,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "随着魏无极的言语，白帝并没有如同传说中飞升而去，反而慢慢落地。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 523,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "hunyuanzi",
+          "StoryText": "凌老儿，这是怎么回事？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 525,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "恶饕给我种下的魔神蛊带来的伤势比我想象中的还要重。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 524,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "在第九道雷劫中，我虽仍能聚气以秘术攻击雷柱，却在后续的防御中败下阵来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 526,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "hunyuanzi",
+          "StoryText": "但是...渡劫失败必然灰飞烟灭，你又如何能够站在此处？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 527,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "这就要说此剑了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 528,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "白帝拿出了诛仙剑。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 529,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "这剑中似留有一丝天道气息，在我渡劫失败之刻，雷劫中仙灵之气似乎恰巧引动了剑中的天道气息，我趁机运起了先前寻来的《造化逆天术》，重新凝聚了肉身。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 530,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "难道这是...天道树的力量？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 531,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "正是。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 532,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "hunyuanzi",
+          "StoryText": "那你此刻？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 533,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "我生机已绝，即使重新凝聚肉身，此时也如同无根之水，恐怕时日无多。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 534,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "适才吓退血亢已是不易，此番事了，古神教元气大伤，血剑宫和天魔道获得魔剑之后也需要一些时日炼化，而在他们眼中，诛仙剑已由我飞升带往上界，想必短时间内也不会合力再犯宁州。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 535,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "师兄你……",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 536,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "白帝楼今后的事宜阿欣应该能够打理，不过还是需要{shidi}多帮忙照料一番。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 537,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "另外我这位师弟也请混元子老兄之后照看一二了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 538,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "hunyuanzi",
+          "StoryText": "此事你大可放心，但是接下来你打算怎么办？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 540,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 541,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "白帝并未作答，又回头看向你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 539,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "今日我未能帮师傅重塑肉身...以后的事，唯有拜托你了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 542,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "师兄放心。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 543,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "白帝似乎把事情都交代完了，一时沉默了下来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 544,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此时一道红色遁光飞来，竟是血薇去而又返，她静静地站在远处，目光直视白帝。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 545,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xuewei",
+          "StoryText": "你以为你能骗得过我么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 546,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 547,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "...不能",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 548,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xuewei",
+          "StoryText": "其实当年你就没有骗过我",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 550,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 551,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "我知道",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 549,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuewei",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 552,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 553,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "走吧",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 554,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "众人就这么看着一白一红两道身影慢慢远去，渐渐消失在远处的风暴中。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 555,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "远处剧烈的神识波动打断了众人的沉默，却是星凝那边的战斗终于迎来了尾声。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 556,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xingning",
+          "StoryText": "玄骨这老贼终于被我...欸，武陵城这老头是什么情况？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 557,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "hunyuanzi",
+          "StoryText": "哎...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 558,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 559,
+          "CmdType": "Fungus.SetTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 273,
+      "Name": "必须死",
+      "Description": "必须死",
+      "Position": "(-2483.414,-602.2144)",
+      "Commands": [
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuangu",
+          "StoryText": "哼！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "玄骨冷哼一声，张开领域便往后逃窜。但即便如此，他一人又如何能从你们六个人的包围下逃脱呢？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "千余年来，古神教利用魔神蛊控制他人，又何止害了御剑门一家？今日，你便要玄骨为此付出代价！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 345,
+      "Name": "白帝轻伤",
+      "Description": "白帝轻伤",
+      "Position": "(-2255.691,-1072.006)",
+      "Commands": [
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此时天边一道剑气划过，劫云又一次散开。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "这已是第八道雷劫的劫云了。看来没有我的拖累，这雷劫对轩儿来说并不是什么难事。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你闻言看去，只见白帝正闭目盘坐在半空之中，似是在调理自身。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "看来刚刚的伤势对师兄没造成什么影响...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "bailu",
+          "StoryText": "哼...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "hunyuanzi",
+          "StoryText": "小友当心！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你才将目光移开，身边的战局似乎又起了变化。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此时混元子、明山、白鹿似乎都已负伤，而恶饕单手接住了麒麟的火球，并借力快速向你飞来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "魏无极又祭起诛仙剑，想要挡在你的面前。但你却紧紧握住剑柄，将之收向身后，同时运起灵气，准备自己挡下恶饕这来势汹汹的一击。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao2",
+          "StoryText": "你这是自寻死...啊！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "想象中的攻击并没有落在你是身上，你只看到恶饕停在了你的身前，一个明晃晃的剑尖从他的胸口透出。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao2",
+          "StoryText": "你...你竟敢在渡劫时出手？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "白帝并未说话，只是摄走了你手中的诛仙剑，并静静地看着恶饕。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此时恶饕被白帝刺出的伤口逐渐愈合，留下了一道疤痕，即使在他扭曲的肉体上，这道疤痕也显得格外狰狞。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "......",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "残存的劫云闪动，一道闪电向白帝劈下。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao2",
+          "StoryText": "既然如此，那你也一起死吧！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "恶饕悍然出手，欺身冲向白帝，同时一道黑雾也从他天灵飞出，飞向白帝。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只见黑雾并未被白帝的护罩阻挡，径直钻入了白帝的丹田之处。与此同时，在劫雷的打击下，灵气护罩明灭了数次但并未破开。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "雷光之中，白帝又举起了手中之剑，凝聚出一道浩大的剑形虚影，劈向恶饕。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "恶饕似乎并没有防备，反倒手臂险些被这道剑影撕裂。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao2",
+          "StoryText": "为什么...魔神蛊居然？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "baidi",
+          "StoryText": "同样的手段，用多了可就不管用了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao2",
+          "StoryText": "原来如此...看来你们早就调查清楚了。难怪对魔神蛊有所防备。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao2",
+          "StoryText": "真没想到...小小一个御剑门...留下了这么多的后患...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao2",
+          "StoryText": "但是...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao2",
+          "StoryText": "诛仙剑阵！起！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只见恶饕祭起了手中的三柄魔剑，隐隐之中形成了一个残缺阵法，霎时间凶煞之气不断地从这剑阵中弥漫而出。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "恶饕借剑阵之威又向白帝攻去，一时之间，凶煞之气与剑气不断碰撞、爆发、泯灭。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "huoqiling",
+          "StoryText": "混元子，马上要对付最后一道雷劫了，这样下去可不妙。但本座却也不敢随意插手，怕反倒干扰到他。你和白帝多年至交，可有什么办法？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "hunyuanzi",
+          "StoryText": "这...现在这个情况，我也没有有十足的把握，还是暂且相信白帝...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "确实如火麒麟所说，起初白帝尚可与恶饕对攻，但随着半空中劫云慢慢聚集，心有顾虑的白帝也渐渐地有些难以招架。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "就在此刻，你隐约听到远处传来“嗖”的一声。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "转头看去，只见一道血色剑气瞬间横跨天空，直直刺进剑阵中，接着一声轰然炸响，灵气狂暴地四散开来，让人看不清其中发生了什么。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "待到灵气平息下来，你再凝神看去，只见到恶饕此时已恢复了正常体型，跪倒在一处岛屿碎片之上，白帝手握诛仙剑，而诛仙剑的另一头，就在恶饕天灵之内。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "而在一旁，血亢手握三柄魔剑浮空而立。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "huoqiling",
+          "StoryText": "吼...那三柄魔剑被血剑宫的人抢去了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xiusha",
+          "StoryText": "血亢剑仙，按照约定，那柄绝仙剑该给我们天魔道，你不会不认账吧？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "“轰隆”",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一道震耳欲聋的雷鸣声打破了你们的对峙，一块覆盖了整片海域的暗红色雷劫终于成型，无数鲜红色的电弧在劫云中若隐若现。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "etao2",
+          "StoryText": "轩儿...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "mingshan",
+          "StoryText": "是最后一道天劫了",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "hunyuanzi",
+          "StoryText": "{size=31}这天地劫可不好应对，凌老儿你可要撑住啊...{/size}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "xuewei",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "怎么？你也怕他扛不住这雷劫？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "xuewei",
+          "StoryText": "没有。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "放心，凌轩的实力我比你更清楚。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "红莲尊者，按之前的约定，绝仙剑归你了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "说罢，他便将一柄魔剑抛向红莲。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "xiusha",
+          "StoryText": "红莲，绝仙剑已经到手，留在这里已经没有意义了。白帝若是成功渡劫，可不会放过我们。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "honglian",
+          "StoryText": "嘁...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "honglian",
+          "StoryText": "我们走！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "红色的雷柱轰然落下，迎接它的是一柄巨大的青色灵剑。灵剑与雷柱接触的一瞬间，爆发出耀眼的闪光，翻涌的灵气四散开来，让人无法看清劫云中心到底发生了什么。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "到底成功了么？这是所有人的疑问。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "CmdSetBG"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "劫云渐渐散去，万道光柱穿破云层，洒在海面上。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "在光柱的正中心，能够清晰的看到一个身影正缓缓向上飞去。但此时若有人用神识探查，却又绝无可能感应到任何东西。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "bailu",
+          "StoryText": "成功了？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "huoqiling",
+          "StoryText": "哼，总算没有白费本座的功夫。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "hunyuanzi",
+          "StoryText": "{size=31}哈哈哈，我就知道凌老儿没问题的！{/size}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "etao2",
+          "StoryText": "呼...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你也不由得长松一口气。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "血亢...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "带着你的人离开这里，我可以放你们一条生路。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "白帝的声音在每个人的耳边淡淡响起，带着不容质疑的威严。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "哈哈哈哈哈...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "凌轩，你一点都没变，还是和当年一样自以为是的口吻。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "不错，我现在的确奈何不了你。但别忘了，当年是薇儿救了你！若是没有我们血剑宫，哪有你凌轩的今日？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "我后半生所做的一切，都是为了偿还当年在血剑宫犯下的罪孽。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "若是你真的问心无愧的话，那心魔劫...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuewei",
+          "StoryText": "够了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuewei",
+          "StoryText": "兄长，今日戮仙剑已到我们手中，又何必耗费口舌与他相争。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "哼，我们走！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "看着血剑宫众人化作红色的遁光逐渐远去，白帝似乎想说什么，却欲言又止。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "{shidi}，我的时间不多了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "白帝楼今后的事宜阿欣应该能够打理，不过还是需要{shidi}多帮忙照料一番。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "另外...今日我未能帮师傅重塑肉身...以后的事，唯有拜托你了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.Menu",
+          "Text": "包在我身上",
+          "TargetBlockID": "this:228(再后续)"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.Menu",
+          "Text": "我一定尽力而为",
+          "TargetBlockID": "this:228(再后续)"
+        }
+      ]
+    },
+    {
+      "ItemID": 267,
+      "Name": "放",
+      "Description": "放",
+      "Position": "(-2346.271,-673.6431)",
+      "Commands": [
+        {
+          "ItemID": 275,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "算了，今天已经打的够多了，让他走吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 276,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "此言一出，玄骨的脸色立刻轻松了起来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 277,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xingning",
+          "StoryText": "虽然{$TmpTalkString}同意放你走了，不过我星宫的仇可不能不报。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 278,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xingning",
+          "StoryText": "何况你们这些古神教的蛆虫留在世上也是祸害。不如，今日本宫先废了你的一身修为，再放你走如何？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuangu",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "玄骨的脸色顿时难看的起来，过了许久，才挤出一抹难看的笑容说道：",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuangu",
+          "StoryText": "星宫主言笑了，这里可是无尽之海。若没有金丹期以上的修为，根本不可能活着离开这里。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuangu",
+          "StoryText": "不如这样，你们开个价，只要我能拿得出手的，我都可以交给你们，如何？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Menu",
+          "Text": "那就要看看你能拿出什么了",
+          "TargetBlockID": "this:274(拿出什么)"
+        }
+      ]
+    },
+    {
+      "ItemID": 228,
+      "Name": "再后续",
+      "Description": "再后续",
+      "Position": "(-2429.291,-910.9884)",
+      "Commands": [
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 229,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "今日之事，多谢诸位道友鼎力相助。此番古神教元气大伤，魔剑也悉数被毁，想必短时间内魔门也不会再犯宁州。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "今日之事，多谢诸位道友鼎力相助。此番古神教元气大伤，血剑宫和天魔道获得魔剑之后也需要一些时日炼化，他们本就不同心，此后更是觊觎对方手中的魔剑，想必短时间内也不会合力再犯宁州。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 231,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "就此别过，来日若有缘，我等自会在上界重逢。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 230,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "保重！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 232,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "众人目送白帝的身影逐渐远去，直到劫云散尽，光柱消失，便再也看不见了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 233,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "CmdSetBG"
+        },
+        {
+          "ItemID": 234,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 561,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.steamStat"
+        },
+        {
+          "ItemID": 562,
+          "CmdType": "CmdRecordShengPing"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 235,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "看起来似乎一切都要结束了，但你们的身后又传来了星凝的声音。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 236,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xingning",
+          "StoryText": "站住，谁允许你走了？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 237,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuangu",
+          "StoryText": "星宫主，你可不要欺人太甚了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 238,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuangu",
+          "StoryText": "事已至此，莫非你还要逼的我全力出手，与你拼个两败俱伤么！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 239,
+          "CmdType": "Fungus.Menu",
+          "Text": "还有我们呢",
+          "TargetBlockID": "this:241(还有我们呢)"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.Menu",
+          "Text": "用不着两败俱伤",
+          "TargetBlockID": "this:242(用不着两败俱伤)"
+        }
+      ]
+    },
+    {
+      "ItemID": 167,
+      "Name": "后续",
+      "Description": "后续",
+      "Position": "(-2431.291,-987.8811)",
+      "Commands": [
+        {
+          "ItemID": 168,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "etao2",
+          "StoryText": "这一剑，为了御剑门！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 171,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你调动全身的灵气，催动诛仙剑刺入了恶饕老祖的身体。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 170,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一时间，剑芒大盛，恶饕老祖变异的躯体以肉眼可见的速度慢慢缩回了正常的样子。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 169,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "他手中的陷仙剑，戮仙剑与绝仙剑飞至半空，爆发出耀眼的红光，似乎想要与诛仙剑抗衡，但这光芒很快便黯淡了下去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 172,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "周天灵气开始像疯了般灌入诛仙剑中，这股力量甚至逼得周围得其它化神强者也不得不退避三舍。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 173,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "mingshan",
+          "StoryText": "这是？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 174,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xiusha",
+          "StoryText": "不好，那三柄魔剑也要被...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 175,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "honglian",
+          "StoryText": "这怎么可能！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 176,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "hunyuanzi",
+          "StoryText": "{size=31}真是了不得，这一剑的威能即便是我...不，应该说在场的任何一人都绝无可能从这一剑下幸存{/size}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 248,
+          "CmdType": "Fungus.If",
+          "Condition": "daolv == True"
+        },
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xingning",
+          "StoryText": "{$TmpTalkString}还真是有一手呢。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 249,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 250,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xingning",
+          "StoryText": "还真是有一手呢。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 251,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 178,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "诛仙剑，有吞噬之能，为四剑之首。没有想到，它连另外几柄魔剑的能量都可以吞噬。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 179,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "与此前不同，在吞噬了恶饕老祖与三柄魔剑之后，你手中的诛仙剑却变得越来越轻，直到你再也感受不到它的任何重量。自图南海归来后，铁剑带给你的疑惑终于被解开。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 180,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "etao2",
+          "StoryText": "难道这是...天道树的力量？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 181,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "etao2",
+          "StoryText": "是啊，看来诛仙剑当年在图南海吞噬了一部分天道树的本源能量。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 182,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "etao2",
+          "StoryText": "如今的这柄诛仙剑不仅已经恢复了通天灵宝的威能，甚至还远超当年啊。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 183,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "etao2",
+          "StoryText": "如此正好...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 184,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你手持诛仙剑，拦在追来的魔门众化神身前。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 185,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "etao2",
+          "StoryText": "若谁还想要夺剑的，大可来试上一试。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 186,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "不知是因为你刚刚斩杀恶饕的那一剑过于骇人，还是震慑于诛仙剑的威能。一时间，竟无一人敢对你动手。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 188,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "“轰隆”",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 187,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一道震耳欲聋的雷鸣声打破了你们的对峙，一块覆盖了整片海域的暗红色雷劫终于成型，无数鲜红色的电弧在劫云中若隐若现。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 189,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "etao2",
+          "StoryText": "轩儿...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 190,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "mingshan",
+          "StoryText": "是最后一道天劫了",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 191,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "hunyuanzi",
+          "StoryText": "{size=31}这天地劫可不好应对，凌老儿你可要撑住啊...{/size}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 192,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "xuewei",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 193,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "怎么？你也怕他扛不住这雷劫？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 194,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "xuewei",
+          "StoryText": "没有。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 195,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "放心，凌轩的实力我比你更清楚。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 196,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "xiusha",
+          "StoryText": "红莲，魔剑已毁，留在这里已经没有意义了。白帝若是成功渡劫，可不会放过我们。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 197,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "honglian",
+          "StoryText": "嘁...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 198,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "honglian",
+          "StoryText": "我们走！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 202,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "红色的雷柱轰然落下，迎接它的是一柄巨大的青色灵剑。灵剑与雷柱接触的一瞬间，爆发出耀眼的闪光，翻涌的灵气四散开来，让人无法看清劫云中心到底发生了什么。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 201,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "到底成功了么？这是所有人的疑问。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 203,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "CmdSetBG"
+        },
+        {
+          "ItemID": 204,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 200,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "劫云渐渐散去，万道光柱穿破云层，洒在海面上。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 199,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "在光柱的正中心，能够清晰的看到一个身影正缓缓向上飞去。但此时若有人用神识探查，却又绝无可能感应到任何东西。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 205,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "bailu",
+          "StoryText": "成功了？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 206,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "huoqiling",
+          "StoryText": "哼，总算没有白费本座的功夫。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 207,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "hunyuanzi",
+          "StoryText": "{size=31}哈哈哈，我就知道凌老儿没问题的！{/size}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 208,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "etao2",
+          "StoryText": "呼...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 209,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你也不由得长松一口气。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 210,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "血亢...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 211,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "带着你的人离开这里，我可以放你们一条生路。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 212,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "白帝的声音在每个人的耳边淡淡响起，带着不容质疑的威严。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 213,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "哈哈哈哈哈...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 214,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "凌轩，你一点都没变，还是和当年一样自以为是的口吻。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 215,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "不错，我现在的确奈何不了你。但别忘了，当年是薇儿救了你！若是没有我们血剑宫，哪有你凌轩的今日？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 216,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 217,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "我后半生所做的一切，都是为了偿还当年在血剑宫犯下的罪孽。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 219,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "若是你真的问心无愧的话，那心魔劫...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 218,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuewei",
+          "StoryText": "够了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 220,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuewei",
+          "StoryText": "兄长，今日我们只是为戮仙剑而来。如今魔剑已毁，再说这些又有何益。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 221,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "哼，我们走！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 222,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 223,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "看着血剑宫众人化作红色的遁光逐渐远去，白帝似乎想说什么，却欲言又止。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 225,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "{shidi}，我的时间不多了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 224,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "白帝楼今后的事宜阿欣应该能够打理，不过还是需要{shidi}多帮忙照料一番。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "baidi",
+          "StoryText": "另外...今日我未能帮师傅重塑肉身...以后的事，唯有拜托你了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 226,
+          "CmdType": "Fungus.Menu",
+          "Text": "包在我身上",
+          "TargetBlockID": "this:228(再后续)"
+        },
+        {
+          "ItemID": 227,
+          "CmdType": "Fungus.Menu",
+          "Text": "我一定尽力而为",
+          "TargetBlockID": "this:228(再后续)"
+        }
+      ]
+    },
+    {
+      "ItemID": 256,
+      "Name": "玄骨后续",
+      "Description": "玄骨后续",
+      "Position": "(-2424.814,-751.7795)",
+      "Commands": [
+        {
+          "ItemID": 260,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "hunyuanzi",
+          "StoryText": "{size=31}哈哈哈，难得松松筋骨，再多打你一个又何妨？{/size}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 261,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "huoqiling",
+          "StoryText": "要打的话，本座也可以出手。这些古神教的杂碎，本座恨不得通通撕碎！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 262,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "bailu",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 263,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xingning",
+          "StoryText": "那...到底该拿你怎么办呢？不如就由{$TmpTalkString}说了算吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 264,
+          "CmdType": "Fungus.Menu",
+          "Text": "杀了他",
+          "TargetBlockID": "this:266(杀)"
+        },
+        {
+          "ItemID": 265,
+          "CmdType": "Fungus.Menu",
+          "Text": "放他走",
+          "TargetBlockID": "this:267(放)"
+        }
+      ]
+    },
+    {
+      "ItemID": 266,
+      "Name": "杀",
+      "Description": "杀",
+      "Position": "(-2481.985,-672.2144)",
+      "Commands": [
+        {
+          "ItemID": 268,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这些古神教的人，留在世上也是祸害。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 269,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "此言一出，玄骨的脸色立刻难看了起来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 270,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xuangu",
+          "StoryText": "你要怎么样才肯放过我？不如开出个价来。若是逼的我毁去储物袋，你们什么也别想得到！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 271,
+          "CmdType": "Fungus.Menu",
+          "Text": "你今天必须死",
+          "TargetBlockID": "this:273(必须死)"
+        },
+        {
+          "ItemID": 272,
+          "CmdType": "Fungus.Menu",
+          "Text": "那就要看看你能拿出什么了",
+          "TargetBlockID": "this:274(拿出什么)"
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "战后判定",
+      "Description": "战后判定",
+      "Position": "(-2430.039,-1138.942)",
+      "Commands": [
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 244,
+          "CmdType": "CmdSetJiaoHuNPC"
+        },
+        {
+          "ItemID": 245,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 246,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 247,
+          "CmdType": "CmdCheckGuanXi2"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 156,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "155(打赢后)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "339(打输)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

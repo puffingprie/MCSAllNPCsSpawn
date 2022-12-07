@@ -1,0 +1,112 @@
+{
+  "Name": "FightTalk18",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "UseSkill",
+      "Description": "UseSkill",
+      "Position": "(-2889.911,-1326.276)",
+      "Commands": [
+        {
+          "ItemID": 107,
+          "CmdType": "Fungus.If",
+          "Condition": "attaker == True"
+        },
+        {
+          "ItemID": 108,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "105(玩家释放技能)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 109,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "attaker == False"
+        },
+        {
+          "ItemID": 110,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "106(敌人释放技能)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 103,
+      "Name": "start",
+      "Description": "start",
+      "Position": "(-2501.282,-1313.504)",
+      "Commands": [
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3068,
+          "AvatarBindKey": "",
+          "StoryText": "哼...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3068,
+          "AvatarBindKey": "",
+          "StoryText": "风雨楼的人？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（先交手几个回合，假装不敌，看看那琚运琦到底想干什么...）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 105,
+      "Name": "玩家释放技能",
+      "Description": "玩家释放技能",
+      "Position": "(-2971.928,-1158.115)",
+      "Commands": []
+    },
+    {
+      "ItemID": 106,
+      "Name": "敌人释放技能",
+      "Description": "敌人释放技能",
+      "Position": "(-3115.32,-1329.036)",
+      "Commands": []
+    },
+    {
+      "ItemID": 156,
+      "Name": "RealClickEndRound",
+      "Description": "RealClickEndRound",
+      "Position": "(-2281.971,-1316.555)",
+      "Commands": []
+    },
+    {
+      "ItemID": 297,
+      "Name": "RemoveBuff",
+      "Description": "RemoveBuff",
+      "Position": "(-2071.154,-1315.158)",
+      "Commands": []
+    },
+    {
+      "ItemID": 336,
+      "Name": "PlayerStartRound",
+      "Description": "PlayerStartRound",
+      "Position": "(-1903.516,-1312.285)",
+      "Commands": []
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,21 @@
+{
+	"buffid":7010,
+	"BuffIcon":0,
+	"skillEffect":"7010.0",
+	"name":"灵雾",
+	"Affix":[],
+	"bufftype":16,
+	"seid":[
+		214,
+		2
+	],
+	"descr":"每次受到雷劫的实际伤害时，若此伤害超过5000，则吸收2点灵气。",
+	"trigger":42,
+	"removeTrigger":7,
+	"script":"Buff",
+	"looptime":1,
+	"totaltime":1,
+	"BuffType":0,
+	"isHide":0,
+	"ShowOnlyOne":0
+}

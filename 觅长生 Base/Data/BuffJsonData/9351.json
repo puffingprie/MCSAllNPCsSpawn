@@ -1,0 +1,21 @@
+{
+	"buffid":9351,
+	"BuffIcon":9324,
+	"skillEffect":"fx_Summoner_o",
+	"name":"诛仙剑阵-残",
+	"Affix":[],
+	"bufftype":4,
+	"seid":[
+		5,
+		17
+	],
+	"descr":"回合结束时，自己获得【血煞之力】*（attack），敌方获得【血煞之气】*（attack）。",
+	"trigger":1,
+	"removeTrigger":7,
+	"script":"Buff",
+	"looptime":1,
+	"totaltime":1,
+	"BuffType":0,
+	"isHide":0,
+	"ShowOnlyOne":1
+}

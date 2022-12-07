@@ -1,0 +1,18 @@
+{
+	"buffid":3153,
+	"BuffIcon":0,
+	"skillEffect":"3153.0",
+	"name":"逆天造化术",
+	"Affix":[],
+	"bufftype":16,
+	"seid":[],
+	"descr":"每回合吸收灵气后，若灵气数量大于6，则魏无极将吸收两点灵气。吸收满30点灵气后，魏无极肉体重塑成功。",
+	"trigger":5,
+	"removeTrigger":7,
+	"script":"Buff",
+	"looptime":1,
+	"totaltime":1,
+	"BuffType":0,
+	"isHide":0,
+	"ShowOnlyOne":0
+}

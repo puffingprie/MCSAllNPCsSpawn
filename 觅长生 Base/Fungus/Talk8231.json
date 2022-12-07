@@ -1,0 +1,170 @@
+{
+  "Name": "Talk8231",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "241(变量赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 241,
+      "Name": "变量赋值",
+      "Description": "变量赋值",
+      "Position": "(-2428.7,-1126.089)",
+      "Commands": [
+        {
+          "ItemID": 638,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid1",
+          "StoryText": "在吸收了足够的先天灵气之后你便退了出来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 639,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid1",
+          "StoryText": "呼~这就是九霄雷狱的先天之雷么。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 640,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid1",
+          "StoryText": "你感受到在经过天雷的洗礼之后，大量的先天灵气强化了你的肉身。你甚至能看到一缕缕电花在肌肤之下一闪而过。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 622,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 629,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 624,
+          "CmdType": "Fungus.AddHPMax"
+        },
+        {
+          "ItemID": 625,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 630,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 631,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 628,
+          "CmdType": "Fungus.AddWuDaoEx"
+        },
+        {
+          "ItemID": 627,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 633,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid1",
+          "StoryText": "回忆此次九霄雷狱种的种种异象，你陷入了空灵顿悟之境。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 636,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 635,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 637,
+          "CmdType": "Fungus.steamStat"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "413(锻体成功文案)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 623,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2651.685,-1042.89)",
+      "Commands": []
+    },
+    {
+      "ItemID": 413,
+      "Name": "锻体成功文案",
+      "Description": "锻体成功文案",
+      "Position": "(-2427.03,-1031.93)",
+      "Commands": [
+        {
+          "ItemID": 641,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "npcid1",
+          "StoryText": "不错不错，这雷鸣海上人妖两族都梦寐以求的九霄雷狱，你不仅找到了还在其中收获颇丰嘛。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 642,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "npcid1",
+          "StoryText": "不过，这雷鸣海也非善地，既然目的达到了，我们速速离去吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 643,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid1",
+          "StoryText": "好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

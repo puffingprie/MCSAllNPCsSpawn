@@ -1,0 +1,20 @@
+{
+	"buffid":9362,
+	"BuffIcon":8104,
+	"skillEffect":"fx_Summoner_o",
+	"name":"大道已成",
+	"Affix":[],
+	"bufftype":17,
+	"seid":[
+		5
+	],
+	"descr":"因你的体道达到了大道已成，回合结束时，恢复200点生命值且增加200点生命值上限。",
+	"trigger":1,
+	"removeTrigger":7,
+	"script":"Buff",
+	"looptime":1,
+	"totaltime":1,
+	"BuffType":0,
+	"isHide":0,
+	"ShowOnlyOne":0
+}

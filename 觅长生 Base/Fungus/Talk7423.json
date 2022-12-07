@@ -1,0 +1,533 @@
+{
+  "Name": "Talk7423",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 205,
+      "Name": "合并后续",
+      "Description": "合并后续",
+      "Position": "(-2274.727,-875.1739)",
+      "Commands": [
+        {
+          "ItemID": 207,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 208,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "倪兄，你知道师兄他为什么不让你去么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 209,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "其实我和师兄早就料到这次飞升魔门会来夺剑，所以才提前邀请其他化神前辈助阵。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 210,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "师兄他自知到时候无暇顾及你的安危，因此才特意把你留下的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 211,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "师祖...是觉得我实力不济么...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 212,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "还记得师兄他临走前对你说的话么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 213,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯...师祖让我镇守白帝楼，避免被魔门偷袭？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 214,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不只是这样，师兄还说了此番无论他渡劫成功与否，白帝楼都要交到你们这些后辈的手上。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 215,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "师兄这句话是对你说的，你还不明白了么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 216,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "自从师兄开始准备渡劫以后，白帝楼内外事宜都已经是你在打理了。楼内无论从修为还是声望来看，都没有比你更适合接手白帝楼楼主一职的人了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 217,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我...白帝楼楼主？可是我从来没有...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 218,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "白帝楼本身只是一个松散的剑修组织，即便身为楼主，也未必需要花费大量的时间管理。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 219,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "最重要的是，白帝楼楼主要嫉恶如仇，更要以铲灭魔修为己任...倪兄，你一直是最适合的那个人选。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 220,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 221,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "谢谢你，{FirstName}{xiongdi}。我知道我该怎么做了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 222,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 223,
+          "CmdType": "Fungus.SetNpcChengHao"
+        }
+      ]
+    },
+    {
+      "ItemID": 203,
+      "Name": "全胜后续",
+      "Description": "全胜后续",
+      "Position": "(-2360.611,-975.1741)",
+      "Commands": [
+        {
+          "ItemID": 224,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "后来藏在暗处的古神教也伺机偷袭想要夺剑，不过那玄骨上人被一直在暗处戒备的星宫宫主拖住，另外一个恶饕老祖也被我拦了下来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 225,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这次我们终于成功拖到师兄渡劫成功，剩下的那些魔门也只能无功而返了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哎...可惜师祖没让我跟他一起去，不然我一定能帮上忙的！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 231,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "205(合并后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 157,
+      "Name": "飞升成功",
+      "Description": "飞升成功",
+      "Position": "(-2431.557,-1046.39)",
+      "Commands": [
+        {
+          "ItemID": 167,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "师兄他成功渡劫，如今应该已经飞升上界了吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 169,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "呼，这我就放心了...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 168,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "可惜这次我没能亲眼见证师祖飞升，{FirstName}{xiongdi}快与我讲讲当时的情景吧！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 170,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这次师兄渡劫选择的地方是一座孤岛...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 171,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 172,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 173,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你从白帝准备渡劫开始，一直讲到魔门前来夺剑。倪旭欣听的津津有味，不停地向你问这问那...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 176,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这血剑宫的血亢剑仙实力应该不在师兄之下，就连混元子前辈都很难与他抗衡。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 175,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "那天魔道的两位尊者也绝非泛泛之辈，若非有灵尊相助，恐怕难以抵挡。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 178,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 179,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 174,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "所幸血剑宫那个血河老祖实力很是一般，我解决了他以后才得以抽出手来帮助其他前辈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 180,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "那...那后来呢？你们支撑到师祖渡劫完成了么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 226,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 227,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 228,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "203(全胜后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 229,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 230,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "204(战败后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 158,
+      "Name": "飞升失败",
+      "Description": "飞升失败",
+      "Position": "(-2276.852,-1135.978)",
+      "Commands": [
+        {
+          "ItemID": 235,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "师兄他在渡劫时被魔门偷袭，没能...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 238,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这...这怎么可能...到底发生了什么事？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 236,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 237,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 239,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你从白帝准备渡劫开始，一直讲到魔门前来夺剑。倪旭欣只是呆呆的楞在那里，似乎还无法接受这个事实。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 242,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "都怪我...如果我也在场的话，一定能帮上忙的...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 162,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "205(合并后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 204,
+      "Name": "战败后续",
+      "Description": "战败后续",
+      "Position": "(-2501.786,-972.8209)",
+      "Commands": [
+        {
+          "ItemID": 232,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "后来藏在暗处的古神教也伺机偷袭想要夺剑，虽说那玄骨上人被一直在暗处戒备的星宫宫主拖住，但那古神教老祖恶饕却不好对付。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 233,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "诸位化神前辈与那恶饕间发生了一场混战，师兄也被迫出手。最后我们虽然打败了恶饕，另外三柄魔剑却被一直暗中伺机的血剑宫夺了去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 241,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哎...可惜师祖没让我跟他一起去，不然我一定能帮上忙的！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 234,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "205(合并后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2430.016,-1134.54)",
+      "Commands": [
+        {
+          "ItemID": 199,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{FirstName}{xiongdi}！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "师祖...师祖他渡劫成功了么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 155,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 156,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 159,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "157(飞升成功)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 160,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 161,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "158(飞升失败)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

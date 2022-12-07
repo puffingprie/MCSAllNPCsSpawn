@@ -1,0 +1,859 @@
+{
+  "Name": "Talk7410",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 195,
+      "Name": "正是如此",
+      "Description": "正是如此",
+      "Position": "(-2522.19,-1049.956)",
+      "Commands": [
+        {
+          "ItemID": 197,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哈哈哈哈，看来我与{shidi}所见略同啊。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 200,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "199(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 196,
+      "Name": "我才不会管这老头呢",
+      "Description": "我才不会管这老头呢",
+      "Position": "(-2347.19,-1049.886)",
+      "Commands": [
+        {
+          "ItemID": 261,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 262,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 265,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 263,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 198,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哈哈哈哈，{shidi}嘴上这么说，但出海寻找秘术可是未见迟疑。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 264,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 201,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "199(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 199,
+      "Name": "后续",
+      "Description": "后续",
+      "Position": "(-2429.321,-969.2687)",
+      "Commands": [
+        {
+          "ItemID": 202,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "唉...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 203,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "魏无极叹了口气，嘟囔了一句什么便回到剑中去了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 204,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不过既然要在渡劫时帮师父重塑肉身，那有些事情就不得不考虑了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 205,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我对抗魔门多年，与天魔道血剑宫都结下深仇。再加上此前早已放出戮仙剑在我手中的传闻，这些魔门必然不会放过我渡劫飞升时这个最后的机会。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 206,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 207,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 208,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "此前为了调查当年御剑门之事，我也一直在留意这些魔门的动向。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 209,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "可惜时隔太久，还是没能弄清当年的真相...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 210,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "无妨，我追查多年，也只是有了一些模糊的猜测。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 214,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 216,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "此前为了调查当年御剑门之事，我也一直在留意这些魔门的动向，如今倒是有了一些新的理解。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 217,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哦？愿闻其详。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 215,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你将自己与魏无极的分析向白帝一一道来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 218,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 224,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "天魔道？这倒是我未曾想到的...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 223,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不过这些年天魔道确实一直蠢蠢欲动，与宁州的不少势力都有所勾结。当年或许也是他们用这种手段挑拨了五派与御剑门的关系吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 228,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 213,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 220,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "古神教？师父和{shidi}的分析倒是不无道理...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 222,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "当年我故意放出戮仙剑在白帝楼手中的消息，骗过了血剑宫与天魔道，却唯独被这古神教用魔神蛊渗透倪家长老的方式识破了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 221,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "如今想来，这般手段倒是与当年之事有几分相似...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 229,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 219,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 226,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "血剑宫？师父和{shidi}的分析倒是不无道理...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 225,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "当年我被血剑宫救下绝非巧合，他们来宁州的目的也一直都是为了寻找那几柄魔剑。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 230,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 227,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 231,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这{$heishou}当年没能夺得魔剑，恐怕不会善罢甘休。此番师兄渡劫，可以算是他们最后的机会了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 232,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}说的是，确实应当多多提防这{$heishou}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 233,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 234,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "原本我想借此番渡劫引魔出动，与那玄道宗的混元子长老一起将来犯的魔门一网打尽。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 235,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "但眼下当务之急是把握住替师父重塑肉身的机会，到时恐怕很难再同时防备魔门的袭击。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 236,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "师兄的意思是...？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 266,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我与魔门交手多年，曾自创了一套荡魔剑诀，在与魔修对阵时或有奇效。今日便先授与{shidi}。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 267,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 237,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "另外，玄道宗的混元子，竹山宗的明山散人，星宫的星凝宫主，离火门的火麒麟以及金虹剑派的白鹿真人。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 239,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "以上五人或是与我私交甚密，或是与魔门留有旧怨，我有十足把握他们不会拒绝。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 238,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这些请帖留有我的神识印记，我会让阿欣带上这些请帖替我走上一趟，邀请他们前来观礼。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "若是魔门来犯，他们也不会坐视不理。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 241,
+          "CmdType": "Fungus.Menu",
+          "Text": "不如交给我吧",
+          "TargetBlockID": "this:243(交给我)"
+        },
+        {
+          "ItemID": 242,
+          "CmdType": "Fungus.Menu",
+          "Text": "就让倪旭欣去吧",
+          "TargetBlockID": "this:244(就让倪旭欣去吧)"
+        }
+      ]
+    },
+    {
+      "ItemID": 244,
+      "Name": "就让倪旭欣去吧",
+      "Description": "就让倪旭欣去吧",
+      "Position": "(-2357.678,-879.7164)",
+      "Commands": [
+        {
+          "ItemID": 245,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "那{shidi}先做好准备吧，待时机成熟，我会让阿欣通知你的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 259,
+          "CmdType": "Fungus.AddTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 243,
+      "Name": "交给我",
+      "Description": "交给我",
+      "Position": "(-2508.425,-879.7164)",
+      "Commands": [
+        {
+          "ItemID": 247,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 246,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 248,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > -500"
+        },
+        {
+          "ItemID": 249,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这件事就交给我吧，我正想和那些化神前辈结识一番。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 250,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "也好，那此事便交给{shidi}了。雷劫到来前，我会再让阿欣通知你的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 255,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 256,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 258,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 251,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 252,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 254,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "以{shidi}你如今在宁州的名声，若由你出面邀请或许会适得其反。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 253,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "此事还是让阿欣走一遭吧。待时机成熟之后，我会让阿欣通知你的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 260,
+          "CmdType": "Fungus.AddTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2431.193,-1122.775)",
+      "Commands": [
+        {
+          "ItemID": 156,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 257,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 155,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "师祖，{FirstName}{xiongdi}来了",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 157,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{FirstName}{shidi}，极阴三海一行可有收获？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 158,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 159,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 161,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我顺利得到一种名为《逆天造化术》的秘术，据言可以为灵魂体塑造一具与生前一般无二的肉体。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 162,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "只是使用条件有些苛刻，需在他人渡雷劫之时于一旁引动仙灵之气重铸身体。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "果然也是仙灵之气么...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "也是？难道师兄在另一处获得秘法也需要仙灵之气？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯，我获得的秘法与{shidi}寻来的虽有些不同，但究其根本确实一致的。眼下除非还能寻到其他秘术，不然仙灵之气恐怕是不可或缺了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不过我这秘术其他方面又有些不同。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 167,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "愿闻其详。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 168,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "听{shidi}的描述，这《逆天造化术》需要被复活者自主看准机会驱动。而我所获得的《造化逆天术》将主动权放在渡劫者手里，需由渡劫者驱动秘术，从而利用仙灵之气为被复活者重铸肉身。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 169,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "等等，两种秘术都要在他人渡劫时才能使用，那也就是说...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 160,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 171,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "还没有...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 172,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "无妨，这极阴三海的传说本就是虚无缥缈之事。索性这些年我也算有所收获，寻得了这本名为《造化逆天术》的秘术。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 173,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "造化逆天术？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 174,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不错，这《造化逆天术》的原理乃是利用他人飞升渡劫时引动的仙灵之气重铸肉身。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 176,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "等等，这秘术需要在他人渡劫时才能使用，那也就是说...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 175,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 170,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯，我本就准备在不久之后渡飞升之劫，所以师父不需担心，不会让你等太久的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "{vpunch=10,0.5}胡闹！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 178,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "{vpunch=10,0.5}飞升渡劫本就万分困难，稍有不慎便会让你千百年的苦修白费！岂能将之当做儿戏！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 180,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "如今弟子可是九州第一剑仙，区区雷劫我还不放在眼里！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 179,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "师傅，放心吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 183,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "放心..我怎放得下心！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 182,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "当年御剑门因我而湮坠，本就对你们这一众弟子怀愧在心。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 181,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "时隔多年，为师能再见轩儿一面便已是高兴至极，若是为了复活我，又葬送了你的苦修，我...我...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 185,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "魏无极说到此处竟是哽咽起来，只是那灵魂之体未能随着他的心情变化相应地凝结出泪光，倒让这份情绪显得不那么真切。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 186,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "但白帝还是一转此前豪气干云的气势，言语都温和了许多。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 187,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "如若真是事不可为，弟子将主动停下《造化逆天术》的运转，专心应对雷劫。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 188,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 189,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "而《逆天造化术》，据小{shidi}的描述应该是由师父决定是否使用，敬请安心。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 191,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "唉，你这孩子，还是一点没变。嘴上是这么说的，但你心里在想什么难道我还不知道么。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 190,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "你们俩有这心就够了，但为我这老不死的冒险，真不值得。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 192,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "若不是师父当年将我领进门，这身修为还不知从何谈起，如今能有机会报答师父，我当然不会放过。是吧，小{shidi}？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 193,
+          "CmdType": "Fungus.Menu",
+          "Text": "正是如此",
+          "TargetBlockID": "this:195(正是如此)"
+        },
+        {
+          "ItemID": 194,
+          "CmdType": "Fungus.Menu",
+          "Text": "我才不会管这老头呢",
+          "TargetBlockID": "this:196(我才不会管这老头呢)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

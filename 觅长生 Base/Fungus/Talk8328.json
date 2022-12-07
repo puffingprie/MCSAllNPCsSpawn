@@ -1,0 +1,165 @@
+{
+  "Name": "Talk8328",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2434.278,-1224.476)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 372,
+      "Name": "剧情",
+      "Description": "剧情",
+      "Position": "(-2431.354,-1029.312)",
+      "Commands": [
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "没想到这振兴玄古门徒做他人嫁衣啊。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "这修真界本就是尔虞我诈，稍有不慎就是身死道消。相比起玄古门，那些豹麟兽又是何其无辜，就因为麒麟血惨遭横祸。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "相比起这些，更让我忧心的是玄骨。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这一次他若是真的完善了炼妖散，那下一次见面说不定就是化神大能了，可就真是心腹大患了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "这蜕凡化神哪有那么容易，一剂药石就可度过？这小子不把自己也变成不人不鬼的疯子就不错了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不过，他为了这炼妖散甚至放弃了诛仙剑和他师父的命令，说明他很是看重这炼妖散。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "嗯。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "最后轩岚诺提及的玄骨的师傅...完了找机会打听一下这玄骨的师傅是何方人士吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "是的",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 304,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2967.036,-1186.717)",
+      "Commands": [
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "CmdRefreshNPCUI"
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "赋值",
+      "Description": "赋值",
+      "Position": "(-2431.277,-1138.482)",
+      "Commands": [
+        {
+          "ItemID": 241,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 242,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 244,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "372(剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

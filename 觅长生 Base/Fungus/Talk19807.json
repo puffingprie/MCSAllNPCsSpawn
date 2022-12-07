@@ -1,0 +1,560 @@
+{
+  "Name": "Talk19807",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2434.278,-1224.476)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 456,
+      "Name": "剧情",
+      "Description": "剧情",
+      "Position": "(-2430.137,-1041.508)",
+      "Commands": [
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "刚刚大殿动静不小，我师兄弟和我师父如何？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.Menu",
+          "Text": "如实告知",
+          "TargetBlockID": "this:459(如实相告)"
+        }
+      ]
+    },
+    {
+      "ItemID": 304,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2967.036,-1186.717)",
+      "Commands": [
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "CmdRefreshNPCUI"
+        }
+      ]
+    },
+    {
+      "ItemID": 459,
+      "Name": "如实相告",
+      "Description": "如实相告",
+      "Position": "(-2426.478,-958.5808)",
+      "Commands": [
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "什么！！！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "噗！！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "玄骨！！！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "你这魔神蛊已经发作了，先稳定伤势我们再做其他。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "自事自知，我已时日无多也没什么好顾忌的了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "呵，玄骨以为这魔神蛊就能完全控制我？这麒麟血我必不能让他如愿以偿。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "来吧，看这是我们数十年的努力，看看我们最后的作品是什么样。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 560,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 559,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 558,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "472(接受)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 520,
+      "Name": "木有血脉",
+      "Description": "木有血脉",
+      "Position": "(-2224.444,-767.873)",
+      "Commands": [
+        {
+          "ItemID": 521,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "此时，随着麒麟血的渗透，你感觉到些许灵力散溢于空中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 522,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "道友，以我们这些凡夫俗子的体格很难发挥全力，可惜了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 523,
+          "CmdType": "Fungus.LearningSkill"
+        },
+        {
+          "ItemID": 524,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 525,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "509(最终剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 472,
+      "Name": "接受",
+      "Description": "接受",
+      "Position": "(-2426.259,-878.8735)",
+      "Commands": [
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "道友且忍住，灵纹铭刻在掌心必会有些痛楚。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "说罢天空中金色的血液向你掌心飞来，你的手掌一阵刺痛。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.GetTianFu"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 538,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "506(龙族血脉)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 546,
+          "CmdType": "Fungus.GetTianFu"
+        },
+        {
+          "ItemID": 547,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 548,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "507(神魔血脉)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 552,
+          "CmdType": "Fungus.GetTianFu"
+        },
+        {
+          "ItemID": 553,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 554,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "508(异族血脉)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 555,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 556,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "520(木有血脉)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 557,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 549,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 550,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "520(木有血脉)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 551,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 545,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "520(木有血脉)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 509,
+      "Name": "最终剧情",
+      "Description": "最终剧情",
+      "Position": "(-2436.444,-641.873)",
+      "Commands": [
+        {
+          "ItemID": 515,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "咳~师傅，这振兴玄古门终归是场梦啊。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 562,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 517,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "说完，魔神蛊的反噬爆发，轩岚诺已经失去了气息。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 518,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "唉，先出去吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 563,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        }
+      ]
+    },
+    {
+      "ItemID": 506,
+      "Name": "龙族血脉",
+      "Description": "龙族血脉",
+      "Position": "(-2648.444,-763.873)",
+      "Commands": [
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "此时，随着麒麟血的渗透，你感觉到血脉深处的龙族之力正在觉醒与之相应。你背后印有龙纹显现。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 511,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "没看出来，道友竟是身怀龙族血脉之人，真的很羡慕你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 512,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "那这血脉里的全部灵力就不要浪费了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 513,
+          "CmdType": "Fungus.LearningSkill"
+        },
+        {
+          "ItemID": 514,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 519,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "509(最终剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 508,
+      "Name": "异族血脉",
+      "Description": "异族血脉",
+      "Position": "(-2365.444,-765.873)",
+      "Commands": [
+        {
+          "ItemID": 532,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "此时，随着麒麟血的渗透，你感觉到血脉深处的血脉之力正在觉醒与之相应。你全身散发出旺盛的气血与麒麟之血相融合。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 533,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "嗯？好旺盛的气血，道友应该也是上古遗族之后，那你必能承受这麟血的全部妖力了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 535,
+          "CmdType": "Fungus.LearningSkill"
+        },
+        {
+          "ItemID": 536,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 537,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "509(最终剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "赋值",
+      "Description": "赋值",
+      "Position": "(-2430.057,-1138.482)",
+      "Commands": [
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 244,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "456(剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 507,
+      "Name": "神魔血脉",
+      "Description": "神魔血脉",
+      "Position": "(-2509.444,-763.873)",
+      "Commands": [
+        {
+          "ItemID": 526,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "此时，随着麒麟血的渗透，你感觉到血脉深处的血脉之力正在觉醒与之相应。那是一种上古莽荒力量，你全身散发出旺盛的气血与麒麟之血相融合。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 527,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "嗯？好旺盛的气血，道友竟是上古神魔遗族，那你便能承受这麟血的妖力了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 528,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "这血脉里的全部灵力就不要浪费了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 529,
+          "CmdType": "Fungus.LearningSkill"
+        },
+        {
+          "ItemID": 530,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 531,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "509(最终剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,20 @@
+{
+	"buffid":11033,
+	"BuffIcon":3027,
+	"skillEffect":"11033.0",
+	"name":"剑之领域",
+	"Affix":[],
+	"bufftype":16,
+	"seid":[
+		141
+	],
+	"descr":"对雷劫造成的伤害提升25%",
+	"trigger":31,
+	"removeTrigger":7,
+	"script":"Buff",
+	"looptime":1,
+	"totaltime":1,
+	"BuffType":0,
+	"isHide":0,
+	"ShowOnlyOne":1
+}

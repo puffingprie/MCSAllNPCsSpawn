@@ -1,0 +1,906 @@
+{
+  "Name": "Talk7420",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1224.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 202,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(战后判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 340,
+      "Name": "战斗",
+      "Description": "战斗",
+      "Position": "(-2225.679,-1046.046)",
+      "Commands": [
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 155,
+      "Name": "打赢",
+      "Description": "打赢",
+      "Position": "(-2430.149,-1049.341)",
+      "Commands": [
+        {
+          "ItemID": 157,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只听一声巨响，这古神教老怪最后的防御也被你的神通击破，连带着远处的小岛都在战斗的余波下支离破碎。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 158,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "刚刚还在交手的众化神也不由的把目光转移到了你们这里。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 159,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你就只有这点实力么？在我看来也不过如此。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 160,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao1",
+          "StoryText": "咳咳...没想到...会被逼到这一步...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 162,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao1",
+          "StoryText": "罢了...老夫苦等了数万年...也是时候做个了结了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 161,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao1",
+          "StoryText": "你们...将死无全尸。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "“咕嘟...咕嘟...”",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "伴随着一阵诡异的声音，老人原本有些瘦弱的身躯迅速扩大了两圈，上身包裹着的衣物已经被撑裂，就连肤色都变成了灰暗的墨绿色。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "mingshan",
+          "StoryText": "这...这到底是什么东西？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "huoqiling",
+          "StoryText": "吼...本座怎么有种熟悉的感觉？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 167,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "huoqiling",
+          "StoryText": "等等...是恶饕？这老怪物竟然还没死？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 168,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xiusha",
+          "StoryText": "恶饕？我记得那是古神教创教老祖吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 169,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "honglian",
+          "StoryText": "笑话。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 170,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "honglian",
+          "StoryText": "化神修士最多在下界逗留千年，这恶饕十万年前便化神了，还能活到今日？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 171,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao2",
+          "StoryText": "无知...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 173,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao2",
+          "StoryText": "人类修士...至多不过千余年寿元。化神大妖...也不过活数万年。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 172,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao2",
+          "StoryText": "但若能拥有上古神兽血脉...寿元便可突破十万年，甚至更久...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 174,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao2",
+          "StoryText": "今日，便是我觅得长生之日...而你们...都将死无全尸！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 175,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "半空之上，第八道雷劫正慢慢成型，但此时众人的焦点却都集中在这个怪物的身上。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 178,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "“嗖...”",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "就在这众目睽睽之下，恶饕老祖竟突然消失不见了。不...应该说是他快到让人无法再捕捉到他得身影。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 176,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一道红光闪过，浓郁的血煞之气顿时布满整片空间，即便是化神强者也不由得感到一整晕眩。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 179,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "而就在这一息之间，恶饕老祖已经冲向了此前魔门与正道对峙之地，两条手臂上赫然伸出无数藤曼，卷向血亢剑仙与红莲尊者手中的魔剑。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 180,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "不好...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 182,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "血亢剑仙瞬间清醒过来，闪身避开藤曼，随即一剑刺出，正扎在恶饕老祖的胸前。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 181,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "他正待发力，却感觉这怪物的身体内似乎有什么东西顶住了他的剑，不由得愣了一愣。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 183,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "但就在这楞神的刹那之间，恶饕老祖的小腹竟幻化出一只麒麟兽头，向着血亢持剑之手咬了上去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 185,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "血亢剑仙想要拔出魔剑，但剑却被恶饕的身体紧紧的吸住了。不得已之下，他只能松手向后闪去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 184,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "而另一边的红莲尊者更是还未来得及反应，便被夺取了手中的魔剑。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 186,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xiusha",
+          "StoryText": "不好...陷仙剑被...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 187,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "honglian",
+          "StoryText": "嘁！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 188,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "honglian",
+          "StoryText": "是我大意了，没想到这老鬼会突然向我们发难。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 189,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xiusha",
+          "StoryText": "快追！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 190,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xuewei",
+          "StoryText": "刚刚的煞气是...戮仙剑？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 191,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "原来凌轩手上的那柄不是戮仙剑，而是失踪已久的诛仙剑。这下就有意思了...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 193,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xuewei",
+          "StoryText": "今日四剑齐聚，这确实是个难得的机会。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 192,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "那老鬼也不知用了什么秘术，现在即便开启领域我也未必是他的对手。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 194,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "不过他眼下树敌太多，我们先跟上去静观其变就好。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 195,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "夺下两柄魔剑的恶饕老祖也愈发疯狂，不顾身后追来的正魔两道化神，直直的便又朝着你冲了过来！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "340(战斗)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 289,
+      "Name": "打输",
+      "Description": "打输",
+      "Position": "(-2226.679,-1131.046)",
+      "Commands": [
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "在老者连绵不绝的攻势下，你最后的防御也被击破。魏无极急忙中再次凝聚虚影，驱使着诛仙剑挡下了一击。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "见自己的攻击再一次被诛仙剑挡下，老者却丝毫没有急着夺剑的意思，反倒是一边打量着诛仙剑，一边继续慢慢向你攻来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此时你的灵气早已枯竭，只能用缓慢回复的灵气勉强抵挡着老者，即使有魏无极的辅助，还是有不少的神通穿透防御击打到你的身上。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你的伤势越来越重，但老者的攻击的频率也越来越慢。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "难道他的灵气也快耗尽了？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "远处的战场上突然爆发出了剧烈的灵气波动，打断了你的思绪。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "huoqiling",
+          "StoryText": "吼，小贼吃我一击！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你凝神看去，却是麒麟与天魔道的化神强者正战斗至关键时刻。而在不远处，血亢也凝聚起了一把惊天血剑，与混元子的虚空一指撞在了一起。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "四个化神后期强者神通的对撞，扰乱了整片海域的灵气，一时之间连神识探查到的景象也变得晦涩不清起来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "恰在此刻，正在渡劫中的白帝又凝聚起了一剑劈向劫云，劫云散开的灵气让这片海域越发紊乱。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "恰在此刻，上空的劫云又凝聚起了惊人的威势，横跨过整个天空的闪电爆发又湮灭，让四周的灵气越发紊乱。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你只得收回神念，却发现本应在你身前的老者此时却不见了踪影。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "正当你戒备地环视四周寻找这个老者时，却发现在血亢剑仙的面前闪过了一道红光，浓郁的血煞之气弥漫而出，即便是在稍远之处的化神强者也不由得感到一整晕眩，血亢更是首当其冲。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "而在这红光之中，消失的老者显现出了身形，伸手就夺走了血亢手中的魔剑。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "不好……",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "血亢很快就清醒了过来，但此时身前哪还有那老者的身影。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "场上刹时风云变幻，转眼之间老者又出现在了正与麒麟近身相搏的红莲身后。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "honglian",
+          "StoryText": "噗……老鬼你竟敢！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "红莲尊者一时不查，被老者从身后偷袭，正面又吃了麒麟一击，俨然已受到重创，一时之间竟无法凝聚力量反击，眼睁睁地看着手中的魔剑被老者夺下。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "哪里跑！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "就在老者想要转身后撤的当口，血亢剑仙已经追了上来，身下的血剑直冲老者而去，一旁的红莲尊者也手掐法诀，一道凝实的黑气也攻向老者。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "在两个化神后期强者的全力攻击之下，就算这老者同是化神后期恐怕也难以全身而退。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "“咕嘟...咕嘟...”",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "伴随着一阵诡异的声音，老者的一只手臂瞬间扭曲变形，膨胀了数倍的巨大手掌直接捏碎了黑气。而他的小腹处也幻化出一只麒麟兽头，一口咬碎了血剑。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此时再看这老者，哪还有原来人类的模样，原本有些瘦弱的身躯膨胀开来，上身包裹着的衣物已经被撑裂，就连肤色都变成了灰暗的墨绿色，散发出恐怖的气息。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "粗壮的手臂之上更是伸出无数藤曼，卷着刚刚夺下的魔剑砍向血亢和红莲，将两人击退。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao2",
+          "StoryText": "老夫苦等数万年...终于等到今天...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "mingshan",
+          "StoryText": "这...这到底是什么东西？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "huoqiling",
+          "StoryText": "吼...本座怎么有种熟悉的感觉？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "huoqiling",
+          "StoryText": "等等...是恶饕？这老怪物竟然还没死？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xiusha",
+          "StoryText": "恶饕？我记得那是古神教创教老祖吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "honglian",
+          "StoryText": "笑话。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "honglian",
+          "StoryText": "化神修士最多在下界逗留千年，这恶饕十万年前便化神了，还能活到今日？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao2",
+          "StoryText": "无知...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao2",
+          "StoryText": "人类修士...至多不过千余年寿元。化神大妖...也不过活数万年。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao2",
+          "StoryText": "但若能拥有上古神兽血脉...寿元便可突破十万年，甚至更久...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "etao2",
+          "StoryText": "今日，便是我觅得长生之日...而你们...都将死无全尸！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "没想到此人竟是恶饕。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xuewei",
+          "StoryText": "刚刚的煞气是...戮仙剑？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "没错，只有戮仙剑的血煞之气才能让我心神失守...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xuewei",
+          "StoryText": "原来凌轩手上的那柄不是戮仙剑，而是失踪已久的诛仙剑。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xuewei",
+          "StoryText": "今日四剑齐聚，确实是个难得的机会。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "那老鬼也不知用了什么秘术，适才与他对阵之时，我也受了些许损伤。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xuekang",
+          "StoryText": "不过他眼下目标必然是那柄诛仙剑，我们在一旁静观其变，待我调整好伤势后再伺机而动。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "驱使着三柄魔剑的恶饕老祖直直向你冲来，而已经停下手的宁州化神们也正追着他飞速赶来...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "340(战斗)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "战后判定",
+      "Description": "战后判定",
+      "Position": "(-2427.825,-1130.636)",
+      "Commands": [
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 156,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "155(打赢)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "289(打输)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

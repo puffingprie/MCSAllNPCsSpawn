@@ -1,0 +1,347 @@
+{
+  "Name": "Talk8317",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2434.278,-1224.476)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 304,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2796.448,-946.7169)",
+      "Commands": [
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "CmdRefreshNPCUI"
+        }
+      ]
+    },
+    {
+      "ItemID": 409,
+      "Name": "算了",
+      "Description": "算了",
+      "Position": "(-2501.156,-798.4814)",
+      "Commands": []
+    },
+    {
+      "ItemID": 243,
+      "Name": "剧情",
+      "Description": "剧情",
+      "Position": "(-2431.861,-1051.071)",
+      "Commands": [
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一进门你就看到一个人面露焦急的拉着灵药堂管事。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCdianzhang",
+          "StoryText": "道友，这延寿丹药本就是有价无市，上次也是巧合，大少爷炼制了一批延寿丹我便帮你留了两粒。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCdianzhang",
+          "StoryText": "你现在又来求购青冥丹，你真的是为难在下了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "之前已经是救命之恩了，但延寿丹家师之前已经服用过两粒了，上一次就只生效了一粒。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "早就听闻倪家大少不仅剑术高超更是精于炼丹，不知您可否帮我问问。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "道友，是在求购延寿丹药么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "说罢，拿出一个黑瓶在掌心倒出一粒丹药。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "这是？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "这是本门秘药玄古丹，除了能延年益寿更能易经伐髓调整资质。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "这就是玄古丹？阁下是玄古门的道友吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "哦？道友知晓本门？那倒是方便了，不用我在做介绍了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "这玄古丹乃是本门不传之秘，但道友孝心着实令人动容，我就作价两万灵石卖于道友。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "多谢道友。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.Menu",
+          "Text": "上前叫住",
+          "TargetBlockID": "this:391(上前叫住)"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.Menu",
+          "Text": "不予理会",
+          "TargetBlockID": "this:392(不予理会)"
+        }
+      ]
+    },
+    {
+      "ItemID": 392,
+      "Name": "不予理会",
+      "Description": "不予理会",
+      "Position": "(-2254.097,-962.0109)",
+      "Commands": []
+    },
+    {
+      "ItemID": 391,
+      "Name": "上前叫住",
+      "Description": "上前叫住",
+      "Position": "(-2577.626,-958.4815)",
+      "Commands": [
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "道友何事？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.Menu",
+          "Text": "购买玄古丹",
+          "TargetBlockID": "this:397(购买)"
+        }
+      ]
+    },
+    {
+      "ItemID": 397,
+      "Name": "购买",
+      "Description": "购买",
+      "Position": "(-2577.626,-871.4224)",
+      "Commands": [
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "嘿嘿，正好我这里还剩一枚。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "说罢，他掌中出现一样的黑色小瓶，另只手向你伸出。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "两万一枚。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 20000"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.Menu",
+          "Text": "交钱",
+          "TargetBlockID": "this:408(交钱)"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.Menu",
+          "Text": "算了",
+          "TargetBlockID": "this:409(算了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 408,
+      "Name": "交钱",
+      "Description": "交钱",
+      "Position": "(-2650.568,-796.1284)",
+      "Commands": [
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "嘿嘿，钱货两清，承蒙惠顾。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "赋值",
+      "Description": "赋值",
+      "Position": "(-2437.115,-1130.204)",
+      "Commands": [
+        {
+          "ItemID": 241,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 242,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 244,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "243(剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

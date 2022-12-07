@@ -1,0 +1,21 @@
+{
+	"buffid":9363,
+	"BuffIcon":0,
+	"skillEffect":"fx_Summoner_o",
+	"name":"暗雷",
+	"Affix":[],
+	"bufftype":6,
+	"seid":[
+		225,
+		24
+	],
+	"descr":"回合结束时，对手每有三点灵气便对其施加一次【雷灵劲】",
+	"trigger":1,
+	"removeTrigger":7,
+	"script":"Buff",
+	"looptime":1,
+	"totaltime":1,
+	"BuffType":0,
+	"isHide":0,
+	"ShowOnlyOne":0
+}

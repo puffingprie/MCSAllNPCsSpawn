@@ -1,0 +1,174 @@
+{
+  "Name": "Talk7442",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2431.193,-1122.775)",
+      "Commands": [
+        {
+          "ItemID": 156,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 155,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 170,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 158,
+          "CmdType": "CmdSetJiaoHuNPC"
+        },
+        {
+          "ItemID": 159,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 160,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 157,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你将请帖从储物袋中取出，并通过以灵气御物将其递送过去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 162,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这印记...武陵城那老头是不是要飞升了？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 161,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不错，白帝即将渡劫飞升，特让我来邀请你前往观礼。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "唉，又不是没见过飞升，还要和一帮老家伙装正经，无聊死了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "白帝这老家伙是不是知道你和本宫的关系，所以故意让你来邀请我？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 167,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "星凝一边说着，一边漫不经心地用神识扫过请柬，而后便惊讶的扬起了眉毛。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "欸？这老头竟然...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "好，很好。古神教蛊惑我派长老，还害死鸾儿，本宫可未曾淡忘！{vpunch=10,0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 169,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "白帝既有此心，本宫便奉陪到底，",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 168,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{$TmpTalkString}，帮我转告白帝，本宫会前往观礼。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 181,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 182,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 184,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 185,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 186,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 6"
+        },
+        {
+          "ItemID": 187,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

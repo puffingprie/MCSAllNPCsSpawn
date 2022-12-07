@@ -1,0 +1,642 @@
+{
+  "Name": "Talk119301",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-2575.041,-1104.423)",
+      "Commands": [
+        {
+          "ItemID": 278,
+          "CmdType": "CmdOpenNingZhouMapWarp"
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2576.932,-1224.188)",
+      "Commands": [
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "339(第一年英杰会)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 119,
+      "Name": "AddItem",
+      "Description": "AddItem",
+      "Position": "(-3075.997,-1175.896)",
+      "Commands": [
+        {
+          "ItemID": 120,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 121,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 128,
+      "Name": "GetStaticValues",
+      "Description": "GetStaticValues",
+      "Position": "(-3081.535,-1099.401)",
+      "Commands": [
+        {
+          "ItemID": 129,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 130,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "SeTalk",
+      "Description": "SeTalk",
+      "Position": "(-3246.16,-1026.03)",
+      "Commands": [
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 362,
+      "Name": "为什么捏",
+      "Description": "为什么捏",
+      "Position": "(-2169.355,-1106.221)",
+      "Commands": [
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "这个嘛，修仙界的有头有脸的势力都会花心思举办诸如此类的盛会，以鼓励后进刻苦修行、相互切磋学习，让有能之人可以脱颖而出。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "{xiaozi}，这种盛会，对现在的你而言，参加了总是有利无害的，哪怕观赛也能有所收获。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "348(看看你的)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 363,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2169.355,-1164.221)",
+      "Commands": [
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "好，孺子可教，咱们走吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 197,
+      "Name": "钱不够",
+      "Description": "钱不够",
+      "Position": "(-2578.03,-851.2888)",
+      "Commands": [
+        {
+          "ItemID": 202,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "囊中羞涩...哎，我还是靠走的吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 143,
+      "Name": "New Block4",
+      "Description": "New Block4",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 139,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 125,
+      "Name": "SetStaticValues",
+      "Description": "SetStaticValues",
+      "Position": "(-3249.952,-1090.583)",
+      "Commands": [
+        {
+          "ItemID": 151,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 152,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 192,
+      "Name": "不住",
+      "Description": "不住",
+      "Position": "(-2807.504,-1101.304)",
+      "Commands": []
+    },
+    {
+      "ItemID": 273,
+      "Name": "备用",
+      "Description": "备用",
+      "Position": "(-2127.626,-927.3751)",
+      "Commands": [
+        {
+          "ItemID": 274,
+          "CmdType": "Fungus.PlaySound"
+        },
+        {
+          "ItemID": 275,
+          "CmdType": "Fungus.AvatarTransfer"
+        },
+        {
+          "ItemID": 276,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 277,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 171,
+      "Name": "天星城",
+      "Description": "天星城",
+      "Position": "(-2496.282,-1017.719)",
+      "Commands": [
+        {
+          "ItemID": 250,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 251,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 5"
+        },
+        {
+          "ItemID": 252,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "197(钱不够)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 253,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 272,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 144,
+      "Name": "New Block5",
+      "Description": "New Block5",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 169,
+      "Name": "逸风城",
+      "Description": "逸风城",
+      "Position": "(-2812.152,-1014.94)",
+      "Commands": [
+        {
+          "ItemID": 198,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 199,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 5"
+        },
+        {
+          "ItemID": 200,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "197(钱不够)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 201,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 268,
+          "CmdType": "Fungus.PlaySound"
+        },
+        {
+          "ItemID": 229,
+          "CmdType": "Fungus.AvatarTransfer"
+        },
+        {
+          "ItemID": 196,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 230,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 141,
+      "Name": "New Block2",
+      "Description": "New Block2",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 348,
+      "Name": "看看你的",
+      "Description": "看看你的",
+      "Position": "(-2366.355,-1165.221)",
+      "Commands": [
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Menu",
+          "Text": "好，观上一观",
+          "TargetBlockID": "this:363(无事发生)"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.Menu",
+          "Text": "为何要去一观",
+          "TargetBlockID": "this:362(为什么捏)"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Menu",
+          "Text": "还有别的事情",
+          "TargetBlockID": "this:352(不看)"
+        }
+      ]
+    },
+    {
+      "ItemID": 148,
+      "Name": "New Block1",
+      "Description": "New Block1",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 195,
+      "Name": "广陵城",
+      "Description": "广陵城",
+      "Position": "(-2315.279,-1015.246)",
+      "Commands": [
+        {
+          "ItemID": 259,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 260,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 5"
+        },
+        {
+          "ItemID": 261,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "197(钱不够)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 262,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 271,
+          "CmdType": "Fungus.PlaySound"
+        },
+        {
+          "ItemID": 264,
+          "CmdType": "Fungus.AvatarTransfer"
+        },
+        {
+          "ItemID": 265,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 267,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 170,
+      "Name": "云汐城",
+      "Description": "云汐城",
+      "Position": "(-2648.556,-1013.094)",
+      "Commands": [
+        {
+          "ItemID": 241,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 242,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 5"
+        },
+        {
+          "ItemID": 243,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "197(钱不够)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 244,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 269,
+          "CmdType": "Fungus.PlaySound"
+        },
+        {
+          "ItemID": 246,
+          "CmdType": "Fungus.AvatarTransfer"
+        },
+        {
+          "ItemID": 247,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 249,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 352,
+      "Name": "不看",
+      "Description": "不看",
+      "Position": "(-2368.355,-1103.221)",
+      "Commands": [
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "你这{xiaozi}倒当真奇怪，这么重大的盛会不急着参加，倒想着出去晃晃，罢了，随你吧，别误了时间便好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 145,
+      "Name": "New Block6",
+      "Description": "New Block6",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 142,
+      "Name": "New Block3",
+      "Description": "New Block3",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 339,
+      "Name": "第一年英杰会",
+      "Description": "第一年英杰会",
+      "Position": "(-2576.355,-1166.221)",
+      "Commands": [
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.If",
+          "Condition": "year == 1"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "{xiaozi}，着急出城干什么，好不容易到了这武陵城，这升仙台怎么不去观上一观？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "348(看看你的)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

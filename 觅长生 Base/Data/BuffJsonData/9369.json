@@ -1,0 +1,20 @@
+{
+	"buffid":9369,
+	"BuffIcon":9365,
+	"skillEffect":"fx_Summoner_o",
+	"name":"五行剑诀",
+	"Affix":[],
+	"bufftype":6,
+	"seid":[
+		131
+	],
+	"descr":"释放剑系技能时，若触发五行连击，则获得9365*24；否则9365重置为24层。",
+	"trigger":8,
+	"removeTrigger":7,
+	"script":"Buff",
+	"looptime":1,
+	"totaltime":1,
+	"BuffType":0,
+	"isHide":1,
+	"ShowOnlyOne":0
+}

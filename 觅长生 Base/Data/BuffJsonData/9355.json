@@ -1,0 +1,20 @@
+{
+	"buffid":9355,
+	"BuffIcon":3980,
+	"skillEffect":"fx_Summoner_o",
+	"name":"鲲鹏灵体",
+	"Affix":[],
+	"bufftype":3,
+	"seid":[
+		149
+	],
+	"descr":"每受到一点伤害，获得【蓄力】*1，受到技能伤害后移除。",
+	"trigger":29,
+	"removeTrigger":2,
+	"script":"Buff",
+	"looptime":1,
+	"totaltime":1,
+	"BuffType":0,
+	"isHide":0,
+	"ShowOnlyOne":0
+}

@@ -1,0 +1,684 @@
+{
+  "Name": "Talk7502",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 693,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(地点判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 679,
+      "Name": "大好时机",
+      "Description": "大好时机",
+      "Position": "(-2431.381,-966.4328)",
+      "Commands": [
+        {
+          "ItemID": 697,
+          "CmdType": "CmdHideAllJiaoHuUI"
+        },
+        {
+          "ItemID": 754,
+          "CmdType": "Fungus.If",
+          "Condition": "FavorLevel > 3"
+        },
+        {
+          "ItemID": 758,
+          "CmdType": "Fungus.GetNPCName"
+        },
+        {
+          "ItemID": 757,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "是{$name}...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 759,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "这便是你在风雨楼所接悬赏的目标，但他此前毕竟与你相识...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 755,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 680,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此人便是风雨楼悬赏的目标，而眼下正是动手的大好时机！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 756,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 687,
+          "CmdType": "Fungus.Menu",
+          "Text": "动手",
+          "TargetBlockID": "this:689(动手)"
+        },
+        {
+          "ItemID": 688,
+          "CmdType": "Fungus.Menu",
+          "Text": "再等等",
+          "TargetBlockID": "this:690(再等等)"
+        }
+      ]
+    },
+    {
+      "ItemID": 681,
+      "Name": "不明智",
+      "Description": "不明智",
+      "Position": "(-2274.237,-1124.675)",
+      "Commands": [
+        {
+          "ItemID": 683,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此人便是风雨楼悬赏的目标，但在此地动手却并不明智...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 699,
+      "Name": "特殊目标判定",
+      "Description": "特殊目标判定",
+      "Position": "(-2430.278,-1037.862)",
+      "Commands": [
+        {
+          "ItemID": 701,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 700,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 702,
+          "CmdType": "Fungus.If",
+          "Condition": "npcid == Avatar"
+        },
+        {
+          "ItemID": 703,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "704(毕长寿)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 705,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 706,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 707,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 708,
+          "CmdType": "Fungus.If",
+          "Condition": "npcid == Avatar"
+        },
+        {
+          "ItemID": 709,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "710(王登)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 713,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 714,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 715,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 716,
+          "CmdType": "Fungus.If",
+          "Condition": "npcid == Avatar"
+        },
+        {
+          "ItemID": 717,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "711(沂山老祖)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 718,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 719,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 720,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 721,
+          "CmdType": "Fungus.If",
+          "Condition": "npcid == Avatar"
+        },
+        {
+          "ItemID": 722,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "712(天魔道长老)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 723,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 760,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 761,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 762,
+          "CmdType": "Fungus.If",
+          "Condition": "npcid == Avatar"
+        },
+        {
+          "ItemID": 763,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "765(琚运琦)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 764,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 724,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "679(大好时机)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 712,
+      "Name": "天魔道长老",
+      "Description": "天魔道长老",
+      "Position": "(-2592.917,-900.4987)",
+      "Commands": [
+        {
+          "ItemID": 750,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "黑木老魔...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 751,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "堂堂天魔道的元婴期长老，却偷偷摸摸潜伏于宁州。能趁此机会将他除去，倒也不错。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 752,
+          "CmdType": "Fungus.Menu",
+          "Text": "动手",
+          "TargetBlockID": "this:689(动手)"
+        },
+        {
+          "ItemID": 753,
+          "CmdType": "Fungus.Menu",
+          "Text": "再等等",
+          "TargetBlockID": "this:690(再等等)"
+        }
+      ]
+    },
+    {
+      "ItemID": 710,
+      "Name": "王登",
+      "Description": "王登",
+      "Position": "(-2588.521,-1001.597)",
+      "Commands": [
+        {
+          "ItemID": 734,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 735,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 736,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "679(大好时机)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 737,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 738,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "王登...原来是他...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 739,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "虽说是好色之徒，但应当也没做过什么太伤天害理之事。不该是惹了哪位惹不得的仙子，才遭来了这杀身之祸吧...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 740,
+          "CmdType": "Fungus.Menu",
+          "Text": "动手",
+          "TargetBlockID": "this:689(动手)"
+        },
+        {
+          "ItemID": 741,
+          "CmdType": "Fungus.Menu",
+          "Text": "再等等",
+          "TargetBlockID": "this:690(再等等)"
+        }
+      ]
+    },
+    {
+      "ItemID": 704,
+      "Name": "毕长寿",
+      "Description": "毕长寿",
+      "Position": "(-2595.114,-1049.949)",
+      "Commands": [
+        {
+          "ItemID": 727,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "天儿...天儿...呜呜呜...都杀了...炼成肉参...桀桀桀...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 728,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "眼前之人看起来疯疯癫癫的，嘴里嘟嘟囔囔的不知在说些什么。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 729,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "毕长寿...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 731,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "当年在永安镇除掉的那个叫毕钟天的村霸，似乎就有个不知在沂山派还是禾山道的爹。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 730,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "也不知这毕长寿和他有没有关系...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 732,
+          "CmdType": "Fungus.Menu",
+          "Text": "动手",
+          "TargetBlockID": "this:689(动手)"
+        },
+        {
+          "ItemID": 733,
+          "CmdType": "Fungus.Menu",
+          "Text": "再等等",
+          "TargetBlockID": "this:690(再等等)"
+        }
+      ]
+    },
+    {
+      "ItemID": 689,
+      "Name": "动手",
+      "Description": "动手",
+      "Position": "(-2430.281,-897.2022)",
+      "Commands": [
+        {
+          "ItemID": 694,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 695,
+          "CmdType": "Fungus.SetFengYuLouState"
+        },
+        {
+          "ItemID": 691,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 692,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 765,
+      "Name": "琚运琦",
+      "Description": "琚运琦",
+      "Position": "(-2591.817,-843.3555)",
+      "Commands": [
+        {
+          "ItemID": 776,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 766,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 767,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "还是被你找到了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 768,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "就算你逃到天涯海角，我也会找到你。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 770,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "当年你没能留住我，现在也不行。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 769,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "别逼我动手杀你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 771,
+          "CmdType": "Fungus.Menu",
+          "Text": "动手！",
+          "TargetBlockID": "this:689(动手)"
+        }
+      ]
+    },
+    {
+      "ItemID": 711,
+      "Name": "沂山老祖",
+      "Description": "沂山老祖",
+      "Position": "(-2588.521,-948.8502)",
+      "Commands": [
+        {
+          "ItemID": 742,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 743,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue != 2"
+        },
+        {
+          "ItemID": 744,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "679(大好时机)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 745,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 746,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "百毒老怪...听说他便是当年创立沂山派之人，只不过为了躲避仇敌才去了海外。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 747,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "如此想来，当年确实曾听那沂山双鬼提到过他们有一个什么师傅去了海外渡劫...不会便是此人吧...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 748,
+          "CmdType": "Fungus.Menu",
+          "Text": "动手",
+          "TargetBlockID": "this:689(动手)"
+        },
+        {
+          "ItemID": 749,
+          "CmdType": "Fungus.Menu",
+          "Text": "再等等",
+          "TargetBlockID": "this:690(再等等)"
+        }
+      ]
+    },
+    {
+      "ItemID": 690,
+      "Name": "再等等",
+      "Description": "再等等",
+      "Position": "(-2740.17,-977.4216)",
+      "Commands": [
+        {
+          "ItemID": 698,
+          "CmdType": "CmdHideAllJiaoHuUI"
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "地点判定",
+      "Description": "地点判定",
+      "Position": "(-2430.094,-1121.676)",
+      "Commands": [
+        {
+          "ItemID": 673,
+          "CmdType": "CmdGetMapType"
+        },
+        {
+          "ItemID": 675,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue == 1"
+        },
+        {
+          "ItemID": 684,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "699(特殊目标判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 676,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpValue == 4"
+        },
+        {
+          "ItemID": 725,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "699(特殊目标判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 677,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpValue == 5"
+        },
+        {
+          "ItemID": 726,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "699(特殊目标判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 774,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpValue == 23"
+        },
+        {
+          "ItemID": 775,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "699(特殊目标判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 772,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpValue == 24"
+        },
+        {
+          "ItemID": 773,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "699(特殊目标判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 678,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 682,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "681(不明智)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,159 @@
+{
+  "Name": "Talk8319",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2434.278,-1224.476)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 304,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2796.448,-946.7169)",
+      "Commands": [
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "CmdRefreshNPCUI"
+        }
+      ]
+    },
+    {
+      "ItemID": 243,
+      "Name": "剧情",
+      "Description": "剧情",
+      "Position": "(-2440.097,-1018.13)",
+      "Commands": [
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "前面有两个巡逻弟子，看装束好像是古月寨弟子。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "要说这玄古门也有几分门道啊。他们这炼丹之法看着邪性，这丹药效果却也真的不错嘛。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "哈哈哈，说邪门能比得过咱们古月寨？不过，他们这丹药后劲太大了，听说有个傻子过于冒进，连服三颗差点没给丹毒带走。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "最近，寨主在和他们大护法研究以蛊虫入丹也不知到进度怎么样，真成了咱们古月寨也不用再偏安一隅了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "你倒是乐观，此事本就是以玄古门为主到时候咱们能分得几成好处还是两说。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "切，要不是寨主念及同门之情，这玄古门如何能在宁州立足？要我说他们趁早并入我们古月寨才是正道～",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "嘴上留情啊，继续巡山吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "赋值",
+      "Description": "赋值",
+      "Position": "(-2437.115,-1129.027)",
+      "Commands": [
+        {
+          "ItemID": 241,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 242,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 244,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "243(剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

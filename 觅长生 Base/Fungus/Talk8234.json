@@ -1,0 +1,263 @@
+{
+  "Name": "Talk8234",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "241(变量赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 241,
+      "Name": "变量赋值",
+      "Description": "变量赋值",
+      "Position": "(-2426.882,-1133.835)",
+      "Commands": [
+        {
+          "ItemID": 656,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 657,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 660,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 799,
+          "AvatarBindKey": "",
+          "StoryText": "多谢{FirstName}道友救我。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 658,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 661,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 799,
+          "AvatarBindKey": "",
+          "StoryText": "在下龙宫长老，还未请教高姓大名？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 662,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{LastName}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 663,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 799,
+          "AvatarBindKey": "",
+          "StoryText": "多谢，{FirstName}道友出手相助。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 659,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 664,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你为何会被纠缠上？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 665,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 799,
+          "AvatarBindKey": "",
+          "StoryText": "我在此地探查九霄雷狱的所在。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 666,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于九霄雷狱所在？",
+          "TargetBlockID": "this:413(关于九霄雷狱所在？)"
+        }
+      ]
+    },
+    {
+      "ItemID": 623,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2651.685,-1045.629)",
+      "Commands": [
+        {
+          "ItemID": 639,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 640,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 641,
+          "CmdType": "CmdAddSeaTanSuoDu"
+        }
+      ]
+    },
+    {
+      "ItemID": 413,
+      "Name": "关于九霄雷狱所在？",
+      "Description": "关于九霄雷狱所在？",
+      "Position": "(-2442.735,-1014.197)",
+      "Commands": [
+        {
+          "ItemID": 667,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 799,
+          "AvatarBindKey": "",
+          "StoryText": "九霄雷狱本就是一处存在于异空间的天地异象，而链接它的空间节点是不断变动的，想要进入必须找到空间节点。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 668,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "那雷鸣海引雷锻体又该如何完成？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 669,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 799,
+          "AvatarBindKey": "",
+          "StoryText": "九霄神雷乃是先天之雷，在其中引雷锻体，可以吸收先天之气精进体道。道友进入其中不断承受天雷就可吸收先天灵气。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 670,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 799,
+          "AvatarBindKey": "",
+          "StoryText": "但在九霄雷狱中吸收先天灵气需要锻体秘术，先祖九玄有记载其中几门吸收先天神雷的秘术，不过其中多是为我龙族量身定制的应该没有适合道友的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 671,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 672,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 799,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 673,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 799,
+          "AvatarBindKey": "",
+          "StoryText": "对了，我想起了有一门应该适合道友。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 674,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "说罢他递给你一块玉简，你将神识探入其中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 675,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 676,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 677,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 799,
+          "AvatarBindKey": "",
+          "StoryText": "哦，对了先祖曾在笔录中记载，在渡过了锻体之后，还陷入了顿悟之中，领悟了一道渡劫仙术，只是可惜...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 678,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 799,
+          "AvatarBindKey": "",
+          "StoryText": "唉...关于雷鸣海我就知道这么多了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 679,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "多谢告知。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 680,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 681,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 682,
+          "CmdType": "CmdAddSeaTanSuoDu"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

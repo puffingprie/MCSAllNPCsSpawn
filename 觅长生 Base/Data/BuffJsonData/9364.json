@@ -1,0 +1,21 @@
+{
+	"buffid":9364,
+	"BuffIcon":0,
+	"skillEffect":"fx_Summoner_o",
+	"name":"雷灵体",
+	"Affix":[],
+	"bufftype":6,
+	"seid":[
+		214,
+		138
+	],
+	"descr":"单次受到超过自身血量上限30%的伤害时，立即催动对手体内所有【雷灵劲】",
+	"trigger":7,
+	"removeTrigger":7,
+	"script":"Buff",
+	"looptime":1,
+	"totaltime":1,
+	"BuffType":0,
+	"isHide":0,
+	"ShowOnlyOne":0
+}

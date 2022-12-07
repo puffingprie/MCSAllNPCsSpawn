@@ -1,0 +1,110 @@
+{
+  "Name": "Talk1323",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-2602.846,-1090.221)",
+      "Commands": [
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.If",
+          "Condition": "juyunqi == TempValue"
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.GetOrderState"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "CmdRefreshNPCUI"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2603.035,-1175.43)",
+      "Commands": [
+        {
+          "ItemID": 142,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 141,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

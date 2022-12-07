@@ -1,0 +1,168 @@
+{
+  "Name": "Talk8318",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2434.278,-1224.476)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 304,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2796.448,-946.7169)",
+      "Commands": [
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "CmdRefreshNPCUI"
+        }
+      ]
+    },
+    {
+      "ItemID": 243,
+      "Name": "剧情",
+      "Description": "剧情",
+      "Position": "(-2435.391,-1038.13)",
+      "Commands": [
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "前面有两个巡逻弟子，看装束好像是古月寨弟子。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "最近来了好多外人啊。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "嗯，据说是从衡州逃难来的，叫什么玄古门。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "咱们寨主向来不问世事一心求道，这一次怎么收留了这么多人？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "听说，他们门主和咱们寨主是师兄弟。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "嗯？咱们寨主是这么重情义的人？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC2",
+          "StoryText": "你小点声。我听我师父说，寨主境界多年难以寸进，而这玄古门有一套独门的炼丹秘法对那蜕凡化神有不少增益。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "原来如此。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "赋值",
+      "Description": "赋值",
+      "Position": "(-2437.115,-1129.027)",
+      "Commands": [
+        {
+          "ItemID": 241,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 242,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 244,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "243(剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

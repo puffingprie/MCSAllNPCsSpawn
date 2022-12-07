@@ -1,0 +1,314 @@
+{
+  "Name": "Talk19806",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2434.278,-1224.476)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 430,
+      "Name": "答应 (Copy)",
+      "Description": "答应 (Copy)",
+      "Position": "(-2510.868,-955.4107)",
+      "Commands": [
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 480,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "{LastName}又是我在这里等你帮我，呵呵，安心最后一次麻烦你了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 304,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2967.036,-1186.717)",
+      "Commands": [
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "CmdRefreshNPCUI"
+        }
+      ]
+    },
+    {
+      "ItemID": 431,
+      "Name": "拒绝 (Copy)",
+      "Description": "拒绝 (Copy)",
+      "Position": "(-2360.867,-959.0691)",
+      "Commands": [
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "唉...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "阵法运转，空间一阵波动此人和阵中的精血都不见了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 456,
+      "Name": "剧情",
+      "Description": "剧情",
+      "Position": "(-2428.917,-1045.167)",
+      "Commands": [
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "眼前是一团暗金色的血液浮于半空之中，显然刚刚那滴血液就是汇入了此处。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "盯眼看去台上坐着一个玄古门修士，正在此地维持着阵法的运转，但要看去正是你寻找的友人。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "咳咳，{LastName}你终于来了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "有很多问题吧？我们长话短说。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你们玄古门的人呢？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "他们都在玄古殿。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你在做什么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "精炼麒麟血啊，从豹麟兽精血中获得麒麟血，但那护法在此法上推陈出新进一步精炼可让品阶再上一层。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "现在这时候还关心麒麟血？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "不做不行啊，我深种魔神蛊，现在已经受他所制，不得不继续啊。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "他承诺我帮他搞定这精血他就放了我师傅。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "魔神蛊？？！！你被古神教暗算了？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "咳，误信了小人啊。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "我们都曾以为那位大护法是我玄古门中兴之人，但是看错了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "之前和师傅醉心于炼妖散的研究，希望帮助师傅获得那蜕凡化神的一线生机，也中了此人暗算。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我怎么帮你？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "杀了他...救出我的师傅和我玄古门是的师兄弟们。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "你若是答应，我我全部身家双手奉上，并用麒麟血为你铭刻灵纹。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 476,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "你若是不允，我就只能希望他得偿所愿之后能信守诺言了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.Menu",
+          "Text": "答应",
+          "TargetBlockID": "this:430(答应 (Copy))"
+        },
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.Menu",
+          "Text": "拒绝",
+          "TargetBlockID": "this:431(拒绝 (Copy))"
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "赋值",
+      "Description": "赋值",
+      "Position": "(-2430.057,-1138.482)",
+      "Commands": [
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 244,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "456(剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

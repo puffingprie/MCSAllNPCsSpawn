@@ -1,0 +1,36 @@
+{
+	"id":3937,
+	"ItemIcon":3901,
+	"maxNum":1,
+	"name":"斗",
+	"FaBaoType":"",
+	"Affix":[],
+	"TuJianType":0,
+	"ShopType":99,
+	"ItemFlag":[
+		413
+	],
+	"WuWeiType":0,
+	"ShuXingType":0,
+	"type":3,
+	"quality":3,
+	"typePinJie":1,
+	"StuTime":480,
+	"seid":[],
+	"vagueType":1,
+	"price":200000,
+	"desc":"1157.0",
+	"desc2":"特殊仙术，能够以内伤为代价用更强的力量攻击劫云。",
+	"CanSale":0,
+	"DanDu":0,
+	"CanUse":0,
+	"NPCCanUse":0,
+	"yaoZhi1":0,
+	"yaoZhi2":0,
+	"yaoZhi3":0,
+	"ShuaXin":0,
+	"wuDao":[
+		9,
+		3
+	]
+}

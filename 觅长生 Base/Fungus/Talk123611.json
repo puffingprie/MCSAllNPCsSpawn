@@ -1,0 +1,1797 @@
+{
+  "Name": "Talk123611",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2438.623,-1348.409)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 641,
+      "Name": "收获3",
+      "Description": "收获3",
+      "Position": "(-2076.221,-1184.506)",
+      "Commands": [
+        {
+          "ItemID": 672,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "你这次收获不小吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 671,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "哈哈哈，是“我们”收获不小。你看，",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 686,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "说罢，他伸出左手繁复的灵纹附于其上，只见其灵力流转之后一层甲壳覆盖在手上，他右手拿出一柄法宝级的剑，向手甲斩去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 687,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "“噌”的一声，只见他左手未伤分毫。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 673,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "徒手接白刃，有时候真的很羡慕这些身怀金钥匙出身的种族啊。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 674,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "{LastName}，等你准备好我就也为你铭刻灵纹，哈哈哈。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 689,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "“咔嚓，咔嚓”",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 690,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "轩岚诺左手骨甲脱落，掌心是的灵纹也随之溃散，这情景就好似你们初识之时。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 691,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "这个....还是不行么，鲲族说到底也只不过是鲲鹏后裔，虽说实力强劲但是血脉的精纯程度属实一般。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 692,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "再加之也不知为何那只鲲的血脉之中灵力甚是驳杂，确实是有问题。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 693,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "唉...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 694,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "不要沮丧，此事本就是夺天地之造化，侵日月之玄机。自古以来觊觎这份力量的能人异士不知多少。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 695,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "嗯，我并没有放弃，只是此事目前确实陷入了瓶颈我要整理一下思路。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 696,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "看来这次是不能铭刻灵纹了，这些是我最近自己收集到的天材地宝你先收好，你为这东西以身犯险总不好叫你空手而归。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 675,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 676,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 677,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 678,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 737,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 738,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 739,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 740,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        }
+      ]
+    },
+    {
+      "ItemID": 502,
+      "Name": "认同",
+      "Description": "认同",
+      "Position": "(-2039.895,-1032.971)",
+      "Commands": [
+        {
+          "ItemID": 508,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "确实，我辈修仙之人本就是逆天而行，讲究夺万物之灵以强己身。本门行事与猎杀妖兽有何区别？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 511,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "只是....",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 512,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "道友想说，以血肉炼丹总让人想到天魔道之流？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 513,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "嗯，天魔道将修士凡人视为“肉参”，手段令人发指。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 514,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "道友多虑了，这一项乃是本门大忌，一经发现必为宗门追杀，我玄古门是不屑于做这种事的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 515,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "聊了这么久，在下玄古门轩岚诺，还未请教道友高姓大名？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 516,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{LastName}。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 517,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "原来是{FirstName}道友久仰久仰，我玄古门会定期在此地售卖丹药。你若是有需要可以来看看。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 524,
+          "CmdType": "Fungus.Menu",
+          "Text": "我自己看看就好",
+          "TargetBlockID": "this:461(交易)"
+        },
+        {
+          "ItemID": 525,
+          "CmdType": "Fungus.Menu",
+          "Text": "算了",
+          "TargetBlockID": "this:521(无事发生)"
+        }
+      ]
+    },
+    {
+      "ItemID": 456,
+      "Name": "离火门剧情",
+      "Description": "离火门剧情",
+      "Position": "(-2430.137,-1041.508)",
+      "Commands": [
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "道友，也是来购买丹药的么？我玄古门的丹药在衡州可是鼎鼎有名的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "458(问题)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 304,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-3092.646,-1205.01)",
+      "Commands": [
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "CmdRefreshNPCUI"
+        }
+      ]
+    },
+    {
+      "ItemID": 551,
+      "Name": "上交心脏1",
+      "Description": "上交心脏1",
+      "Position": "(-2078.694,-1405.743)",
+      "Commands": [
+        {
+          "ItemID": 556,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 557,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 561,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "我已经找到了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 562,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "不愧是{FirstName}道友，这等材料也能快速找到。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 741,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 563,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "按照现在的进度我需要10年时间，我将成品分你一份。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 564,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "好",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 571,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 565,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 566,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 567,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 579,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 570,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 569,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 572,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 558,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 560,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "（我还没有找到。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 559,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 503,
+      "Name": "不认同",
+      "Description": "不认同",
+      "Position": "(-1880.139,-1125.654)",
+      "Commands": [
+        {
+          "ItemID": 509,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 507,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "哼...\n",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 595,
+      "Name": "收获2",
+      "Description": "收获2",
+      "Position": "(-2072.979,-1271.457)",
+      "Commands": [
+        {
+          "ItemID": 625,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "多亏道友拿到火蟾的心脏，现在这炼妖散已经制成了；只是灵纹的存续依旧没有解决，这些普通妖族血脉中缺乏一种灵性，让灵纹难以存续。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 635,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "灵性？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 626,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "嗯，灵纹除了模拟妖兽本命天赋的灵气运转之外，也在潜移默化的让手术者吸收精血的灵性，一般的妖兽血脉中的灵性很是稀薄，故而不能持久。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 636,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "不论如何，{FirstName}道友这次帮了大忙，这炼妖散和血菩提你先收好。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 627,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 637,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 628,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 629,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 630,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "这次看来进展不小，还有什么我可以帮忙的么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 631,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "按照之前的理论，感觉还是需要无尽之海的鲲族帮帮啊。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 638,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "是要五品元婴期的鲲族心脏么。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 632,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "嗯，不过无尽之海凶险异常你切莫勉强自己，我这边自己也在想想办法。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 639,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 633,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 634,
+          "CmdType": "Fungus.AddTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 573,
+      "Name": "收获1",
+      "Description": "收获1",
+      "Position": "(-2072.98,-1365.743)",
+      "Commands": [
+        {
+          "ItemID": 584,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "多谢道友拿到的心脏，但金丹期的妖力根本不足以铭刻新版的灵纹，也不足以炼制炼妖散了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 585,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "真的很抱歉，这几枚血菩提就当是道友此行的报酬吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 587,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 578,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 586,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 590,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "还挺可惜的，有什么我可以帮忙的么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 589,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "经过这次实验，我现在对火系元婴大妖的体质很感兴趣。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 591,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "道友帮我寻找一下，五品火蟾的心脏吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 592,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 593,
+          "CmdType": "Fungus.AddTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 478,
+      "Name": "散修线",
+      "Description": "散修线",
+      "Position": "(-2044.769,-1125.653)",
+      "Commands": [
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "道友，也是来购买丹药的么？我玄古门的丹药在衡州可是鼎鼎有名的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 493,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "衡州？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 494,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "若不是那古神教咄咄逼人，我玄古门在衡州也算是一方霸主。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 495,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "不过现在仅仅是丧家之犬罢了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 496,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "你这丹药似乎不是以常规手法炼制吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "对面惊讶的一挑眉头。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "看来阁下也精于炼丹之道。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 499,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "确实，本门的炼丹手法不拘泥于草木灵物，故而和传统的丹药不太一样。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "这一股腥甜之气，感觉是...精血？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "嗯，是妖兽精血。怎么道友也如同那些迂腐之辈认为此乃邪道？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.Menu",
+          "Text": "炼丹手法哪有正邪之分？",
+          "TargetBlockID": "this:502(认同)"
+        },
+        {
+          "ItemID": 505,
+          "CmdType": "Fungus.Menu",
+          "Text": "此法确实有些惊世骇俗。",
+          "TargetBlockID": "this:503(不认同)"
+        }
+      ]
+    },
+    {
+      "ItemID": 640,
+      "Name": "上交心脏3",
+      "Description": "上交心脏3",
+      "Position": "(-2068.695,-1224.314)",
+      "Commands": [
+        {
+          "ItemID": 646,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 647,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 648,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "我已经找到了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 649,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "不愧是{LastName}，这宝贝我可得好好研究研究。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 743,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 662,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "按照现在的进度我需要10年时间。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 650,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "好",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 651,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 652,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 653,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 654,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 655,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 656,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 657,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 658,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 659,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 660,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "（我还没有找到。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 661,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 489,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-2234.042,-1324.231)",
+      "Commands": [
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.Menu",
+          "Text": "购买丹药",
+          "TargetBlockID": "this:461(交易)"
+        },
+        {
+          "ItemID": 528,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 529,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 546,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 547,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 548,
+          "CmdType": "Fungus.Menu",
+          "Text": "询问",
+          "TargetBlockID": "this:527(询问进度)"
+        },
+        {
+          "ItemID": 549,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 530,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 552,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 553,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 554,
+          "CmdType": "Fungus.Menu",
+          "Text": "找到了",
+          "TargetBlockID": "this:551(上交心脏1)"
+        },
+        {
+          "ItemID": 555,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 574,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 575,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 581,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 580,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 582,
+          "CmdType": "Fungus.If",
+          "Condition": "year >= TempValue"
+        },
+        {
+          "ItemID": 576,
+          "CmdType": "Fungus.Menu",
+          "Text": "询问进度",
+          "TargetBlockID": "this:573(收获1)"
+        },
+        {
+          "ItemID": 583,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 577,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 596,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 597,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 598,
+          "CmdType": "Fungus.Menu",
+          "Text": "找到了",
+          "TargetBlockID": "this:594(上交心脏2)"
+        },
+        {
+          "ItemID": 599,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 617,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 618,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 619,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 620,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 621,
+          "CmdType": "Fungus.If",
+          "Condition": "year >= TempValue"
+        },
+        {
+          "ItemID": 622,
+          "CmdType": "Fungus.Menu",
+          "Text": "询问进度",
+          "TargetBlockID": "this:595(收获2)"
+        },
+        {
+          "ItemID": 623,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 624,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 642,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 643,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 644,
+          "CmdType": "Fungus.Menu",
+          "Text": "找到了",
+          "TargetBlockID": "this:640(上交心脏3)"
+        },
+        {
+          "ItemID": 645,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 663,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 664,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 665,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 666,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 667,
+          "CmdType": "Fungus.If",
+          "Condition": "year >= TempValue"
+        },
+        {
+          "ItemID": 668,
+          "CmdType": "Fungus.Menu",
+          "Text": "询问进度",
+          "TargetBlockID": "this:641(收获3)"
+        },
+        {
+          "ItemID": 669,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 670,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 698,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 699,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 730,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 731,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 732,
+          "CmdType": "Fungus.Menu",
+          "Text": "询问进度",
+          "TargetBlockID": "this:697(最终任务)"
+        },
+        {
+          "ItemID": 733,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 705,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 522,
+          "CmdType": "Fungus.Menu",
+          "Text": "算了",
+          "TargetBlockID": "this:521(无事发生)"
+        }
+      ]
+    },
+    {
+      "ItemID": 527,
+      "Name": "询问进度",
+      "Description": "询问进度",
+      "Position": "(-2079.34,-1454.194)",
+      "Commands": [
+        {
+          "ItemID": 531,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 532,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "道友是想问那日与人相斗时的灵纹么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 533,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "我本意是将其永久的铭刻在肉体上，就如同妖兽的本命神通一般，不过现在还很不完善。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 534,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "还需要很多妖兽的精血做实验。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 535,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "我看你刚刚的售卖清单是没有炼妖散的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 537,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "嗯，是的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 538,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "炼妖散毕竟是本门机密，就算是我改良的也不好公开交易。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 539,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "再加之炼妖散需要妖兽的精血，我自己也不是一时之间也收集不到那么多。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 540,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "原来如此，那是我唐突了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 541,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "哪里的话，{FirstName}道友想要自然可以，只是我现在手头没有材料。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 542,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "那有什么我可以帮忙的么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 543,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "我现在对海上妖兽很是感兴趣，但是在宁州确实很难收集到材料",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 544,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "道友若是有四品的金丹期鲲族的心脏就请帮我带来吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 550,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 545,
+          "CmdType": "Fungus.AddTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 459,
+      "Name": "1",
+      "Description": "1",
+      "Position": "(-2619.16,-869.5566)",
+      "Commands": [
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "若不是那古神教咄咄逼人，我玄古门在衡州也算是一方霸主。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "不过现在仅仅是丧家之犬罢了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "458(问题)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 521,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2241.116,-957.3613)",
+      "Commands": []
+    },
+    {
+      "ItemID": 475,
+      "Name": "宗门判定",
+      "Description": "宗门判定",
+      "Position": "(-2432.575,-1124.434)",
+      "Commands": [
+        {
+          "ItemID": 476,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "456(离火门剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 477,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "483(初识轩岚诺-初次判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 483,
+      "Name": "初识轩岚诺-初次判定",
+      "Description": "初识轩岚诺-初次判定",
+      "Position": "(-2256.969,-1128.302)",
+      "Commands": [
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "478(散修线)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 518,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 519,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "489(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "489(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 461,
+      "Name": "交易",
+      "Description": "交易",
+      "Position": "(-2239.893,-867.1173)",
+      "Commands": [
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.OpenJiaoYi"
+        }
+      ]
+    },
+    {
+      "ItemID": 460,
+      "Name": "炼丹手法",
+      "Description": "炼丹手法",
+      "Position": "(-2424.039,-864.6784)",
+      "Commands": [
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "你这丹药似乎不是以常规手法炼制吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "对面惊讶的一挑眉头。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "看来阁下也精于炼丹之道。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "确实，本门的炼丹手法不拘泥于草木灵物，故而和传统的丹药不太一样。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "458(问题)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 458,
+      "Name": "问题",
+      "Description": "问题",
+      "Position": "(-2428.917,-958.5806)",
+      "Commands": [
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.Menu",
+          "Text": "衡州？",
+          "TargetBlockID": "this:459(1)"
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.Menu",
+          "Text": "炼丹手法",
+          "TargetBlockID": "this:460(炼丹手法)"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.Menu",
+          "Text": "我自己看看就好",
+          "TargetBlockID": "this:461(交易)"
+        },
+        {
+          "ItemID": 523,
+          "CmdType": "Fungus.Menu",
+          "Text": "算了",
+          "TargetBlockID": "this:521(无事发生)"
+        }
+      ]
+    },
+    {
+      "ItemID": 697,
+      "Name": "最终任务",
+      "Description": "最终任务",
+      "Position": "(-2241.26,-1491.457)",
+      "Commands": [
+        {
+          "ItemID": 706,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 707,
+          "CmdType": "Fungus.If",
+          "Condition": "year >= 510"
+        },
+        {
+          "ItemID": 711,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "道友，可知炎麟大圣？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 714,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "未等你回答他就自问自答。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 715,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "离火门老祖，化神期妖圣，纯血麒麟；让人很是嫉妒呢。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 716,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "怎么突然提及？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 717,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "还记得我之前说，我之前铭刻灵纹使用的是豹麟兽的精血么，这豹麟兽乃是蕴含麒麟血脉的异兽。使用它的血就有如此效果，若是真的麒麟血功效更是天壤之别。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 718,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "额，你不会是要以我二人之力图谋化神妖圣吧？！！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 719,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "轩岚诺摆摆手，一脸无奈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 720,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "你当我吃药吃傻了么？我又不是嫌自己活得太久。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 721,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "只是最近本门大护法研究出一套法门，我们已经可以从豹麟兽的精血中提炼麒麟血了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 722,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "竟有这等神乎其技的秘法，你们玄古门中兴有望啊。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 723,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "哈哈，哪里哪里。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 724,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "你看得出来他很兴奋。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 725,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "而且这精炼麒麟血由我主持，到时候作为奖励我可以分润到一份麟血，正好够你我的用量。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 726,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "用量？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 727,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "在上次之后，灵纹铭刻之法已经趋于完善。这一次得了麒麟血，正好可以报答{LastName}你的救命之恩以及之前的帮助。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 728,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "不过精炼麒麟血可是一件水磨工夫，我此次闭关至少10年。到时候，你来巫山古月寨找我。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 729,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 735,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 734,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 736,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 710,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 712,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "我现在还要理理思路，还用不到{LastName}你帮忙。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 713,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 709,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "赋值",
+      "Description": "赋值",
+      "Position": "(-2440.842,-1231.775)",
+      "Commands": [
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 688,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 480,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "475(宗门判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 594,
+      "Name": "上交心脏2",
+      "Description": "上交心脏2",
+      "Position": "(-2074.408,-1322.886)",
+      "Commands": [
+        {
+          "ItemID": 600,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 601,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 602,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "我已经找到了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 603,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCxuan",
+          "StoryText": "不愧是{FirstName}道友，按照现在的进度我需要10年时间，我将成品分你一份。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 742,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 605,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "好",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 606,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 607,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 608,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 609,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 610,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 611,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 612,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 613,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 614,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 615,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC1",
+          "StoryText": "（我还没有找到。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 616,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,538 @@
+{
+  "Name": "Talk8322",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2434.278,-1224.476)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 265,
+      "Name": "判断对话",
+      "Description": "判断对话",
+      "Position": "(-2445.677,-1025.54)",
+      "Commands": [
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "391(胜)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 3.0)"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "392(败)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        }
+      ]
+    },
+    {
+      "ItemID": 304,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2967.036,-1186.717)",
+      "Commands": [
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "CmdRefreshNPCUI"
+        }
+      ]
+    },
+    {
+      "ItemID": 243,
+      "Name": "离开剧情",
+      "Description": "离开剧情",
+      "Position": "(-2444.802,-833.4243)",
+      "Commands": [
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "远处两道强悍的气息飞速接近。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCyanhe",
+          "StoryText": "阿焰，我们来啦！！！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "我就先行回去疗伤了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "钟师兄，路上小心。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCyanhe",
+          "StoryText": "{FirstName}长老，此番凶险多亏你了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCtianchanzi",
+          "StoryText": "多谢。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "我此行匆忙身无长物，这几枚血菩提还请{shidi}收下。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "言毕，三人化作一到遁光直奔离火门方向。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "平时看不出来，这傻鸟带着天蟾子竟然也有如此遁速必是精于遁术的妖修，而天蟾子刚刚迸发出恐怖的妖气已是远超一般元婴妖兽。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "钟道友，路上小心。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "道友，此番凶险多亏你了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一株草药向你飞来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCtianchanzi",
+          "StoryText": "多谢。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "我此行匆忙身无长物，这几枚血菩提还请{shidi}收下。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "言毕，三人化作一到遁光直奔离火门方向。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "这只鹤虽是元婴初期但看近的速度必是精于遁术的妖修，而那只蛤蟆刚刚迸发出恐怖的妖气已是远超一般元婴妖兽。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "离火门也是卧虎藏龙啊。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 391,
+      "Name": "胜",
+      "Description": "胜",
+      "Position": "(-2657.625,-1030.246)",
+      "Commands": [
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "多谢，{shidi}出手相救。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "钟师兄怎么会被古神教的宵小困于此地。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "我之前得知此地有人搜捕豹麟兽，但是抵达此地时却是中伏了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "说来也是我大意，险些着了他们的道。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "不必了，此阵一破我就通知傻鸟他们前来接我了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "多谢，道友出手相救。在下离火门绝焰堂大长老钟焰，敢问阁下姓名？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "{FirstName}{LastName}。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "原来是{FirstName}道友，我虽久居麟庙却也对你早有耳闻了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "客气了，道友为何会被这古神教的妖人在此伏击？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "我之前有事来此处理，但是抵达此地时却是中伏了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "（看来这离火门内部也是....）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "道友身受重伤可是需要我送你回去？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "不必了，此阵一破我就通知同门前来接我了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "243(离开剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "赋值",
+      "Description": "赋值",
+      "Position": "(-2430.057,-1137.262)",
+      "Commands": [
+        {
+          "ItemID": 241,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 242,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 244,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "265(判断对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 392,
+      "Name": "败",
+      "Description": "败",
+      "Position": "(-2248.214,-1025.54)",
+      "Commands": [
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC",
+          "StoryText": "哼，三脚猫的本事也想学人做英雄。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "我拖住他，你快走！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCzhongyi",
+          "StoryText": "平时叫你好好练功，一天天就知道倒腾炼器。现在神识被封发挥不出来了吧？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPC",
+          "StoryText": "谁？！！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一个少年出现在他身后，仅仅一击就洞穿了他的胸口。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCzhongyi",
+          "StoryText": "三脚猫的本事也想学人劫道？\n",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCzhongyi",
+          "StoryText": "人我带走了啊，你先和那傻鸟回去吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "243(离开剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

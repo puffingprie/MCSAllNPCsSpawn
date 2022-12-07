@@ -1,0 +1,22 @@
+{
+	"buffid":9370,
+	"BuffIcon":9365,
+	"skillEffect":"fx_Summoner_o",
+	"name":"五行剑诀隐",
+	"Affix":[],
+	"bufftype":6,
+	"seid":[
+		85,
+		162,
+		5
+	],
+	"descr":"释放剑系技能时，若触发五行连击，则获得【剑气】*（attack）【驭剑】*（attack）【振剑】*（attack）；连续触发连击时将使此效果+（attack），若连击中断，则将此加成重置。",
+	"trigger":8,
+	"removeTrigger":7,
+	"script":"Buff",
+	"looptime":1,
+	"totaltime":1,
+	"BuffType":0,
+	"isHide":0,
+	"ShowOnlyOne":0
+}

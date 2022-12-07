@@ -1,0 +1,18 @@
+{
+	"buffid":9356,
+	"BuffIcon":0,
+	"skillEffect":"9356.0",
+	"name":"戮仙剑",
+	"Affix":[],
+	"bufftype":3,
+	"seid":[],
+	"descr":"戮仙剑",
+	"trigger":5,
+	"removeTrigger":7,
+	"script":"Buff",
+	"looptime":1,
+	"totaltime":1,
+	"BuffType":0,
+	"isHide":1,
+	"ShowOnlyOne":0
+}

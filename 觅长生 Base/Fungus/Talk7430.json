@@ -1,0 +1,199 @@
+{
+  "Name": "Talk7430",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 167,
+      "Name": "飞升成功",
+      "Description": "飞升成功",
+      "Position": "(-2426.545,-975.5746)",
+      "Commands": [
+        {
+          "ItemID": 171,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 172,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 173,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{size=31}看到凌老儿能成功飞升，真是替他高兴啊。{/size}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 174,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 175,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{size=31}白帝楼以后就要交给你们这些小崽子来打理了。尤其是那个倪什么欣的，想想就让老夫头大。{/size}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 157,
+      "Name": "飞升前对话",
+      "Description": "飞升前对话",
+      "Position": "(-2275.483,-1121.319)",
+      "Commands": [
+        {
+          "ItemID": 170,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 164,
+      "Name": "飞升失败",
+      "Description": "飞升失败",
+      "Position": "(-2276.547,-1038.341)",
+      "Commands": [
+        {
+          "ItemID": 176,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 178,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "没想到凌老儿渡劫竟有如此多的劫难，实在是……",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 179,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 180,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "现在人已经去了，那白帝楼也只好交给你们这些小崽子来打理了，希望那倪什么欣的不要...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 158,
+      "Name": "飞升后对话",
+      "Description": "飞升后对话",
+      "Position": "(-2429.738,-1042.596)",
+      "Commands": [
+        {
+          "ItemID": 162,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 5"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "164(飞升失败)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 168,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "167(飞升成功)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2432.257,-1122.775)",
+      "Commands": [
+        {
+          "ItemID": 169,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 155,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 156,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 159,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "157(飞升前对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 160,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 161,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "158(飞升后对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

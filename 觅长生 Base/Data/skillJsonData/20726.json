@@ -1,0 +1,37 @@
+{
+	"id":20726,
+	"Skill_ID":2206,
+	"Skill_Lv":1,
+	"skillEffect":"1153.0",
+	"Skill_Type":4,
+	"name":"御灵",
+	"qingjiaotype":7,
+	"seid":[
+		31
+	],
+	"Affix":[],
+	"Affix2":[],
+	"descr":"获得【护罩】*420",
+	"TuJiandescr":"获得【护罩】*210",
+	"AttackType":[
+		20
+	],
+	"script":"SkillSelf",
+	"HP":0,
+	"speed":0,
+	"icon":0,
+	"Skill_DisplayType":0,
+	"skill_SameCastNum":[
+		5
+	],
+	"skill_CastType":[],
+	"skill_Cast":[],
+	"Skill_LV":3,
+	"typePinJie":1,
+	"DF":0,
+	"TuJianType":0,
+	"Skill_Open":0,
+	"Skill_castTime":1,
+	"canUseDistMax":30,
+	"CD":10000
+}

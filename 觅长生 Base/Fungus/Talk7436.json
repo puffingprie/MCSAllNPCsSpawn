@@ -1,0 +1,432 @@
+{
+  "Name": "Talk7436",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 191,
+      "Name": "金虹版",
+      "Description": "金虹版",
+      "Position": "(-2279.338,-1122.636)",
+      "Commands": [
+        {
+          "ItemID": 195,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 13"
+        },
+        {
+          "ItemID": 196,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{FirstName}师祖，今日这是...？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 197,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "白帝即将准备渡劫飞升，特意让我来邀请白鹿师兄届时前往观礼。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 198,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你将请帖从储物袋中取出，随手丢向对方。后者则是恭敬地将之接在手中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 199,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 200,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{FirstName}{shidi}，今日这是...？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 201,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "白帝即将准备渡劫飞升，特意让我来邀请白鹿师祖届时前往观礼。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 202,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你将请帖从储物袋中取出，并通过以灵气御物将其递送过去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 203,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 204,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "金虹剑派掌门正要接过，却被一位身着淡金色衣袍的修士截入手中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 205,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "见过白鹿师祖。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 206,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "此人也不言语，只是点了点头表示回复，而后便开始认真检查请帖的内容。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 207,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "眼看白鹿真人眉头紧皱，金虹掌门也不敢出声打扰，而你更是没甚么开口的必要，只是在等着他看完请帖后发话。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 208,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "金虹剑派的大殿一时间陷入寂静之中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 209,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3059,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "好。我会前往。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 210,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 13"
+        },
+        {
+          "ItemID": 211,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "多谢白鹿师兄，那我这便告辞了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 212,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 213,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "多谢师祖，那我这便告辞了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 214,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 215,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "159(回大地图)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 159,
+      "Name": "回大地图",
+      "Description": "回大地图",
+      "Position": "(-2429.338,-1048.167)",
+      "Commands": [
+        {
+          "ItemID": 184,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 185,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 186,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 187,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 188,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 6"
+        },
+        {
+          "ItemID": 189,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 190,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 160,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2430.016,-1122.775)",
+      "Commands": [
+        {
+          "ItemID": 155,
+          "CmdType": "CmdGetNPCIDByTitle"
+        },
+        {
+          "ItemID": 156,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 192,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 194,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "191(金虹版)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 193,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 157,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 13"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "竟是{FirstName}前辈亲自登门，请问此番有何贵干？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "白帝即将准备渡劫飞升，特意让我来贵派邀请白鹿道友届时前往观礼。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你将请帖从储物袋中取出，随手丢向对方。后者则是恭敬地将之接在手中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 158,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{FirstName}道友，请问此番光临我派有何贵干？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 167,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "白帝即将准备渡劫飞升，特意让我来贵派邀请白鹿前辈届时前往观礼。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 168,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你将请帖从储物袋中取出，并通过以灵气御物将其递送过去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 161,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 169,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "金虹剑派掌门正要接过，却被一位身着淡金色衣袍的修士截入手中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 170,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "见过白鹿师祖。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 173,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "此人也不言语，只是点了点头表示回复，而后便开始认真检查请帖的内容。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 172,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "眼看白鹿真人眉头紧皱，金虹掌门也不敢出声打扰，而你更是没甚么开口的必要，只是在等着他看完请帖后发话。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 171,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "金虹剑派的大殿一时间陷入寂静之中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 174,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3059,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "好。我会前往。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 175,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 13"
+        },
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "多谢白鹿道友，那我这便告辞了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 179,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 181,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "多谢白鹿前辈，那我这便告辞了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 183,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 162,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "159(回大地图)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

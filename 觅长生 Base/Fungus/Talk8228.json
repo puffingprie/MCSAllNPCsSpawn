@@ -1,0 +1,127 @@
+{
+  "Name": "Talk8228",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "241(变量赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 241,
+      "Name": "变量赋值",
+      "Description": "变量赋值",
+      "Position": "(-2431.44,-1113.76)",
+      "Commands": [
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定-初次进入)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 413,
+      "Name": "剧情",
+      "Description": "剧情",
+      "Position": "(-2424.29,-860.697)",
+      "Commands": [
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "眼前是一处火山口，其上漂浮着一枚火红色的晶石。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    },
+    {
+      "ItemID": 416,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2218.811,-985.3541)",
+      "Commands": []
+    },
+    {
+      "ItemID": 154,
+      "Name": "判定-初次进入",
+      "Description": "判定-初次进入",
+      "Position": "(-2436.943,-992.9089)",
+      "Commands": [
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "413(剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "416(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

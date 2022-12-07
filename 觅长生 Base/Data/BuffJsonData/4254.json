@@ -1,0 +1,20 @@
+{
+	"buffid":4254,
+	"BuffIcon":4253,
+	"skillEffect":"fx_Summoner_o",
+	"name":"神皇印",
+	"Affix":[],
+	"bufftype":3,
+	"seid":[
+		223
+	],
+	"descr":"本回合【护罩】抵挡的伤害等量转化为【蓄势】。",
+	"trigger":5,
+	"removeTrigger":6,
+	"script":"Buff",
+	"looptime":1,
+	"totaltime":1,
+	"BuffType":0,
+	"isHide":0,
+	"ShowOnlyOne":1
+}

@@ -1,0 +1,301 @@
+{
+  "Name": "Talk6807",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "312(雷鸣海判定 (Copy))",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 299,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2603.905,-1231.561)",
+      "Commands": [
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.SetEndlessEvent"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 439,
+      "Name": "后退",
+      "Description": "后退",
+      "Position": "(-2458.933,-1110.425)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 441,
+      "Name": "上前1",
+      "Description": "上前1",
+      "Position": "(-2862.343,-995.6519)",
+      "Commands": [
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "非第一次",
+      "Description": "非第一次",
+      "Position": "(-2602.543,-1149.73)",
+      "Commands": [
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.YSSaveGame"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一团雷电在云中若隐若现的闪动，一阵阵先天灵气从它身上散发而出。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.Menu",
+          "Text": "上前",
+          "TargetBlockID": "this:440(上前)"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.Menu",
+          "Text": "后退",
+          "TargetBlockID": "this:439(后退)"
+        }
+      ]
+    },
+    {
+      "ItemID": 293,
+      "Name": "第一次",
+      "Description": "第一次",
+      "Position": "(-2804.389,-1069.515)",
+      "Commands": [
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.YSSaveGame"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一团雷电在云中若隐若现的闪动，一阵阵先天灵气从它身上散发而出。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "这就是诞生自九霄雷狱的雷灵吧，观其灵气波动足以匹配元婴后期强者。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.Menu",
+          "Text": "上前",
+          "TargetBlockID": "this:441(上前1)"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.Menu",
+          "Text": "后退\n",
+          "TargetBlockID": "this:442(后退1)"
+        }
+      ]
+    },
+    {
+      "ItemID": 288,
+      "Name": "判断第一次",
+      "Description": "判断第一次",
+      "Position": "(-2799.843,-1149.06)",
+      "Commands": [
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "293(第一次)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(非第一次)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 440,
+      "Name": "上前",
+      "Description": "上前",
+      "Position": "(-2458.933,-1200.197)",
+      "Commands": [
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 442,
+      "Name": "后退1",
+      "Description": "后退1",
+      "Position": "(-2738.479,-994.5155)",
+      "Commands": []
+    },
+    {
+      "ItemID": 312,
+      "Name": "雷鸣海判定 (Copy)",
+      "Description": "雷鸣海判定 (Copy)",
+      "Position": "(-2814.388,-1224.744)",
+      "Commands": [
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 3"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 8"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "299(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "288(判断第一次)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "288(判断第一次)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

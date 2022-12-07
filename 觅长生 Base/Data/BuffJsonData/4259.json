@@ -1,0 +1,18 @@
+{
+	"buffid":4259,
+	"BuffIcon":0,
+	"skillEffect":"fx_Summoner_o",
+	"name":"淬体",
+	"Affix":[],
+	"bufftype":3,
+	"seid":[],
+	"descr":"回合结束时，淬体进度+（attack）。",
+	"trigger":1,
+	"removeTrigger":7,
+	"script":"Buff",
+	"looptime":1,
+	"totaltime":1,
+	"BuffType":0,
+	"isHide":0,
+	"ShowOnlyOne":1
+}

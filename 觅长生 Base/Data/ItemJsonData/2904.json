@@ -1,0 +1,37 @@
+{
+	"id":2904,
+	"ItemIcon":0,
+	"maxNum":1,
+	"name":"开天印",
+	"FaBaoType":"",
+	"Affix":[],
+	"TuJianType":0,
+	"ShopType":9,
+	"ItemFlag":[
+		12007,
+		3,
+		304
+	],
+	"WuWeiType":0,
+	"ShuXingType":0,
+	"type":2,
+	"quality":4,
+	"typePinJie":3,
+	"StuTime":0,
+	"seid":[
+		1
+	],
+	"vagueType":0,
+	"price":733200,
+	"desc":"回合开始，自身受到30点伤害，获得【剑气】*13",
+	"desc2":"上品纯阳法宝，其上铭刻白虎灵纹。",
+	"CanSale":0,
+	"DanDu":0,
+	"CanUse":0,
+	"NPCCanUse":0,
+	"yaoZhi1":0,
+	"yaoZhi2":0,
+	"yaoZhi3":0,
+	"ShuaXin":0,
+	"wuDao":[]
+}

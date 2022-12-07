@@ -1,0 +1,544 @@
+{
+  "Name": "Talk646",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 244,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2579.919,-1123.538)",
+      "Commands": [
+        {
+          "ItemID": 247,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 261,
+      "Name": "魏无极判定",
+      "Description": "魏无极判定",
+      "Position": "(-2429.184,-989.5099)",
+      "Commands": [
+        {
+          "ItemID": 262,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 263,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 265,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 266,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 3"
+        },
+        {
+          "ItemID": 267,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "哎...转眼便过去这么多年，当时那个连吐纳心法都练不好的{xiaozi}，如今却要准备飞升了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 268,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "若非魏老当年将我领入门，我又哪有今日。放心吧，我很快便会帮您重塑肉身的！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 271,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "当年你师兄渡劫时，我便能察觉到，施展这秘术对他有不小的影响。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 270,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "你和轩儿一样，都走到了这最后的一步。无论如何，我都为你感到骄傲。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 269,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "所以若你没有十足的把握，我是不会轻易施展那秘术的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 272,
+          "CmdType": "Fungus.Menu",
+          "Text": "我有十足的把握",
+          "TargetBlockID": "this:256(我有十足的把握)"
+        },
+        {
+          "ItemID": 273,
+          "CmdType": "Fungus.Menu",
+          "Text": "让我再想想",
+          "TargetBlockID": "this:257(让我再想想)"
+        },
+        {
+          "ItemID": 264,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 278,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "哎...转眼便过去这么多年，当时那个连吐纳心法都练不好的{xiaozi}，如今却要准备飞升了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "若非魏老当年将我领入门，我又哪有今日。放心吧，我很快便会帮您重塑肉身的！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "多少化神大能都倒在了飞升这一步，你可不要掉以轻心了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "若你没有十足的把握，我是不会轻易施展那秘术的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Menu",
+          "Text": "我有十足的把握",
+          "TargetBlockID": "this:256(我有十足的把握)"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Menu",
+          "Text": "让我再想想",
+          "TargetBlockID": "this:257(让我再想想)"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "哎...转眼便过去这么多年，当时那个连吐纳心法都练不好的{xiaozi}，如今却要准备飞升了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "若非魏老当年将我领入门，我又哪有今日。可惜...我还没能找到帮您重塑肉身的方法。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "这么多年，我早就已经放弃这个念想了...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "这世上有几人能和你一样走到这一步？作为你的师傅，无论如何，我都为你感到骄傲。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 245,
+      "Name": "魏无极",
+      "Description": "魏无极",
+      "Position": "(-2429.181,-1051.048)",
+      "Commands": [
+        {
+          "ItemID": 249,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 250,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 251,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 260,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "261(魏无极判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "290(没有秘术)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 252,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 253,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "若你没有十足的把握，我是不会轻易施展那秘术的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 254,
+          "CmdType": "Fungus.Menu",
+          "Text": "我有十足的把握",
+          "TargetBlockID": "this:256(我有十足的把握)"
+        },
+        {
+          "ItemID": 255,
+          "CmdType": "Fungus.Menu",
+          "Text": "让我再斟酌一下",
+          "TargetBlockID": "this:257(让我再想想)"
+        }
+      ]
+    },
+    {
+      "ItemID": 246,
+      "Name": "准备渡劫",
+      "Description": "准备渡劫",
+      "Position": "(-2270.872,-1121.453)",
+      "Commands": [
+        {
+          "ItemID": 248,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你盘腿坐下，闭目垂帘，调息静心，那熟悉的动作，熟悉的身影，\r\n与初入仙途时别无二致，但你知道，沧海桑田，早已是天壤之别。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你运功调息，最后一次缜密回顾着已感悟的渡劫秘术，准备渡劫......",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "CmdOpenTianJie"
+        }
+      ]
+    },
+    {
+      "ItemID": 290,
+      "Name": "没有秘术",
+      "Description": "没有秘术",
+      "Position": "(-2576.434,-1050.861)",
+      "Commands": [
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "此生...有你这样的徒弟，无论如何，我都为你感到骄傲。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "唠叨了这么多年的魏老，此刻却沉默了。他望向你的眼神复杂万分。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "{xiaozi}，接下来的困难，你只能独自面对了。渡劫凶险异常，你一定要保护好自己，要慎之又慎！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 256,
+      "Name": "我有十足的把握",
+      "Description": "我有十足的把握",
+      "Position": "(-2268.741,-1049.949)",
+      "Commands": [
+        {
+          "ItemID": 258,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 274,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "放心吧魏老，我想我对自己有十足的信心。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 275,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "哎...我明白你的心意...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "唠叨了这么多年的魏老，此刻却沉默了。他望向你的眼神复杂万分。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "此生...有你这样的徒弟，无论如何，我都为你感到骄傲......",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 276,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "如果渡劫时遇到任何意外，我都会主动停下秘术，到时你可切勿因此分心。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "是，徒儿明白。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 257,
+      "Name": "让我再想想",
+      "Description": "让我再想想",
+      "Position": "(-2266.545,-990.6091)",
+      "Commands": [
+        {
+          "ItemID": 259,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "魏老，我还得再斟酌一下。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "{xiaozi}，千万别勉强自己，渡劫绝非儿戏，少几分灵气，也许就是身死道消。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "此生有你这样的徒弟，无论如何，我都为你感到骄傲。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2430.094,-1121.676)",
+      "Commands": [
+        {
+          "ItemID": 300,
+          "CmdType": "CmdGetNPCLeftListCount"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue > 0"
+        },
+        {
+          "ItemID": 241,
+          "CmdType": "Fungus.Menu",
+          "Text": "和其他人聊聊",
+          "TargetBlockID": "this:244(无事发生)"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 243,
+          "CmdType": "Fungus.Menu",
+          "Text": "和魏无极聊聊",
+          "TargetBlockID": "this:245(魏无极)"
+        },
+        {
+          "ItemID": 242,
+          "CmdType": "Fungus.Menu",
+          "Text": "静心准备渡劫",
+          "TargetBlockID": "this:246(准备渡劫)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

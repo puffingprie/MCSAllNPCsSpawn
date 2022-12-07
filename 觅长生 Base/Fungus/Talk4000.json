@@ -1,0 +1,52 @@
+{
+  "Name": "Talk4000",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2429.28,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2430.094,-1121.676)",
+      "Commands": [
+        {
+          "ItemID": 241,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "回合结束时若角色灵气数量大于上限，则需要丢弃灵气。\n{color=#d0380a}左键单击{/color}某属性灵气可选择消散一单位灵气。\n{color=#d0380a}右键单击{/color}某属性灵气可批量消散该属性灵气。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 242,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

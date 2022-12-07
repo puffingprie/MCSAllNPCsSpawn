@@ -1,0 +1,21 @@
+{
+	"buffid":4251,
+	"BuffIcon":0,
+	"skillEffect":"fx_Summoner_o",
+	"name":"释放打2",
+	"Affix":[],
+	"bufftype":3,
+	"seid":[
+		24,
+		129
+	],
+	"descr":"释放打2",
+	"trigger":12,
+	"removeTrigger":2,
+	"script":"Buff",
+	"looptime":1,
+	"totaltime":1,
+	"BuffType":1,
+	"isHide":1,
+	"ShowOnlyOne":0
+}

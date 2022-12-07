@@ -1,0 +1,1052 @@
+{
+  "Name": "Talk7504",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2430.308,-1301.98)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 353,
+      "Name": "最终线",
+      "Description": "最终线",
+      "Position": "(-2276.677,-1157.175)",
+      "Commands": [
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{$daihao}...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "玄女叫住了你，不知为何，你觉得今日的她似乎与平时有些不一样...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "大长老...有特殊的悬赏任务要交予你，他在密室等你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 290,
+      "Name": "首次完成天剧情",
+      "Description": "首次完成天剧情",
+      "Position": "(-2108.738,-938.6001)",
+      "Commands": [
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哦？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "她抬头看了你一眼，似乎有些惊讶。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3065,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "有些实力，能完成这个悬赏，你很不错...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "背后传来一名男子的声音，你转头望去，正是上次那个被称作大长老的男人。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.Menu",
+          "Text": "拿钱办事罢了",
+          "TargetBlockID": "this:303(拿钱办事罢了)"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Menu",
+          "Text": "多谢大长老夸奖",
+          "TargetBlockID": "this:304(多谢大长老夸奖)"
+        }
+      ]
+    },
+    {
+      "ItemID": 567,
+      "Name": "放弃",
+      "Description": "放弃",
+      "Position": "(-2268.752,-937.6044)",
+      "Commands": [
+        {
+          "ItemID": 568,
+          "CmdType": "Fungus.GiveUpRewardOrder"
+        },
+        {
+          "ItemID": 569,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 570,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "好。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "首次完成天阶判定",
+      "Description": "首次完成天阶判定",
+      "Position": "(-2111.738,-1004.6)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "290(首次完成天剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "277(交付任务)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "277(交付任务)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 265,
+      "Name": "悬赏已完成（领赏）",
+      "Description": "悬赏已完成（领赏）",
+      "Position": "(-2277.057,-1002.608)",
+      "Commands": [
+        {
+          "ItemID": 275,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 276,
+          "CmdType": "Fungus.Menu",
+          "Text": "出示风雨楼令牌",
+          "TargetBlockID": "this:284(首次完成天阶判定)"
+        }
+      ]
+    },
+    {
+      "ItemID": 242,
+      "Name": "杨雄琦任务交付",
+      "Description": "杨雄琦任务交付",
+      "Position": "(-2278.989,-1224.593)",
+      "Commands": [
+        {
+          "ItemID": 246,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 250,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 251,
+          "CmdType": "Fungus.Menu",
+          "Text": "出示风雨楼令牌",
+          "TargetBlockID": "this:252(杨雄琦任务交付1)"
+        }
+      ]
+    },
+    {
+      "ItemID": 303,
+      "Name": "拿钱办事罢了",
+      "Description": "拿钱办事罢了",
+      "Position": "(-2173.738,-873.6001)",
+      "Commands": [
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "309(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 248,
+      "Name": "常规交互",
+      "Description": "常规交互",
+      "Position": "(-2429.302,-1079.619)",
+      "Commands": [
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.GetOrderState"
+        },
+        {
+          "ItemID": 262,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 266,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "263(悬赏未接取)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 267,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 268,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "264(悬赏未完成)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 269,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 270,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "265(悬赏已完成（领赏）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 263,
+      "Name": "悬赏未接取",
+      "Description": "悬赏未接取",
+      "Position": "(-2578.091,-1006.137)",
+      "Commands": [
+        {
+          "ItemID": 271,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 272,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "要领悬赏的话，自己看吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.OpenKillPanel"
+        }
+      ]
+    },
+    {
+      "ItemID": 332,
+      "Name": "大长老找我何事？",
+      "Description": "大长老找我何事？",
+      "Position": "(-1791.494,-1041.364)",
+      "Commands": [
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这与我无关。话已带到，你若不愿去，也随你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Menu",
+          "Text": "带路吧",
+          "TargetBlockID": "this:333(跳转琚运琦密室秘谈)"
+        }
+      ]
+    },
+    {
+      "ItemID": 309,
+      "Name": "后续",
+      "Description": "后续",
+      "Position": "(-2100.174,-818.5327)",
+      "Commands": [
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3065,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "玄女，他叫什么名字？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3065,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{$daihao}。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3065,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{$daihao}...很好，我记住这个名字了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "说完，他便转身离去了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3065,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{$daihao}...这些是你的赏金。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.GiverOrderReward"
+        }
+      ]
+    },
+    {
+      "ItemID": 333,
+      "Name": "跳转琚运琦密室秘谈",
+      "Description": "跳转琚运琦密室秘谈",
+      "Position": "(-1796.201,-963.7176)",
+      "Commands": [
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 571,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 304,
+      "Name": "多谢大长老夸奖",
+      "Description": "多谢大长老夸奖",
+      "Position": "(-2039.738,-872.6001)",
+      "Commands": [
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "309(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 555,
+      "Name": "踪迹",
+      "Description": "踪迹",
+      "Position": "(-2425.689,-936.1879)",
+      "Commands": [
+        {
+          "ItemID": 573,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 574,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 562,
+          "CmdType": "CmdGetNPCName"
+        },
+        {
+          "ItemID": 575,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 576,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == juyunqi"
+        },
+        {
+          "ItemID": 578,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "577(琚运琦)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 579,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 558,
+          "CmdType": "Fungus.GetRewardNpcPlace"
+        },
+        {
+          "ItemID": 559,
+          "CmdType": "Fungus.If",
+          "Condition": "place == null"
+        },
+        {
+          "ItemID": 560,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "最近没有发现{$TmpStrValue}的下落...这些事不必特意来问我，直接用传音符联系密探即可。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 563,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 564,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "最近一次发现{$TmpStrValue}的踪迹是在{$place}..这些事不必特意来问我，直接用传音符联系密探即可。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 264,
+      "Name": "悬赏未完成",
+      "Description": "悬赏未完成",
+      "Position": "(-2426.909,-1004.847)",
+      "Commands": [
+        {
+          "ItemID": 273,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 274,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "还有什么问题？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 554,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于目标的踪迹",
+          "TargetBlockID": "this:555(踪迹)"
+        },
+        {
+          "ItemID": 566,
+          "CmdType": "Fungus.Menu",
+          "Text": "我要放弃这个悬赏",
+          "TargetBlockID": "this:567(放弃)"
+        },
+        {
+          "ItemID": 556,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:557(无)"
+        }
+      ]
+    },
+    {
+      "ItemID": 252,
+      "Name": "杨雄琦任务交付1",
+      "Description": "杨雄琦任务交付1",
+      "Position": "(-2117.198,-1223.712)",
+      "Commands": [
+        {
+          "ItemID": 253,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{$daihao}？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 254,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "离火门的这件悬赏应该早就完成了，为何过了那么久才回来？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 256,
+          "CmdType": "Fungus.Menu",
+          "Text": "发生了一些意外",
+          "TargetBlockID": "this:257(发生了一些意外)"
+        },
+        {
+          "ItemID": 255,
+          "CmdType": "Fungus.Menu",
+          "Text": "只是在疗伤",
+          "TargetBlockID": "this:257(发生了一些意外)"
+        }
+      ]
+    },
+    {
+      "ItemID": 577,
+      "Name": "琚运琦",
+      "Description": "琚运琦",
+      "Position": "(-2426.752,-856.6044)",
+      "Commands": [
+        {
+          "ItemID": 580,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "琚运琦作为上一任风雨楼大长老，对我们的情报系统极为熟悉，所以我恐怕很难提供给你有效的信息。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 581,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不过据我猜测，他继续留在宁州的可能性极低，反倒可能已经逃往海外的碎星岛，或是南崖城一带。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 557,
+      "Name": "无",
+      "Description": "无",
+      "Position": "(-2577.235,-939.2808)",
+      "Commands": []
+    },
+    {
+      "ItemID": 257,
+      "Name": "发生了一些意外",
+      "Description": "发生了一些意外",
+      "Position": "(-1967.433,-1224.698)",
+      "Commands": [
+        {
+          "ItemID": 258,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "只是发生了一些意外，现在都已经摆平了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 259,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 260,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "那就好。收下吧，这些是你的赏金。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 551,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 553,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 552,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2429.394,-1223.575)",
+      "Commands": [
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.AddCyFriend"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.GetPlayerDaiHao"
+        },
+        {
+          "ItemID": 241,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 243,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 244,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 245,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "242(杨雄琦任务交付)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 247,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 249,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "345(最终事件判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 345,
+      "Name": "最终事件判定",
+      "Description": "最终事件判定",
+      "Position": "(-2430.116,-1155.298)",
+      "Commands": [
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "353(最终线)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.If",
+          "Condition": "year > 500"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "353(最终线)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 582,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "248(常规交互)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 277,
+      "Name": "交付任务",
+      "Description": "交付任务",
+      "Position": "(-1935.991,-1002.505)",
+      "Commands": [
+        {
+          "ItemID": 278,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{$daihao}...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "收下吧，这些是你的赏金。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.GiverOrderReward"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "CmdGetShiLiChengHaoLevel"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue < 3"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 500"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "CmdSetShiLiChengHaoLevel"
+        },
+        {
+          "ItemID": 572,
+          "CmdType": "Fungus.steamStat"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "另外...凭你在风雨楼内完成的悬赏，已经足以晋升为天字杀手。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 550,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "大长老已经在密室恭候多时了，他应该有些事要与你说。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Menu",
+          "Text": "大长老找我何事？",
+          "TargetBlockID": "this:332(大长老找我何事？)"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Menu",
+          "Text": "带路吧",
+          "TargetBlockID": "this:333(跳转琚运琦密室秘谈)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

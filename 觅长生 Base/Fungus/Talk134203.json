@@ -1,0 +1,251 @@
+{
+  "Name": "Talk134203",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定-初次进入)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 435,
+      "Name": "拒绝",
+      "Description": "拒绝",
+      "Position": "(-2351.688,-837.4091)",
+      "Commands": [
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid1",
+          "StoryText": "此事也是我唐突了，道友不必挂怀。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 241,
+      "Name": "赋值",
+      "Description": "赋值",
+      "Position": "(-2428.701,-1021.98)",
+      "Commands": [
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "413(剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 434,
+      "Name": "答应",
+      "Description": "答应",
+      "Position": "(-2501.002,-834.6694)",
+      "Commands": [
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 413,
+      "Name": "剧情",
+      "Description": "剧情",
+      "Position": "(-2428.4,-934.6691)",
+      "Commands": [
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid1",
+          "StoryText": "道友可还记得，家父突破失败一事？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MenPai",
+          "StoryText": "我记得敖玄道友你曾言令尊当时在疗伤是在闭关疗伤。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid1",
+          "StoryText": "嗯，最近家父已经伤愈出关，正在着手冲击化神之境。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MenPai",
+          "StoryText": "覆海大圣本就是修为精深的龙族大能，再加之九霄前辈的指点。此次突破必然如履平地。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid1",
+          "StoryText": "本次突破不比上次，家父需借助龙珠引动龙脉之力故而会在龙宫突破，届时声势浩大，必会吸引这无尽之海上各方势力的目光。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MenPai",
+          "StoryText": "你是担心会有人趁虚而入？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid1",
+          "StoryText": "哈哈，并非如此。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid1",
+          "StoryText": "浪方老贼已经被你手刃鲲族余孽已是不成气候，虽我龙族隐世不出，但也不是什么宵小之辈都可以觊觎的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid1",
+          "StoryText": "此次仅是想邀请道友前来观礼而已。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid1",
+          "StoryText": "我龙族隐世不出，但也不是什么宵小之辈都可以觊觎的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid1",
+          "StoryText": "不过鲲族余孽在浪方老贼的率领之下觊觎我族已久，他们必不会放过这次机会。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid1",
+          "StoryText": "此次是想请道友为家父护法。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Menu",
+          "Text": "答应",
+          "TargetBlockID": "this:434(答应)"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.Menu",
+          "Text": "拒绝",
+          "TargetBlockID": "this:435(拒绝)"
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "判定-初次进入",
+      "Description": "判定-初次进入",
+      "Position": "(-2431.464,-1118.936)",
+      "Commands": [
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "241(赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

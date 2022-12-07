@@ -1,0 +1,155 @@
+{
+  "Name": "Talk7434",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 167,
+      "Name": "飞升成功",
+      "Description": "飞升成功",
+      "Position": "(-2426.545,-975.5746)",
+      "Commands": [
+        {
+          "ItemID": 173,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 170,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{$TmpTalkString}今天可真是让我刮目相看呢。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 164,
+      "Name": "飞升失败",
+      "Description": "飞升失败",
+      "Position": "(-2276.547,-1038.341)",
+      "Commands": [
+        {
+          "ItemID": 174,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你说这白帝和血薇过去到底发生过什么呢？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 158,
+      "Name": "飞升后对话",
+      "Description": "飞升后对话",
+      "Position": "(-2429.738,-1042.596)",
+      "Commands": [
+        {
+          "ItemID": 162,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 5"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "164(飞升失败)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 168,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "167(飞升成功)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2432.257,-1122.775)",
+      "Commands": [
+        {
+          "ItemID": 169,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 171,
+          "CmdType": "CmdSetJiaoHuNPC"
+        },
+        {
+          "ItemID": 172,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 155,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 156,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 159,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 160,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 161,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "158(飞升后对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}
