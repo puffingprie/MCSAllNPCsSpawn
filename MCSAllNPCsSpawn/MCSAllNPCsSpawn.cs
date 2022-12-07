@@ -28,17 +28,15 @@ namespace MCSAllNPCsSpawn
             MCSAllNPCsSpawn.Inst = this;
             MCSAllNPCsSpawn.enableAllNPCsSpawn = base.Config.Bind<bool>("MCSAllNPCsSpawnConfig", "EnableAllNPCsSpawning", true, "Enable this mod (enable all npcs spawning)");
             MCSAllNPCsSpawn.maxSpawnCount = base.Config.Bind<int>("MCSAllNPCsSpawnConfig", "MaxSpawnCount", 30000, "Controls the max amount of NPCs that spawn - Increase this number at your own risk. Personally I have a potato of a computer and it's always entertaining when I can barely move on the map because there are 80,000 NPCs.");
-            MCSAllNPCsSpawn.npcPowerIncreaseAmount = base.Config.Bind<float>("MCSAllNPCsSpawnConfig", "NPCPowerIncreaseAmount", 1.0, "!!Not Yet Implemented!! - Because of the insane amount of NPCs that get spawned into the game, plugins like UniqueCream's ExtraChoicesForTalents plugin which constantly updates NPC data every tick lags the game out immensely. Thought it might be better if NPCs just got a flat increase in the beginning. Again, potato computer reasons.");
+            MCSAllNPCsSpawn.npcPowerIncreaseAmount = base.Config.Bind<double>("MCSAllNPCsSpawnConfig", "NPCPowerIncreaseAmount", 1.0, "Not Yet Implemented - Because of the insane amount of NPCs that get spawned into the game, plugins like UniqueCream's ExtraChoicesForTalents plugin which constantly updates NPC data every tick lags the game out immensely. Thought it might be better if NPCs just got a flat increase in the beginning. Again, potato computer reasons.");
             Harmony.CreateAndPatchAll(typeof(MCSAllNPCsSpawn), null);
-            LogStuff(jsonData.instance.NPCLeiXingDate[0]);
-            LogStuff(jsonData.instance.NPCLeiXingDate[0][1]);
         }
 
         [HarmonyPostfix]
         [HarmonyPatch(typeof(NPCFactory), "firstCreateNpcs")]
         private static void NPCFactory_firstCreateNpcs_Postfix(NPCFactory __instance)
         {
-            if (MCSAllNPCsSpawn.enableAllNPCsSpawn)
+            if (MCSAllNPCsSpawn.enableAllNPCsSpawn.Value)
             {
 
                 List<string> item = new List<string>();
@@ -65,7 +63,8 @@ namespace MCSAllNPCsSpawn
             };
                 for (int i = 0; i < jsonData.instance.NPCLeiXingDate.Count; i++)
                 {
-                    LogStuff(jsonData.instance.NPCLeiXingDate[i]);
+                    var boop = new JSONObject();
+                    LogStuff(boop.Print(true));
                     if (jsonData.instance.NPCLeiXingDate[i]["NPCTag"].Count == 2)
                     {
                         int i2 = jsonData.instance.NPCLeiXingDate[i]["Level"].I;
@@ -432,6 +431,6 @@ namespace MCSAllNPCsSpawn
         public static MCSAllNPCsSpawn Inst;
         public static ConfigEntry<bool> enableAllNPCsSpawn;
         public static ConfigEntry<int> maxSpawnCount;
-        public static ConfigEntry<float> npcPowerIncreaseAmount;
+        public static ConfigEntry<double> npcPowerIncreaseAmount;
     }
 }
