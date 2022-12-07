@@ -213,12 +213,12 @@ namespace MCSAllNPCsSpawn
                         list[i2].Add(jsonData.instance.NPCLeiXingDate[i].ToString());
                     }
                 }
-                List<string> list2 = new List<string>();
-                List<string> list3 = new List<string>();
+                List<string> NPCImportantDateIdList = new List<string>();
+                List<string> AvatarJsonDataNameList = new List<string>();
                 for (int j = 0; j < jsonData.instance.NPCImportantDate.Count; j++)
                 {
-                    list2.Add(jsonData.instance.NPCImportantDate[j]["id"].I.ToString());
-                    list3.Add(
+                    NPCImportantDateIdList.Add(jsonData.instance.NPCImportantDate[j]["id"].I.ToString());
+                    AvatarJsonDataNameList.Add(
                         ToolsEx.ToCN(
                             jsonData.instance.AvatarJsonData[
                                 jsonData.instance.NPCImportantDate[j]["id"].I.ToString()
@@ -226,14 +226,14 @@ namespace MCSAllNPCsSpawn
                         )
                     );
                 }
-                List<int> list4 = new List<int>();
-                List<string> list5 = new List<string>();
-                List<string> list6 = new List<string>();
+                List<int> NPCChenghhaoDataIdList = new List<int>();
+                List<string> NPCChenghaoDataChenghaoList = new List<string>();
+                List<string> NPCChenghaoNPCTypeList = new List<string>();
                 for (int k = 0; k < jsonData.instance.NPCChengHaoData.Count; k++)
                 {
-                    list4.Add(jsonData.instance.NPCChengHaoData[k]["id"].I);
-                    list5.Add(ToolsEx.ToCN(jsonData.instance.NPCChengHaoData[k]["ChengHao"].Str));
-                    list6.Add(jsonData.instance.NPCChengHaoData[k]["NPCType"].I.ToString());
+                    NPCChenghhaoDataIdList.Add(jsonData.instance.NPCChengHaoData[k]["id"].I);
+                    NPCChenghaoDataChenghaoList.Add(ToolsEx.ToCN(jsonData.instance.NPCChengHaoData[k]["ChengHao"].Str));
+                    NPCChenghaoNPCTypeList.Add(jsonData.instance.NPCChengHaoData[k]["NPCType"].I.ToString());
                 }
                 int count = jsonData.instance.AvatarJsonData.Count;
                 for (int l = 0; l < count; l++)
@@ -254,7 +254,7 @@ namespace MCSAllNPCsSpawn
                             break;
                         }
                         bool flag5 =
-                            !(npcname != "") || list3.FindIndex((string xxt) => xxt == npcname) <= -1;
+                            !(npcname != "") || AvatarJsonDataNameList.FindIndex((string xxt) => xxt == npcname) <= -1;
                         if (flag5)
                         {
                             int i4 = jsonData.instance.AvatarJsonData[l]["Level"].I;
@@ -262,15 +262,15 @@ namespace MCSAllNPCsSpawn
                                 jsonData.instance.AvatarJsonData[l]["Title"].Str
                             );
                             int i5 = jsonData.instance.AvatarJsonData[l]["AvatarType"].I;
-                            int num2 = list5.FindIndex((string xxt) => xxt == npctitle);
+                            int num2 = NPCChenghaoDataChenghaoList.FindIndex((string xxt) => xxt == npctitle);
                             bool flag6 = num2 > -1;
                             int num3;
                             string text2;
                             int num4;
                             if (flag6)
                             {
-                                num3 = list4[num2];
-                                text2 = list6[num2];
+                                num3 = NPCChenghhaoDataIdList[num2];
+                                text2 = NPCChenghaoNPCTypeList[num2];
                                 num4 = 0;
                             }
                             else
@@ -568,6 +568,13 @@ namespace MCSAllNPCsSpawn
                     }
                 }
             }
+        }
+
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(NPCFactory), "firstCreateNpcs")]
+        private static void NPCFactory_FirstCreateNpcs_Postfix(NPCFactor __instance)
+        {
+
         }
 
         public static MCSAllNPCsSpawn Inst;
