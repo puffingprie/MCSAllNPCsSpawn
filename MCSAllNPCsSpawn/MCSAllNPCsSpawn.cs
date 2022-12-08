@@ -23,165 +23,36 @@ namespace MCSAllNPCsSpawn
             Debug.Log("=======================================================");
         }
 
+        private static void WriteToShittyLog(string message, bool createNewOrOverwrite = false)
+        {
+            if (createNewOrOverwrite)
+            {
+                File.WriteAllText(@"C:\Users\Shadow\Documents\MiChangSheng\AllNPCsSpawn\Log.txt", message);
+            }
+            else
+            {
+                File.AppendAllText(@"C:\Users\Shadow\Documents\MiChangSheng\AllNPCsSpawn\Log.txt", message);
+            }
+        }
+
         private void Start()
         {
             MCSAllNPCsSpawn.Inst = this;
 
+            // Create Shitty Log
+            WriteToShittyLog("MCSAllNPCsSpawn Log");
+
             MCSAllNPCsSpawn.enableAllNPCsSpawn = base.Config.Bind<bool>("MCSAllNPCsSpawnConfig", "EnableAllNPCsSpawning", true, "Enable this mod (enable all npcs spawning)");
             MCSAllNPCsSpawn.maxSpawnCount = base.Config.Bind<int>("MCSAllNPCsSpawnConfig", "MaxSpawnCount", 30000, "Controls the max amount of NPCs that spawn - Increase this number at your own risk. Personally I have a potato of a computer and it's always entertaining when I can barely move on the map because there are 80,000 NPCs.");
-            MCSAllNPCsSpawn.maxSpawnDeterminedByNPCLevel = base.Config.Bind<bool>("MCSAllNPCsSpawnConfig", "MaxSpawnDeterminedByLevel", true, "Whether to prioritize higher level NPCs (cultivation level) when NPC spawn count is limited. Used in conjunction with MaxSpawnCount. If MaxSpawnCount is -1, this has no effect.");
-            MCSAllNPCsSpawn.enableMonsterSpawns = base.Config.Bind<bool>("MCSAllNPCsSpawnConfig", "EnableMonsterSpawns", true, "Enable Monster Spawning");
-            MCSAllNPCsSpawn.spawnMinMoney = base.Config.Bind<bool>("MCSAllNPCsSpawnConfig", "SpawnMinMoney", 0, "Limit NPC spawning to NPCs withh AT LEAST this wealth level (0-11), NPC entries outside this wealth level won't be spawned -> Greater than or equals");
-            MCSAllNPCsSpawn.spawnMaxMoney = base.Config.Bind<bool>("MCSAllNPCsSpawnConfig", "SpawnMaxMoney", 11, "Limit NPC spawning to NPCs withh AT MOST this wealth level (0-11), NPC entries outside this wealth level won't be spawned -> Less than or equals");
-            MCSAllNPCsSpawn.spawnMinCultivationLevel = base.Config.Bind<bool>("MCSAllNPCsSpawnConfig", "SpawnMinCultivationLevel", true, "Limit NPC spawning to NPCs withh AT LEAST this amount of cultivation (0-15), NPC entries outside this cultivation level won't be spawned -> Greater than or equals");
-            MCSAllNPCsSpawn.spawnMaxCultivationLevel = base.Config.Bind<bool>("MCSAllNPCsSpawnConfig", "SpawnMaxCultivationLevel", true, "Limit NPC spawning to NPCs withh AT MOST this amount of cultivation (0-15), NPC entries outside this cultivation level won't be spawned -> Less than or equals");
+            MCSAllNPCsSpawn.prioritizeHigherCultivationLevelNPCSpawn = base.Config.Bind<bool>("MCSAllNPCsSpawnConfig", "PrioritizeHigherCultivationLevelNPCSpawn", true, "Whether to prioritize higher cultivation level NPCs when NPC spawn count is limited. Used in conjunction with MaxSpawnCount. If MaxSpawnCount is -1, this has no effect.");
+            MCSAllNPCsSpawn.onlyHumans = base.Config.Bind<bool>("MCSAllNPCsSpawnConfig", "onlyHumans", true, "Only Humans Spawn");
+            MCSAllNPCsSpawn.spawnMinMoney = base.Config.Bind<int>("MCSAllNPCsSpawnConfig", "SpawnMinMoney", 0, "Limit NPC spawning to NPCs withh AT LEAST this wealth level (0-11), NPC entries outside this wealth level won't be spawned -> Greater than or equals");
+            MCSAllNPCsSpawn.spawnMaxMoney = base.Config.Bind<int>("MCSAllNPCsSpawnConfig", "SpawnMaxMoney", 11, "Limit NPC spawning to NPCs withh AT MOST this wealth level (0-11), NPC entries outside this wealth level won't be spawned -> Less than or equals");
+            MCSAllNPCsSpawn.spawnMinCultivationLevel = base.Config.Bind<int>("MCSAllNPCsSpawnConfig", "SpawnMinCultivationLevel", true, "Limit NPC spawning to NPCs withh AT LEAST this amount of cultivation (0-15), NPC entries outside this cultivation level won't be spawned -> Greater than or equals");
+            MCSAllNPCsSpawn.spawnMaxCultivationLevel = base.Config.Bind<int>("MCSAllNPCsSpawnConfig", "SpawnMaxCultivationLevel", true, "Limit NPC spawning to NPCs withh AT MOST this amount of cultivation (0-15), NPC entries outside this cultivation level won't be spawned -> Less than or equals");
             MCSAllNPCsSpawn.npcPowerIncreaseAmount = base.Config.Bind<double>("MCSAllNPCsSpawnConfig", "NPCPowerIncreaseAmount", 1.0, "Not Yet Implemented - Because of the insane amount of NPCs that get spawned into the game, plugins like UniqueCream's ExtraChoicesForTalents plugin which constantly updates NPC data every tick lags the game out immensely. Thought it might be better if NPCs just got a flat increase in the beginning. Again, potato computer reasons.");
 
             Harmony.CreateAndPatchAll(typeof(MCSAllNPCsSpawn), null);
-        }
-
-        private class NPC
-        {
-            private int id;
-            private List<int> Status;
-            private bool isImportant;
-            private string Name;
-            private bool isTag;
-            private string FirstName;
-            private int face;
-            private int fightFace;
-            private int XingGe;
-            private int NPCTag;
-            private int IsKnowPlayer;
-            private int HuaShenLingYu;
-            private int QingFen;
-            private List<int> CyList;
-            private List<int> TuPoMiShu;
-            private string Title;
-            private int ChengHaoID;
-            private int GongXian;
-            private int SexType;
-            private int AvatarType;
-            private int Level;
-            private int WuDaoValue;
-            private int WuDaoValueLevel;
-            private int EWWuDaoDian;
-            private int HP;
-            private int dunSu;
-            private int ziZhi;
-            private int wuXin;
-            private int shengShi;
-            private int shaQi;
-            private int shouYuan;
-            private int NextExp;
-            private int equipList;
-            private List<int> skills;
-            private List<int> staticSkills;
-            private List<int> JinDanType;
-            private List<int> LingGen;
-            private int equipWeapon;
-            private int equipClothing;
-            private int equipRing;
-            private int Type;
-            private int LiuPai;
-            private int MenPai;
-            private List<int> equipWeaponPianHao;
-            private List<int> equipWeapon2PianHao;
-            private List<int> equipClothingPianHao;
-            private int yuanying;
-            private int canjiaPaiMai;
-            private List<int> paimaifenzu;
-            private int xiuLianSpeed;
-            private int MoneyType;
-            private int IsRefresh;
-            private int dropType;
-            private int wudaoType;
-            private int XinQuType;
-            private int gudingjiage;
-            private int sellPercent;
-            private List<int> useItem;
-            private List<List<object>> NoteBook;
-            private List<int> wuDaoSkillList;
-            private List<object> wuDaoJson;
-            private int mybangding;
-            private int age;
-            private int ActionId;
-            private int IsNeedHelp;
-            private int isTanChaUnlock;
-            private int exp;
-            private List<object> getNPCData()
-            {
-                List<object> NPCData = new List<object> {
-                    this.id,
-                    this.Status,
-                    this.isImportant,
-                    this.Name,
-                    this.isTag,
-                    this.FirstName,
-                    this.face,
-                    this.fightFace,
-                    this.XingGe,
-                    this.NPCTag,
-                    this.IsKnowPlayer,
-                    this.HuaShenLingYu,
-                    this.QingFen,
-                    this.CyList,
-                    this.TuPoMiShu,
-                    this.Title,
-                    this.ChengHaoID,
-                    this.GongXian,
-                    this.SexType,
-                    this.AvatarType,
-                    this.Level,
-                    this.WuDaoValue,
-                    this.WuDaoValueLevel,
-                    this.EWWuDaoDian,
-                    this.HP,
-                    this.dunSu,
-                    this.ziZhi,
-                    this.wuXin,
-                    this.shengShi,
-                    this.shaQi,
-                    this.shouYuan,
-                    this.NextExp,
-                    this.equipList,
-                    this.skills,
-                    this.staticSkills,
-                    this.JinDanType,
-                    this.LingGen,
-                    this.equipWeapon,
-                    this.equipClothing,
-                    this.equipRing,
-                    this.Type,
-                    this.LiuPai,
-                    this.MenPai,
-                    this.equipWeaponPianHao,
-                    this.equipWeapon2PianHao,
-                    this.equipClothingPianHao,
-                    this.yuanying,
-                    this.canjiaPaiMai,
-                    this.paimaifenzu,
-                    this.xiuLianSpeed,
-                    this.MoneyType,
-                    this.IsRefresh,
-                    this.dropType,
-                    this.wudaoType,
-                    this.XinQuType,
-                    this.gudingjiage,
-                    this.sellPercent,
-                    this.useItem,
-                    this.NoteBook,
-                    this.wuDaoSkillList,
-                    this.wuDaoJson,
-                    this.mybangding,
-                    this.age,
-                    this.ActionId,
-                    this.IsNeedHelp,
-                    this.isTanChaUnlock,
-                    this.exp,
-                };
-                return NPCData;
-            }
         }
 
         // [HarmonyPostfix]
@@ -221,12 +92,12 @@ namespace MCSAllNPCsSpawn
                         list[i2].Add(jsonData.instance.NPCLeiXingDate[i].ToString());
                     }
                 }
-                List<string> NPCImportantDateIdList = new List<string>();
-                List<string> AvatarJsonDataNameList = new List<string>();
+                List<string> npcImportantDateIdList = new List<string>();
+                List<string> avatarJsonDataNameList = new List<string>();
                 for (int j = 0; j < jsonData.instance.NPCImportantDate.Count; j++)
                 {
-                    NPCImportantDateIdList.Add(jsonData.instance.NPCImportantDate[j]["id"].I.ToString());
-                    AvatarJsonDataNameList.Add(
+                    npcImportantDateIdList.Add(jsonData.instance.NPCImportantDate[j]["id"].I.ToString());
+                    avatarJsonDataNameList.Add(
                         ToolsEx.ToCN(
                             jsonData.instance.AvatarJsonData[
                                 jsonData.instance.NPCImportantDate[j]["id"].I.ToString()
@@ -234,14 +105,14 @@ namespace MCSAllNPCsSpawn
                         )
                     );
                 }
-                List<int> NPCChenghhaoDataIdList = new List<int>();
-                List<string> NPCChenghaoDataChenghaoList = new List<string>();
-                List<string> NPCChenghaoNPCTypeList = new List<string>();
+                List<int> npcChenghaoDataIdList = new List<int>();
+                List<string> npcChenghaoDataChenghaoList = new List<string>();
+                List<string> npcChenghaoNPCTypeList = new List<string>();
                 for (int k = 0; k < jsonData.instance.NPCChengHaoData.Count; k++)
                 {
-                    NPCChenghhaoDataIdList.Add(jsonData.instance.NPCChengHaoData[k]["id"].I);
-                    NPCChenghaoDataChenghaoList.Add(ToolsEx.ToCN(jsonData.instance.NPCChengHaoData[k]["ChengHao"].Str));
-                    NPCChenghaoNPCTypeList.Add(jsonData.instance.NPCChengHaoData[k]["NPCType"].I.ToString());
+                    npcChenghaoDataIdList.Add(jsonData.instance.NPCChengHaoData[k]["id"].I);
+                    npcChenghaoDataChenghaoList.Add(ToolsEx.ToCN(jsonData.instance.NPCChengHaoData[k]["ChengHao"].Str));
+                    npcChenghaoNPCTypeList.Add(jsonData.instance.NPCChengHaoData[k]["NPCType"].I.ToString());
                 }
                 int count = jsonData.instance.AvatarJsonData.Count;
                 for (int l = 0; l < count; l++)
@@ -262,7 +133,7 @@ namespace MCSAllNPCsSpawn
                             break;
                         }
                         bool flag5 =
-                            !(npcname != "") || AvatarJsonDataNameList.FindIndex((string xxt) => xxt == npcname) <= -1;
+                            !(npcname != "") || avatarJsonDataNameList.FindIndex((string xxt) => xxt == npcname) <= -1;
                         if (flag5)
                         {
                             int i4 = jsonData.instance.AvatarJsonData[l]["Level"].I;
@@ -270,15 +141,15 @@ namespace MCSAllNPCsSpawn
                                 jsonData.instance.AvatarJsonData[l]["Title"].Str
                             );
                             int i5 = jsonData.instance.AvatarJsonData[l]["AvatarType"].I;
-                            int num2 = NPCChenghaoDataChenghaoList.FindIndex((string xxt) => xxt == npctitle);
-                            bool flag6 = num2 > -1;
+                            int npcChenghaoIdx = npcChenghaoDataChenghaoList.FindIndex((string xxt) => xxt == npctitle);
+                            bool flag6 = npcChenghaoIdx > -1;
                             int num3;
                             string text2;
                             int num4;
                             if (flag6)
                             {
-                                num3 = NPCChenghhaoDataIdList[num2];
-                                text2 = NPCChenghaoNPCTypeList[num2];
+                                num3 = npcChenghaoDataIdList[npcChenghaoIdx];
+                                text2 = npcChenghaoNPCTypeList[npcChenghaoIdx];
                                 num4 = 0;
                             }
                             else
@@ -582,14 +453,113 @@ namespace MCSAllNPCsSpawn
         [HarmonyPatch(typeof(NPCFactory), "firstCreateNpcs")]
         private static void NPCFactory_FirstCreateNpcs_Postfix(NPCFactor __instance)
         {
+            if (MCSAllNPCsSpawn.enableAllNPCsSpawn.Value)
+            {
+                List<string> listItem = new List<string>();
+                List<List<string>> validNPCLeiXingDate = new List<List<string>>{
+                    listItem,
+                    listItem,
+                    listItem,
+                    listItem,
+                    listItem,
+                    listItem,
+                    listItem,
+                    listItem,
+                    listItem,
+                    listItem,
+                    listItem,
+                    listItem,
+                    listItem,
+                    listItem,
+                    listItem,
+                    listItem,
+                    listItem,
+                    listItem
+                };
+                for (int i = 0; i < jsonData.instance.NPCLeiXingDate.Count; i++)
+                {
+                    if (jsonData.instance.NPCLeiXingDate[i]["NPCTag"].Count == 2)
+                    {
+                        int i2 = jsonData.instance.NPCLeiXingDate[i]["Level"].I;
+                        validNPCLeiXingDate[i2].Add(jsonData.instance.NPCLeiXingDate[i].ToString());
+                    }
+                }
 
+                List<string> npcImportantDateIdList = new List<string>();
+                List<string> avatarJsonDataNameList = new List<string>();
+                for (int i = 0; i < jsonData.instance.NPCImportantDate.Count; i++)
+                {
+                    npcImportantDateIdList.Add(jsonData.instance.NPCImportantDate[j]["id"].I.ToString());
+                    avatarJsonDataNameList.Add(
+                        ToolsEx.ToCN(
+                            jsonData.instance.AvatarJsonData[
+                                jsonData.instance.NPCImportantDate[j]["id"].I.ToString()
+                            ]["Name"].Str
+                        )
+                    );
+                }
+
+                List<int> npcChenghaoDataIdList = new List<int>();
+                List<string> npcChenghaoDataChenghaoList = new List<string>();
+                List<string> npcChenghaoNPCTypeList = new List<string>();
+                for (int k = 0; k < jsonData.instance.NPCChengHaoData.Count; k++)
+                {
+                    npcChenghaoDataIdList.Add(jsonData.instance.NPCChengHaoData[k]["id"].I);
+                    npcChenghaoDataChenghaoList.Add(ToolsEx.ToCN(jsonData.instance.NPCChengHaoData[k]["ChengHao"].Str));
+                    npcChenghaoNPCTypeList.Add(jsonData.instance.NPCChengHaoData[k]["NPCType"].I.ToString());
+                }
+
+                //Sort by cultivation level if prioritizeHigherCultivationLevelNPCSpawn enabled
+                var npcData = MCSAllNPCsSpawn.prioritizeHigherCultivationLevelNPCSpawn.Value ? JSONObject(jsonData.instance.AvatarJsonData.OrderByDescending(dict => dict["Level"]).ToList()) : jsonData.instance.AvatarJsonData;
+
+                int npcSpawnAmount = MCSAllNPCsSpawn.maxSpawnCount.Value < jsonData.instance.AvatarJsonData.Count ? MCSAllNPCsSpawn.maxSpawnCount.Value : jsonData.instance.AvatarJsonData.Count;
+
+                for (int i = 0; i < npcSpawnAmount; i++)
+                {
+                    string npcIdString = npcData[i]["id"].I.ToString();
+                    int npcId = npcData[i]["id"].I;
+                    string npcName = ToolsEx.ToCN(npcData[i]["Name"].Str);
+                    string npcTitle = ToolsEx.ToCN(npcData[i]["Title"].Str);
+                    int npcAvatarType = npcData[i]["AvatarType"].I;
+                    int npcChenghaoIdx = npcChenghaoDataChenghaoList.FindIndex((string xxt) => xxt == npcTitle);
+
+                    bool hasName = npcName && npcName != "";
+                    bool hasCorrespondingName = avatarJsonDataNameList.FindIndex((string xxt) => xxt == npcName) <= -1;
+                    bool validAvatarType = MCSAllNPCsSpawn.onlyHumans.Value ? npcAvatarType == 1 : true;
+                    bool passesMinMoney = npcData[i]["MoneyType"].I >= MCSAllNPCsSpawn.spawnMinMoney.Value;
+                    bool passesMaxMoney = npcData[i]["MoneyType"].I <= MCSAllNPCsSpawn.spawnMaxMoney.Value;
+                    bool passesMinCultivation = npcData[i]["Level"].I >= MCSAllNPCsSpawn.spawnMinCultivationLevel.Value;
+                    bool passesMaxCultivation = npcData[i]["Level"].I <= MCSAllNPCsSpawn.spawnMaxCultivationLevel.Value;
+
+                    bool passesChecks = hasName && hasCorrespondingName && validAvatarType && passesMinMoney && passesMaxMoney && passesMinCultivation && passesMaxCultivation;
+
+                    if (passesChecks)
+                    {
+                        int npcChenghaoId;
+                        string npcChenghaoNPCType;
+                        int num4;
+                        if (npcChenghaoIdx > -1)
+                        {
+                            npcChenghaoId = npcChenghaoDataIdList[npcChenghaoIdx];
+                            npcChenghaoNPCType = npcChenghaoNPCTypeList[npcChenghaoIdx];
+                            num4 = 0;
+                        }
+                        else
+                        {
+                            npcChenghaoId = 418;
+                            npcChenghaoNPCType = "10";
+                            num4 = i3;
+                        }
+                    }
+                }
+            }
         }
 
         public static MCSAllNPCsSpawn Inst;
         public static ConfigEntry<bool> enableAllNPCsSpawn;
         public static ConfigEntry<int> maxSpawnCount;
-        public static ConfigEntry<bool> maxSpawnDeterminedByNPCLevel;
-        public static ConfigEntry<bool> enableMonsterSpawns;
+        public static ConfigEntry<bool> prioritizeHigherCultivationLevelNPCSpawn;
+        public static ConfigEntry<bool> onlyHumans;
         public static ConfigEntry<int> spawnMinMoney; //Greater than or equals
         public static ConfigEntry<int> spawnMaxMoney; //Less than or equals
         public static ConfigEntry<int> spawnMinCultivationLevel; //Greater than or equals
