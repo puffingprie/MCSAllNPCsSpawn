@@ -163,15 +163,15 @@ namespace MCSAllNPCsSpawn
                             num4 = npcId;
                         }
                         JSONObject newNPCAvatarTypeJSONObject = null;
-                        for (int m = 0; m < validNPCLeiXingDateSortedByLevels[npcLevel].Count - 1; m++)
+                        for (int j = 0; j < validNPCLeiXingDateSortedByLevels[npcLevel].Count - 1; j++)
                         {
-                            JSONObject jsonobject2 = new JSONObject(list[npcLevel][m].ToString());
+                            JSONObject jsonobject2 = new JSONObject(validNPCLeiXingDateSortedByLevels[npcLevel][j].ToString());
                             bool flag7 =
-                                jsonobject2["Type"].I.ToString() == text2
+                                jsonobject2["Type"].I.ToString() == npcChenghaoNPCType
                                 && (
-                                    jsonobject2["AvatarType"].I == i5
+                                    jsonobject2["AvatarType"].I == npcAvatarType
                                     || jsonobject2["AvatarType"].I == 1
-                                    || (i5 == 1 && jsonobject2["AvatarType"].I == 3)
+                                    || (npcAvatarType == 1 && jsonobject2["AvatarType"].I == 3)
                                 );
                             if (flag7)
                             {
@@ -181,7 +181,7 @@ namespace MCSAllNPCsSpawn
                         }
                         if (newNPCAvatarTypeJSONObject)
                         {
-                            WriteToShittyLog(string.Concat(new string[] { text, "|", text2, "\n" }));
+                            WriteToShittyLog(string.Concat(new string[] { npcIdString, "|", npcChenghaoNPCType, "\n" }));
                         }
                         if (newNPCAvatarTypeJSONObject != null)
                         {
@@ -237,11 +237,11 @@ namespace MCSAllNPCsSpawn
                                 newNPCJSONObject.SetField("CyList", JSONObject.arr);
                                 newNPCJSONObject.SetField("TuPoMiShu", JSONObject.arr);
                                 newNPCJSONObject.SetField("Title", ToolsEx.ToCN(npcData[i]["Title"].Str));
-                                newNPCJSONObject.SetField("ChengHaoID", num3);
+                                newNPCJSONObject.SetField("ChengHaoID", npcChenghaoId);
                                 newNPCJSONObject.SetField("GongXian", 0);
                                 newNPCJSONObject.SetField("SexType", npcData[i]["SexType"].I);
-                                newNPCJSONObject.SetField("AvatarType", i5);
-                                newNPCJSONObject.SetField("Level", i4);
+                                newNPCJSONObject.SetField("AvatarType", npcAvatarType);
+                                newNPCJSONObject.SetField("Level", npcLevel);
                                 newNPCJSONObject.SetField("WuDaoValue", 0);
                                 newNPCJSONObject.SetField("WuDaoValueLevel", 0);
                                 newNPCJSONObject.SetField("EWWuDaoDian", 0);
@@ -252,7 +252,7 @@ namespace MCSAllNPCsSpawn
                                 newNPCJSONObject.SetField("wuXin", npcData[i]["wuXin"].I);
                                 newNPCJSONObject.SetField("shengShi", npcData[i]["shengShi"].I);
                                 newNPCJSONObject.SetField("shaQi", 0);
-                                int num5 = i4 * 200 + 200;
+                                int num5 = npcLevel * 200 + 200;
                                 bool flag11 = npcData[i]["shouYuan"].I < num5;
                                 if (flag11)
                                 {
@@ -264,10 +264,10 @@ namespace MCSAllNPCsSpawn
                                 }
                                 newNPCJSONObject.SetField("age", npcData[i]["age"].I * 12);
                                 newNPCJSONObject.SetField("exp", 15000);
-                                bool flag12 = i4 <= 14;
+                                bool flag12 = npcLevel <= 14;
                                 if (flag12)
                                 {
-                                    newNPCJSONObject.SetField("NextExp", jsonData.instance.NPCChuShiShuZiDate[(i4 + 1).ToString()]["xiuwei"].I);
+                                    newNPCJSONObject.SetField("NextExp", jsonData.instance.NPCChuShiShuZiDate[(npcLevel + 1).ToString()]["xiuwei"].I);
                                 }
                                 else
                                 {
@@ -327,7 +327,7 @@ namespace MCSAllNPCsSpawn
                                 newNPCJSONObject.SetField("sellPercent", 0);
                                 newNPCJSONObject.SetField("useItem", new JSONObject());
                                 newNPCJSONObject.SetField("NoteBook", new JSONObject());
-                                __instance.SetNpcWuDao(i4, newNPCAvatarTypeJSONObject["wudaoType"].I, newNPCJSONObject);
+                                __instance.SetNpcWuDao(npcLevel, newNPCAvatarTypeJSONObject["wudaoType"].I, newNPCJSONObject);
                                 __instance.UpNpcWuDaoByTag(newNPCJSONObject["NPCTag"].I, newNPCJSONObject);
                                 bool flag14 = num4 > 0;
                                 if (flag14)
@@ -335,7 +335,7 @@ namespace MCSAllNPCsSpawn
                                     newNPCJSONObject.SetField("mybangding", num4);
                                 }
                                 npcData.SetField(
-                                    (100000 + i3).ToString(),
+                                    (100000 + npcLevel).ToString(),
                                     newNPCJSONObject
                                 );
                             }
@@ -343,8 +343,8 @@ namespace MCSAllNPCsSpawn
                             {
                                 WriteToShittyLog(string.Concat(
                                         new object[] { error.Message, "\n", error.Source, "\n", error.TargetSite, "\n", error.StackTrace.Substring(
-                                            ex.StackTrace.LastIndexOf("\\") + 1, ex.StackTrace.Length - ex.StackTrace.LastIndexOf("\\") - 1 ),
-                                            "\n", i3, "\n", newNPCAvatarTypeJSONObject.Print(false), "\n\n\n" }));
+                                            error.StackTrace.LastIndexOf("\\") + 1, error.StackTrace.Length - error.StackTrace.LastIndexOf("\\") - 1 ),
+                                            "\n", npcId, "\n", newNPCAvatarTypeJSONObject.Print(false), "\n\n\n" }));
                             }
                         }
                     }
