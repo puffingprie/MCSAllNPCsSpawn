@@ -7,3 +7,5 @@ C:\Users\Shadow\source\repos\MCSAllNPCsSpawn\MCSAllNPCsSpawn\bin\Debug\Newtonsof
 C:\Users\Shadow\source\repos\MCSAllNPCsSpawn\MCSAllNPCsSpawn\obj\Debug\MCSAllNPCsSpawn.csproj.CopyComplete
 C:\Users\Shadow\source\repos\MCSAllNPCsSpawn\MCSAllNPCsSpawn\obj\Debug\MCSAllNPCsSpawn.dll
 C:\Users\Shadow\source\repos\MCSAllNPCsSpawn\MCSAllNPCsSpawn\obj\Debug\MCSAllNPCsSpawn.pdb
+D:\SteamLibrary\steamapps\workshop\content\1189490\2824349934\BepInEx\plugins\MCSAllNPCsSpawn.dll
+D:\SteamLibrary\steamapps\workshop\content\1189490\2824349934\BepInEx\plugins\MCSAllNPCsSpawn.pdb

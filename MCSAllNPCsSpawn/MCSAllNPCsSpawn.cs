@@ -84,12 +84,6 @@ namespace MCSAllNPCsSpawn
                 120,
                 "Minimum NPC lifespan when initially spawning"
             );
-            // MCSAllNPCsSpawn.prioritizeHigherCultivationLevelNPCSpawn = base.Config.Bind<bool>(
-            //     "MCSAllNPCsSpawnConfig",
-            //     "PrioritizeHigherCultivationLevelNPCSpawn",
-            //     true,
-            //     "Not Yet Implemented - Whether to prioritize higher cultivation level NPCs when NPC spawn count is limited. Used in conjunction with MaxSpawnCount. If MaxSpawnCount is -1, this has no effect."
-            // );
             MCSAllNPCsSpawn.onlyHumans = base.Config.Bind<bool>(
                 "MCSAllNPCsSpawnConfig",
                 "onlyHumans",
@@ -119,12 +113,6 @@ namespace MCSAllNPCsSpawn
                 "SpawnMaxCultivationLevel",
                 15,
                 "Limit NPC spawning to NPCs withh AT MOST this amount of cultivation (0-15), NPC entries outside this cultivation level won't be spawned -> Less than or equals"
-            );
-            MCSAllNPCsSpawn.npcPowerIncreaseAmount = base.Config.Bind<double>(
-                "MCSAllNPCsSpawnConfig",
-                "NPCPowerIncreaseAmount",
-                1.0,
-                "Because of the insane amount of NPCs that get spawned into the game, plugins like UniqueCream's ExtraChoicesForTalents plugin which constantly updates NPC data every tick lags the game out immensely. Thought it might be better if NPCs just got a flat increase in the beginning. Again, potato computer reasons."
             );
 
             Harmony.CreateAndPatchAll(typeof(MCSAllNPCsSpawn), null);
@@ -159,6 +147,8 @@ namespace MCSAllNPCsSpawn
                     {
                         idx = idx % jsonData.instance.AvatarJsonData.Count;
                     }
+                    WriteToShittyLog("Currently on loop: ");
+                    WriteToShittyLog(i.ToString());
                     if (getAvatarValidity(idx, spawnImportantNPCs.Value))
                     {
                         customCreateNpcs(idx, i);
@@ -201,29 +191,42 @@ namespace MCSAllNPCsSpawn
             }
             bool getAvatarValidity(int idx, bool shouldSpawnImportantNPCs = true)
             {
-                if (
-                    !shouldSpawnImportantNPCs
-                    && jsonData.instance.NPCImportantDate.HasField(idx.ToString())
-                )
+                try
                 {
-                    return false;
+                    if (
+                        !shouldSpawnImportantNPCs
+                        && jsonData.instance.NPCImportantDate.HasField(idx.ToString())
+                    )
+                    {
+                        return false;
+                    }
+                    if (
+                        onlyHumans.Value
+                        && jsonData.instance.AvatarJsonData[idx]["AvatarType"].I != 1
+                    )
+                    {
+                        return false;
+                    }
+                    int avatarMoneyType = jsonData.instance.AvatarJsonData[idx]["MoneyType"].I;
+                    if (
+                        avatarMoneyType < spawnMinMoney.Value
+                        || avatarMoneyType > spawnMaxMoney.Value
+                    )
+                    {
+                        return false;
+                    }
+                    int avatarCultivationLevel = jsonData.instance.AvatarJsonData[idx]["Level"].I;
+                    if (
+                        avatarCultivationLevel < spawnMinCultivationLevel.Value
+                        || avatarCultivationLevel > spawnMaxCultivationLevel.Value
+                    )
+                    {
+                        return false;
+                    }
                 }
-                if (onlyHumans.Value && jsonData.instance.AvatarJsonData[idx]["AvatarType"].I != 1)
+                catch (Exception ex)
                 {
-                    return false;
-                }
-                int avatarMoneyType = jsonData.instance.AvatarJsonData[idx]["MoneyType"].I;
-                if (avatarMoneyType < spawnMinMoney.Value || avatarMoneyType > spawnMaxMoney.Value)
-                {
-                    return false;
-                }
-                int avatarCultivationLevel = jsonData.instance.AvatarJsonData[idx]["Level"].I;
-                if (
-                    avatarCultivationLevel < spawnMinCultivationLevel.Value
-                    || avatarCultivationLevel > spawnMaxCultivationLevel.Value
-                )
-                {
-                    return false;
+                    WriteToShittyLog(ex.ToString());
                 }
                 return true;
             }
@@ -353,241 +356,281 @@ namespace MCSAllNPCsSpawn
                     { "ChengHao", "宁州散修" }
                 };
             }
-            void customCreateNpcs(int idx, int loopIdx, double powerIncreaseAmount = 0)
+            void customCreateNpcs(int idx, int loopIdx)
             {
                 JSONObject newNPC = new JSONObject();
-
-                int leiXingIdx = loopIdx + 1;
-                if (leiXingIdx > jsonData.instance.NPCLeiXingDate.Count)
+                try
                 {
-                    leiXingIdx = leiXingIdx % jsonData.instance.NPCLeiXingDate.Count;
-                }
-                JSONObject newNPCLeiXingJson = jsonData.instance.NPCLeiXingDate[leiXingIdx];
-
-                int avatarJsonDataId = jsonData.instance.AvatarJsonData[idx]["id"].I;
-                newNPC.SetField("id", 100000 + loopIdx); // Add 100,000 so there are definitely no conflicts with the original NPCs, hopefully...
-
-                JSONObject newNPCStatusJson = new JSONObject();
-                newNPCStatusJson.SetField("StatusId", 1);
-                newNPCStatusJson.SetField("StatusTime", 60000);
-                newNPC.SetField("Status", newNPCStatusJson);
-
-                if (createRandomNamesWhenSpawning.Value)
-                {
-                    newNPC.SetField("Name", createRandomName(idx));
-                }
-                else
-                {
-                    newNPC.SetField("Name", jsonData.instance.AvatarJsonData[idx]["Name"].Str);
-                }
-
-                newNPC.SetField("IsTag", false);
-                newNPC.SetField("FirstName", "");
-                newNPC.SetField("face", jsonData.instance.AvatarJsonData[idx]["face"].I);
-                newNPC.SetField("fightFace", jsonData.instance.AvatarJsonData[idx]["fightFace"].I);
-                newNPC.SetField("isImportant", false);
-
-                Dictionary<string, int> randomNPCTagAndXingge = getRandomNPCTagAndXingge(
-                    idx,
-                    new List<int>
+                    int leiXingIdx = loopIdx + 1;
+                    if (leiXingIdx > jsonData.instance.NPCLeiXingDate.Count)
                     {
-                        newNPCLeiXingJson["NPCTag"][0].I,
-                        newNPCLeiXingJson["NPCTag"][1].I
+                        leiXingIdx = leiXingIdx % jsonData.instance.NPCLeiXingDate.Count;
                     }
-                );
-                newNPC.SetField("NPCTag", randomNPCTagAndXingge["RandomNPCTag"]);
-                newNPC.SetField("XingGe", randomNPCTagAndXingge["RandomXingge"]);
-                newNPC.SetField("ActionId", 1);
-                newNPC.SetField("IsKnowPlayer", false);
-                newNPC.SetField("QingFen", 0);
-                newNPC.SetField("CyList", JSONObject.arr);
-                newNPC.SetField("TuPoMiShu", JSONObject.arr);
+                    JSONObject newNPCLeiXingJson = jsonData.instance.NPCLeiXingDate[leiXingIdx];
 
-                Dictionary<string, dynamic> newNPCChengHao = findAndGetNewNPCChengHaoId(
-                    newNPCLeiXingJson["Type"].I,
-                    newNPCLeiXingJson["Level"].I
-                );
-                newNPC.SetField("ChengHaoID", newNPCChengHao["ChengHaoId"]);
-                newNPC.SetField("Title", newNPCChengHao["ChengHao"]);
-                newNPC.SetField("GongXian", 0);
-                newNPC.SetField("SexType", newNPCLeiXingJson["SexType"].I);
-                newNPC.SetField("Type", newNPCLeiXingJson["Type"].I);
-                newNPC.SetField("LiuPai", newNPCLeiXingJson["LiuPai"].I);
-                newNPC.SetField("MenPai", newNPCLeiXingJson["MengPai"].I); //到底为什么拼对真的很不懂，你这样我很头痛欸
-                newNPC.SetField(
-                    "AvatarType",
-                    jsonData.instance.AvatarJsonData[idx]["AvatarType"].I
-                );
+                    int avatarJsonDataId = jsonData.instance.AvatarJsonData[idx]["id"].I;
+                    newNPC.SetField("id", 100000 + loopIdx); // Add 100,000 so there are definitely no conflicts with the original NPCs, hopefully...
 
-                int newNPCLevel = newNPCLeiXingJson["Level"].I;
-                newNPC.SetField("Level", newNPCLevel);
-                newNPC.SetField("WuDaoValue", 0);
-                newNPC.SetField("WuDaoValueLevel", 0);
-                newNPC.SetField("EWWuDaoDian", 0);
-                newNPC.SetField("shaQi", 0);
+                    JSONObject newNPCStatusJson = new JSONObject();
+                    newNPCStatusJson.SetField("StatusId", 1);
+                    newNPCStatusJson.SetField("StatusTime", 60000);
+                    newNPC.SetField("Status", newNPCStatusJson);
 
-                if (newNPCLevel <= 14)
-                {
+                    if (createRandomNamesWhenSpawning.Value)
+                    {
+                        newNPC.SetField("Name", createRandomName(idx));
+                    }
+                    else
+                    {
+                        newNPC.SetField("Name", jsonData.instance.AvatarJsonData[idx]["Name"].Str);
+                    }
+
+                    newNPC.SetField("IsTag", false);
+                    newNPC.SetField("FirstName", "");
+                    newNPC.SetField("face", jsonData.instance.AvatarJsonData[idx]["face"].I);
                     newNPC.SetField(
-                        "NextExp",
-                        jsonData.instance.NPCChuShiShuZiDate[newNPCLevel + 1]["xiuwei"].I
+                        "fightFace",
+                        jsonData.instance.AvatarJsonData[idx]["fightFace"].I
                     );
-                }
-                else
-                {
-                    newNPC.SetField("NextExp", 0);
-                }
+                    newNPC.SetField("isImportant", false);
 
-                newNPC.SetField("equipWeapon", 0);
-                newNPC.SetField("equipClothing", 0);
-                newNPC.SetField("equipRing", 0);
-                newNPC.SetField("equipWeaponPianHao", newNPCLeiXingJson["equipWeapon"]);
-                newNPC.SetField("equipWeapon2PianHao", newNPCLeiXingJson["equipWeapon"]);
-                newNPC.SetField("equipClothingPianHao", newNPCLeiXingJson["equipClothing"]);
-                newNPC.SetField("equipRingPianHao", newNPCLeiXingJson["equipRing"]);
-                newNPC.SetField("equipList", new JSONObject());
-                newNPC.SetField("LingGen", newNPCLeiXingJson["LingGen"]);
-                newNPC.SetField("skills", newNPCLeiXingJson["skills"]);
-                newNPC.SetField("JinDanType", newNPCLeiXingJson["JinDanType"]);
-                newNPC.SetField("staticSkills", newNPCLeiXingJson["staticSkills"]);
-
-                if (useNPCFactoryInitValuesToSpawn.Value)
-                {
-                    JSONObject initValuesJson = jsonData.instance.NPCChuShiShuZiDate[newNPCLevel];
-                    newNPC.SetField(
-                        "HP",
-                        generateRandomIntFromRange(
-                            new List<int>() { initValuesJson["HP"][0].I, initValuesJson["HP"][1].I }
-                        )
-                    );
-                    newNPC.SetField(
-                        "age",
-                        generateRandomIntFromRange(
-                            new List<int>()
-                            {
-                                initValuesJson["age"][0].I,
-                                initValuesJson["age"][1].I
-                            }
-                        )
-                    );
-                    int newNPCShouyuan = generateRandomIntFromRange(
-                        new List<int>()
+                    Dictionary<string, int> randomNPCTagAndXingge = getRandomNPCTagAndXingge(
+                        idx,
+                        new List<int>
                         {
-                            initValuesJson["shouYuan"][0].I,
-                            initValuesJson["shouYuan"][1].I
+                            newNPCLeiXingJson["NPCTag"][0].I,
+                            newNPCLeiXingJson["NPCTag"][1].I
                         }
                     );
-                    if (newNPCShouyuan < minNPCLifeSpan.Value)
-                    {
-                        newNPC.SetField("shouYuan", minNPCLifeSpan.Value);
-                    }
-                    else
-                    {
-                        newNPC.SetField("shouYuan", newNPCShouyuan);
-                    }
-                    newNPC.SetField(
-                        "ziZhi",
-                        generateRandomIntFromRange(
-                            new List<int>()
-                            {
-                                initValuesJson["ziZhi"][0].I,
-                                initValuesJson["ziZhi"][1].I
-                            }
-                        )
+                    newNPC.SetField("NPCTag", randomNPCTagAndXingge["RandomNPCTag"]);
+                    newNPC.SetField("XingGe", randomNPCTagAndXingge["RandomXingge"]);
+                    newNPC.SetField("ActionId", 1);
+                    newNPC.SetField("IsKnowPlayer", false);
+                    newNPC.SetField("QingFen", 0);
+                    newNPC.SetField("CyList", JSONObject.arr);
+                    newNPC.SetField("TuPoMiShu", JSONObject.arr);
+
+                    Dictionary<string, dynamic> newNPCChengHao = findAndGetNewNPCChengHaoId(
+                        newNPCLeiXingJson["Type"].I,
+                        newNPCLeiXingJson["Level"].I
                     );
+                    newNPC.SetField("ChengHaoID", newNPCChengHao["ChengHaoId"]);
+                    newNPC.SetField("Title", newNPCChengHao["ChengHao"]);
+                    newNPC.SetField("GongXian", 0);
+                    newNPC.SetField("SexType", newNPCLeiXingJson["SexType"].I);
+                    newNPC.SetField("Type", newNPCLeiXingJson["Type"].I);
+                    newNPC.SetField("LiuPai", newNPCLeiXingJson["LiuPai"].I);
+                    newNPC.SetField("MenPai", newNPCLeiXingJson["MengPai"].I); //到底为什么拼对真的很不懂，你这样我很头痛欸
                     newNPC.SetField(
-                        "wuXin",
-                        generateRandomIntFromRange(
-                            new List<int>()
-                            {
-                                initValuesJson["wuXin"][0].I,
-                                initValuesJson["wuXin"][1].I
-                            }
-                        )
+                        "AvatarType",
+                        jsonData.instance.AvatarJsonData[idx]["AvatarType"].I
                     );
-                    newNPC.SetField(
-                        "dunSu",
-                        generateRandomIntFromRange(
-                            new List<int>()
-                            {
-                                initValuesJson["dunSu"][0].I,
-                                initValuesJson["dunSu"][1].I
-                            }
-                        )
-                    );
-                    newNPC.SetField(
-                        "shengShi",
-                        generateRandomIntFromRange(
-                            new List<int>()
-                            {
-                                initValuesJson["shengShi"][0].I,
-                                initValuesJson["shengShi"][1].I
-                            }
-                        )
-                    );
-                    newNPC.SetField(
-                        "MoneyType",
-                        generateRandomIntFromRange(
-                            new List<int>()
-                            {
-                                initValuesJson["MoneyType"][0].I,
-                                initValuesJson["MoneyType"][1].I
-                            }
-                        )
-                    );
-                }
-                else
-                {
-                    newNPC.SetField("HP", jsonData.instance.AvatarJsonData[idx]["HP"].I);
-                    newNPC.SetField("age", jsonData.instance.AvatarJsonData[idx]["age"].I);
-                    if (jsonData.instance.AvatarJsonData[idx]["shouYuan"].I < minNPCLifeSpan.Value)
-                    {
-                        newNPC.SetField("shouYuan", minNPCLifeSpan.Value);
-                    }
-                    else
+
+                    int newNPCLevel = newNPCLeiXingJson["Level"].I;
+                    newNPC.SetField("Level", newNPCLevel);
+                    newNPC.SetField("WuDaoValue", 0);
+                    newNPC.SetField("WuDaoValueLevel", 0);
+                    newNPC.SetField("EWWuDaoDian", 0);
+                    newNPC.SetField("shaQi", 0);
+
+                    if (newNPCLevel <= 14)
                     {
                         newNPC.SetField(
-                            "shouYuan",
-                            jsonData.instance.AvatarJsonData[idx]["shouYuan"].I
+                            "NextExp",
+                            jsonData.instance.NPCChuShiShuZiDate[newNPCLevel + 1]["xiuwei"].I
                         );
                     }
-                    newNPC.SetField("ziZhi", jsonData.instance.AvatarJsonData[idx]["ziZhi"].I);
-                    newNPC.SetField("wuXin", jsonData.instance.AvatarJsonData[idx]["wuXin"].I);
-                    newNPC.SetField("dunSu", jsonData.instance.AvatarJsonData[idx]["dunSu"].I);
+                    else
+                    {
+                        newNPC.SetField("NextExp", 0);
+                    }
+
+                    newNPC.SetField("equipWeapon", 0);
+                    newNPC.SetField("equipClothing", 0);
+                    newNPC.SetField("equipRing", 0);
+                    newNPC.SetField("equipWeaponPianHao", newNPCLeiXingJson["equipWeapon"]);
+                    newNPC.SetField("equipWeapon2PianHao", newNPCLeiXingJson["equipWeapon"]);
+                    newNPC.SetField("equipClothingPianHao", newNPCLeiXingJson["equipClothing"]);
+                    newNPC.SetField("equipRingPianHao", newNPCLeiXingJson["equipRing"]);
+                    newNPC.SetField("equipList", new JSONObject());
+                    newNPC.SetField("LingGen", newNPCLeiXingJson["LingGen"]);
+                    newNPC.SetField("skills", newNPCLeiXingJson["skills"]);
+                    newNPC.SetField("JinDanType", newNPCLeiXingJson["JinDanType"]);
+                    newNPC.SetField("staticSkills", newNPCLeiXingJson["staticSkills"]);
+
+                    if (useNPCFactoryInitValuesToSpawn.Value)
+                    {
+                        JSONObject initValuesJson = jsonData.instance.NPCChuShiShuZiDate[
+                            newNPCLevel
+                        ];
+                        newNPC.SetField(
+                            "HP",
+                            generateRandomIntFromRange(
+                                new List<int>()
+                                {
+                                    initValuesJson["HP"][0].I,
+                                    initValuesJson["HP"][1].I
+                                }
+                            )
+                        );
+                        newNPC.SetField(
+                            "age",
+                            generateRandomIntFromRange(
+                                new List<int>()
+                                {
+                                    initValuesJson["age"][0].I,
+                                    initValuesJson["age"][1].I
+                                }
+                            )
+                        );
+                        int newNPCShouyuan = generateRandomIntFromRange(
+                            new List<int>()
+                            {
+                                initValuesJson["shouYuan"][0].I,
+                                initValuesJson["shouYuan"][1].I
+                            }
+                        );
+                        if (newNPCShouyuan < minNPCLifeSpan.Value)
+                        {
+                            newNPC.SetField("shouYuan", minNPCLifeSpan.Value);
+                        }
+                        else
+                        {
+                            newNPC.SetField("shouYuan", newNPCShouyuan);
+                        }
+                        newNPC.SetField(
+                            "ziZhi",
+                            generateRandomIntFromRange(
+                                new List<int>()
+                                {
+                                    initValuesJson["ziZhi"][0].I,
+                                    initValuesJson["ziZhi"][1].I
+                                }
+                            )
+                        );
+                        newNPC.SetField(
+                            "wuXin",
+                            generateRandomIntFromRange(
+                                new List<int>()
+                                {
+                                    initValuesJson["wuXin"][0].I,
+                                    initValuesJson["wuXin"][1].I
+                                }
+                            )
+                        );
+                        newNPC.SetField(
+                            "dunSu",
+                            generateRandomIntFromRange(
+                                new List<int>()
+                                {
+                                    initValuesJson["dunSu"][0].I,
+                                    initValuesJson["dunSu"][1].I
+                                }
+                            )
+                        );
+                        newNPC.SetField(
+                            "shengShi",
+                            generateRandomIntFromRange(
+                                new List<int>()
+                                {
+                                    initValuesJson["shengShi"][0].I,
+                                    initValuesJson["shengShi"][1].I
+                                }
+                            )
+                        );
+                        newNPC.SetField(
+                            "MoneyType",
+                            generateRandomIntFromRange(
+                                new List<int>()
+                                {
+                                    initValuesJson["MoneyType"][0].I,
+                                    initValuesJson["MoneyType"][1].I
+                                }
+                            )
+                        );
+                    }
+                    else
+                    {
+                        newNPC.SetField("HP", jsonData.instance.AvatarJsonData[idx]["HP"].I);
+                        newNPC.SetField("age", jsonData.instance.AvatarJsonData[idx]["age"].I);
+                        if (
+                            jsonData.instance.AvatarJsonData[idx]["shouYuan"].I
+                            < minNPCLifeSpan.Value
+                        )
+                        {
+                            newNPC.SetField("shouYuan", minNPCLifeSpan.Value);
+                        }
+                        else
+                        {
+                            newNPC.SetField(
+                                "shouYuan",
+                                jsonData.instance.AvatarJsonData[idx]["shouYuan"].I
+                            );
+                        }
+                        newNPC.SetField("ziZhi", jsonData.instance.AvatarJsonData[idx]["ziZhi"].I);
+                        newNPC.SetField("wuXin", jsonData.instance.AvatarJsonData[idx]["wuXin"].I);
+                        newNPC.SetField("dunSu", jsonData.instance.AvatarJsonData[idx]["dunSu"].I);
+                        newNPC.SetField(
+                            "shengShi",
+                            jsonData.instance.AvatarJsonData[idx]["shengShi"].I
+                        );
+                        newNPC.SetField(
+                            "MoneyType",
+                            jsonData.instance.AvatarJsonData[idx]["MoneyType"].I
+                        );
+                    }
+
+                    newNPC.SetField("IsNeedHelp", false);
+                    newNPC.SetField("isTanChaUnlock", false);
+                    newNPC.SetField("exp", 15000);
                     newNPC.SetField(
-                        "shengShi",
-                        jsonData.instance.AvatarJsonData[idx]["shengShi"].I
+                        "xiuLianSpeed",
+                        __instance.getXiuLianSpeed(newNPC["staticSkills"], (float)newNPC["ziZhi"].I)
                     );
+                    newNPC.SetField("yuanying", newNPCLeiXingJson["yuanying"].I);
+                    newNPC.SetField("IsRefresh", 0);
+                    newNPC.SetField("dropType", 0);
+                    newNPC.SetField("canjiaPaiMai", newNPCLeiXingJson["canjiaPaiMai"].I);
+                    newNPC.SetField("paimaifenzu", newNPCLeiXingJson["paimaifenzu"]);
+                    newNPC.SetField("wudaoType", newNPCLeiXingJson["wudaoType"].I);
                     newNPC.SetField(
-                        "MoneyType",
-                        jsonData.instance.AvatarJsonData[idx]["MoneyType"].I
+                        "XinQuType",
+                        jsonData.instance.AvatarJsonData[idx]["XinQuType"].I
+                    );
+                    newNPC.SetField("gudingjiage", 0);
+                    newNPC.SetField("sellPercent", 0);
+                    newNPC.SetField("useItem", new JSONObject());
+                    newNPC.SetField("NoteBook", new JSONObject());
+                    __instance.SetNpcWuDao(newNPC["Level"].I, newNPC["wudaoType"].I, newNPC);
+                    __instance.UpNpcWuDaoByTag(randomNPCTagAndXingge["RandomNPCTag"], newNPC);
+
+                    //Add it to the JSON!
+                    jsonData.instance.AvatarJsonData.SetField(newNPC["id"].Str, newNPC);
+                    WriteToShittyLog(newNPC.Print(true));
+                }
+                catch (Exception ex)
+                {
+                    WriteToShittyLog(
+                        string.Concat(
+                            new object[]
+                            {
+                                ex.Message,
+                                "\n",
+                                ex.Source,
+                                "\n",
+                                ex.TargetSite,
+                                "\n",
+                                ex.StackTrace.Substring(
+                                    ex.StackTrace.LastIndexOf("\\") + 1,
+                                    ex.StackTrace.Length - ex.StackTrace.LastIndexOf("\\") - 1
+                                ),
+                                "\n",
+                                newNPC.Print(false),
+                                "\n\n"
+                            }
+                        )
                     );
                 }
-
-                newNPC.SetField("IsNeedHelp", false);
-                newNPC.SetField("isTanChaUnlock", false);
-                newNPC.SetField("exp", 15000);
-                newNPC.SetField(
-                    "xiuLianSpeed",
-                    __instance.getXiuLianSpeed(newNPC["staticSkills"], (float)newNPC["ziZhi"].I)
-                );
-                newNPC.SetField("yuanying", newNPCLeiXingJson["yuanying"].I);
-                newNPC.SetField("IsRefresh", 0);
-                newNPC.SetField("dropType", 0);
-                newNPC.SetField("canjiaPaiMai", newNPCLeiXingJson["canjiaPaiMai"].I);
-                newNPC.SetField("paimaifenzu", newNPCLeiXingJson["paimaifenzu"]);
-                newNPC.SetField("wudaoType", newNPCLeiXingJson["wudaoType"].I);
-                newNPC.SetField("XinQuType", jsonData.instance.AvatarJsonData[idx]["XinQuType"].I);
-                newNPC.SetField("gudingjiage", 0);
-                newNPC.SetField("sellPercent", 0);
-                newNPC.SetField("useItem", new JSONObject());
-                newNPC.SetField("NoteBook", new JSONObject());
-                __instance.SetNpcWuDao(newNPC["Level"].I, newNPC["wudaoType"].I, newNPC);
-                __instance.UpNpcWuDaoByTag(randomNPCTagAndXingge["RandomNPCTag"], newNPC);
-
-                //Add it to the JSON!
-                jsonData.instance.AvatarJsonData.SetField(newNPC["id"].Str, newNPC);
-                WriteToShittyLog(newNPC.ToString());
             }
         }
 
@@ -1023,12 +1066,10 @@ namespace MCSAllNPCsSpawn
         public static ConfigEntry<bool> useNPCFactoryInitValuesToSpawn;
         public static ConfigEntry<int> minNPCLifeSpan;
 
-        // public static ConfigEntry<bool> prioritizeHigherCultivationLevelNPCSpawn;
         public static ConfigEntry<bool> onlyHumans;
         public static ConfigEntry<int> spawnMinMoney; //Greater than or equals
         public static ConfigEntry<int> spawnMaxMoney; //Less than or equals
         public static ConfigEntry<int> spawnMinCultivationLevel; //Greater than or equals
         public static ConfigEntry<int> spawnMaxCultivationLevel; //Less than or equals
-        public static ConfigEntry<double> npcPowerIncreaseAmount;
     }
 }
