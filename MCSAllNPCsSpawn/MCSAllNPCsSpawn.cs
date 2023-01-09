@@ -16,7 +16,7 @@ namespace MCSAllNPCsSpawn
     {
         public const string modGuid = "Arx.MCS.AllNpcsSpawn";
         public const string modName = "MCSAllNPCsSpawn";
-        public const string modVersion = "1.0.0.0";
+        public const string modVersion = "1.0.0.1";
 
         private static void WriteToShittyLog(string message, bool createNewOrOverwrite = false)
         {
@@ -368,12 +368,11 @@ namespace MCSAllNPCsSpawn
             }
             void parseNPCChengHao()
             {
-                for (int i = 0; i < jsonData.instance.NPCChengHaoData.Count; i++)
+                for (int i = 0; i < jsonData.instance.NPCChengHaoData.Count - 1; i++)
                 {
                     int npcType = jsonData.instance.NPCChengHaoData[i]["NPCType"].I;
-                    if (
-                        !npcChengHaos.ContainsKey(npcType)
-                        && jsonData.instance.NPCChengHaoData[i]["id"].I < 500
+                    if (!npcChengHaos.ContainsKey(npcType)
+                    // && jsonData.instance.NPCChengHaoData[i]["id"].I < 500
                     ) //<500 is a shitty solution to try and not pick up Chenghaos from mods but idc
                     {
                         npcChengHaos.Add(
