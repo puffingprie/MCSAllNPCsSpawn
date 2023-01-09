@@ -57,7 +57,7 @@ namespace MCSAllNPCsSpawn
             MCSAllNPCsSpawn.maxSpawnCount = base.Config.Bind<int>(
                 "MCSAllNPCsSpawnConfig",
                 "MaxSpawnCount",
-                400,
+                1000,
                 "Controls the max amount of extra NPCs that spawn - Increase this number at your own risk. Personally I have a potato of a computer and it's always entertaining when I can barely move on the map because there are 80,000 NPCs."
             );
             MCSAllNPCsSpawn.createRandomNamesWhenSpawning = base.Config.Bind<bool>(
@@ -125,34 +125,88 @@ namespace MCSAllNPCsSpawn
             System.Random randomizer = new System.Random(); //Used for randomizing stuff in code
             Dictionary<int, List<JSONObject>> npcChengHaos =
                 new Dictionary<int, List<JSONObject>>(); //Used for storing NPC ChengHao data
-            npcChengHaos.Clear(); //An apple a day makes the doctor go away
             if (MCSAllNPCsSpawn.enableAllNPCsSpawn.Value)
             {
                 parseNPCChengHao();
-                int numNPCsToSpawn = maxSpawnCount.Value;
-                // Create a corresponding NPCLeixingDate list for each NPC to create
-                // for (int i = 0; i < numNPCsToSpawn; i++)
-                // {
-                //     int idx = i;
-                //     if (i >= jsonData.instance.NPCLeiXingDate.Count)
-                //     {
-                //         idx = idx % jsonData.instance.NPCLeiXingDate.Count;
-                //     }
-
-                // }
-                for (int i = 0; i < numNPCsToSpawn; i++)
+                WriteToShittyLog("npcChengHaos has " + npcChengHaos.Count + " entries");
+                foreach (var pair in npcChengHaos)
                 {
-                    int idx = i;
-                    if (i >= jsonData.instance.AvatarJsonData.Count)
+                    WriteToShittyLog($"ChengHao with key (npcType) {pair.Key}: {pair.Value}");
+                    WriteToShittyLog("Getting list content...");
+                    foreach (var item in pair.Value)
                     {
-                        idx = idx % jsonData.instance.AvatarJsonData.Count;
+                        WriteToShittyLog(item.Print());
                     }
-                    WriteToShittyLog("Currently on loop: ");
-                    WriteToShittyLog(i.ToString());
-                    if (getAvatarValidity(idx, spawnImportantNPCs.Value))
+                }
+                int numNPCsToSpawn = maxSpawnCount.Value;
+                int numSpawnedNPCs = 0;
+
+                while (numSpawnedNPCs < numNPCsToSpawn)
+                {
+                    for (int i = 0; i < jsonData.instance.AvatarJsonData.Count; i++)
                     {
-                        customCreateNpcs(idx, i);
+                        int idx = i;
+                        if (i >= jsonData.instance.AvatarJsonData.Count)
+                        {
+                            WriteToShittyLog(
+                                "i (spawn for loop) is bigger than jsonData.instance.AvatarJsonData.Count. Reforming idx, idx was "
+                                    + idx.ToString()
+                            );
+                            idx = idx % jsonData.instance.AvatarJsonData.Count;
+                            WriteToShittyLog("idx is now " + idx.ToString());
+                        }
+                        WriteToShittyLog(
+                            "Currently on loop: "
+                                + i.ToString()
+                                + "\nAlready spawned "
+                                + numSpawnedNPCs.ToString()
+                                + " NPCs\nTrying to get Avatar at index = "
+                                + idx.ToString()
+                                + ".\nAvatar's ID should be "
+                                + jsonData.instance.AvatarJsonData[idx]["id"].I.ToString()
+                        );
+                        if (getAvatarValidity(idx, spawnImportantNPCs.Value))
+                        {
+                            JSONObject coolNewnPC = customCreateNpcs(idx, numSpawnedNPCs);
+                            try
+                            {
+                                WriteToShittyLog("Trying to add NPC to AvatarJsonData...");
+                                jsonData.instance.AvatarJsonData.SetField(
+                                    (50000 + numSpawnedNPCs).ToString(),
+                                    coolNewnPC
+                                );
+                                if (
+                                    jsonData.instance.AvatarJsonData.HasField(
+                                        (50000 + numSpawnedNPCs).ToString()
+                                    )
+                                )
+                                {
+                                    WriteToShittyLog("Successfully added NPC to AvatarJsonData!");
+                                    WriteToShittyLog(coolNewnPC.Print());
+                                    numSpawnedNPCs++;
+                                }
+                                else
+                                {
+                                    WriteToShittyLog("Failed to add NPC to AvatarJsonData...");
+                                }
+                                if (numSpawnedNPCs >= numNPCsToSpawn)
+                                {
+                                    break;
+                                }
+                            }
+                            catch (Exception e)
+                            {
+                                WriteToShittyLog("Error creating NPC: " + e.ToString());
+                                WriteToShittyLog(coolNewnPC.Print());
+                            }
+                        }
                     }
+                }
+
+                if (jsonData.instance.AvatarJsonData.HasField("8881"))
+                {
+                    WriteToShittyLog("AvatarJsonData has 8881 entry, logging...");
+                    WriteToShittyLog(jsonData.instance.AvatarJsonData["8881"].Print());
                 }
             }
             // max inclusive because getRandom() is inclusive...my head hurts. i'm a terrible coder.
@@ -198,6 +252,7 @@ namespace MCSAllNPCsSpawn
                         && jsonData.instance.NPCImportantDate.HasField(idx.ToString())
                     )
                     {
+                        WriteToShittyLog("Avatar is important NPC, skipping...");
                         return false;
                     }
                     if (
@@ -205,6 +260,7 @@ namespace MCSAllNPCsSpawn
                         && jsonData.instance.AvatarJsonData[idx]["AvatarType"].I != 1
                     )
                     {
+                        WriteToShittyLog("Avatar is not human, skipping...");
                         return false;
                     }
                     int avatarMoneyType = jsonData.instance.AvatarJsonData[idx]["MoneyType"].I;
@@ -213,6 +269,7 @@ namespace MCSAllNPCsSpawn
                         || avatarMoneyType > spawnMaxMoney.Value
                     )
                     {
+                        WriteToShittyLog("Avatar's money type is out of range, skipping...");
                         return false;
                     }
                     int avatarCultivationLevel = jsonData.instance.AvatarJsonData[idx]["Level"].I;
@@ -221,6 +278,7 @@ namespace MCSAllNPCsSpawn
                         || avatarCultivationLevel > spawnMaxCultivationLevel.Value
                     )
                     {
+                        WriteToShittyLog("Avatar's cultivation level is out of range, skipping...");
                         return false;
                     }
                 }
@@ -317,7 +375,10 @@ namespace MCSAllNPCsSpawn
                 for (int i = 0; i < jsonData.instance.NPCChengHaoData.Count; i++)
                 {
                     int npcType = jsonData.instance.NPCChengHaoData[i]["NPCType"].I;
-                    if (!npcChengHaos.ContainsKey(npcType))
+                    if (
+                        !npcChengHaos.ContainsKey(npcType)
+                        && jsonData.instance.NPCChengHaoData[i]["id"].I < 500
+                    ) //<500 is a shitty solution to try and not pick up Chenghaos from mods but idc
                     {
                         npcChengHaos.Add(
                             npcType,
@@ -339,7 +400,11 @@ namespace MCSAllNPCsSpawn
                     for (int i = 0; i < npcChengHaos[npcType].Count; i++)
                     {
                         JSONObject chengHao = npcChengHaos[npcType][i];
-                        if (npcLevel >= chengHao["Level"].I && npcLevel <= chengHao["Level"].I)
+                        if (
+                            chengHao["Level"].Count >= 2
+                            && npcLevel >= chengHao["Level"][0].I
+                            && npcLevel <= chengHao["Level"][1].I
+                        )
                         {
                             return new Dictionary<string, dynamic>
                             {
@@ -356,33 +421,41 @@ namespace MCSAllNPCsSpawn
                     { "ChengHao", "宁州散修" }
                 };
             }
-            void customCreateNpcs(int idx, int loopIdx)
+            JSONObject customCreateNpcs(int idx, int idxToUseForLeiXingJson)
             {
                 JSONObject newNPC = new JSONObject();
                 try
                 {
-                    int leiXingIdx = loopIdx + 1;
+                    // WriteToShittyLog("1");
+                    int leiXingIdx = idxToUseForLeiXingJson + 1;
                     if (leiXingIdx > jsonData.instance.NPCLeiXingDate.Count)
                     {
                         leiXingIdx = leiXingIdx % jsonData.instance.NPCLeiXingDate.Count;
                     }
                     JSONObject newNPCLeiXingJson = jsonData.instance.NPCLeiXingDate[leiXingIdx];
+                    WriteToShittyLog("Leixing to use: " + newNPCLeiXingJson.Print());
+                    WriteToShittyLog(
+                        "AvatarJSON to use: " + jsonData.instance.AvatarJsonData[idx].Print()
+                    );
 
                     int avatarJsonDataId = jsonData.instance.AvatarJsonData[idx]["id"].I;
-                    newNPC.SetField("id", 100000 + loopIdx); // Add 100,000 so there are definitely no conflicts with the original NPCs, hopefully...
+                    newNPC.SetField("id", 50000 + idxToUseForLeiXingJson); // Add 50,000 so there are definitely no conflicts with the original NPCs, hopefully...
 
                     JSONObject newNPCStatusJson = new JSONObject();
                     newNPCStatusJson.SetField("StatusId", 1);
                     newNPCStatusJson.SetField("StatusTime", 60000);
                     newNPC.SetField("Status", newNPCStatusJson);
-
+                    // WriteToShittyLog("2");
                     if (createRandomNamesWhenSpawning.Value)
                     {
                         newNPC.SetField("Name", createRandomName(idx));
                     }
                     else
                     {
-                        newNPC.SetField("Name", jsonData.instance.AvatarJsonData[idx]["Name"].Str);
+                        newNPC.SetField(
+                            "Name",
+                            ToolsEx.ToCN(jsonData.instance.AvatarJsonData[idx]["Name"].Str)
+                        );
                     }
 
                     newNPC.SetField("IsTag", false);
@@ -393,7 +466,7 @@ namespace MCSAllNPCsSpawn
                         jsonData.instance.AvatarJsonData[idx]["fightFace"].I
                     );
                     newNPC.SetField("isImportant", false);
-
+                    // WriteToShittyLog("3");
                     Dictionary<string, int> randomNPCTagAndXingge = getRandomNPCTagAndXingge(
                         idx,
                         new List<int>
@@ -404,20 +477,19 @@ namespace MCSAllNPCsSpawn
                     );
                     newNPC.SetField("NPCTag", randomNPCTagAndXingge["RandomNPCTag"]);
                     newNPC.SetField("XingGe", randomNPCTagAndXingge["RandomXingge"]);
-                    newNPC.SetField("ActionId", 1);
                     newNPC.SetField("IsKnowPlayer", false);
                     newNPC.SetField("QingFen", 0);
                     newNPC.SetField("CyList", JSONObject.arr);
                     newNPC.SetField("TuPoMiShu", JSONObject.arr);
-
+                    // WriteToShittyLog("4");
                     Dictionary<string, dynamic> newNPCChengHao = findAndGetNewNPCChengHaoId(
                         newNPCLeiXingJson["Type"].I,
                         newNPCLeiXingJson["Level"].I
                     );
-                    newNPC.SetField("ChengHaoID", newNPCChengHao["ChengHaoId"]);
                     newNPC.SetField("Title", newNPCChengHao["ChengHao"]);
+                    newNPC.SetField("ChengHaoID", newNPCChengHao["ChengHaoId"]);
                     newNPC.SetField("GongXian", 0);
-                    newNPC.SetField("SexType", newNPCLeiXingJson["SexType"].I);
+                    newNPC.SetField("SexType", jsonData.instance.AvatarJsonData[idx]["SexType"].I);
                     newNPC.SetField("Type", newNPCLeiXingJson["Type"].I);
                     newNPC.SetField("LiuPai", newNPCLeiXingJson["LiuPai"].I);
                     newNPC.SetField("MenPai", newNPCLeiXingJson["MengPai"].I); //到底为什么拼对真的很不懂，你这样我很头痛欸
@@ -425,26 +497,26 @@ namespace MCSAllNPCsSpawn
                         "AvatarType",
                         jsonData.instance.AvatarJsonData[idx]["AvatarType"].I
                     );
-
+                    // WriteToShittyLog("5");
                     int newNPCLevel = newNPCLeiXingJson["Level"].I;
                     newNPC.SetField("Level", newNPCLevel);
                     newNPC.SetField("WuDaoValue", 0);
                     newNPC.SetField("WuDaoValueLevel", 0);
                     newNPC.SetField("EWWuDaoDian", 0);
                     newNPC.SetField("shaQi", 0);
-
+                    // WriteToShittyLog("6");
                     if (newNPCLevel <= 14)
                     {
                         newNPC.SetField(
                             "NextExp",
-                            jsonData.instance.NPCChuShiShuZiDate[newNPCLevel + 1]["xiuwei"].I
+                            jsonData.instance.NPCChuShiShuZiDate[newNPCLevel]["xiuwei"].I
                         );
                     }
                     else
                     {
                         newNPC.SetField("NextExp", 0);
                     }
-
+                    // WriteToShittyLog("7");
                     newNPC.SetField("equipWeapon", 0);
                     newNPC.SetField("equipClothing", 0);
                     newNPC.SetField("equipRing", 0);
@@ -456,8 +528,9 @@ namespace MCSAllNPCsSpawn
                     newNPC.SetField("LingGen", newNPCLeiXingJson["LingGen"]);
                     newNPC.SetField("skills", newNPCLeiXingJson["skills"]);
                     newNPC.SetField("JinDanType", newNPCLeiXingJson["JinDanType"]);
+                    newNPC.SetField("HuaShenLingYu", newNPCLeiXingJson["HuaShenLingYu"].I);
                     newNPC.SetField("staticSkills", newNPCLeiXingJson["staticSkills"]);
-
+                    // WriteToShittyLog("8");
                     if (useNPCFactoryInitValuesToSpawn.Value)
                     {
                         JSONObject initValuesJson = jsonData.instance.NPCChuShiShuZiDate[
@@ -579,14 +652,16 @@ namespace MCSAllNPCsSpawn
                             jsonData.instance.AvatarJsonData[idx]["MoneyType"].I
                         );
                     }
-
+                    // WriteToShittyLog("9");
                     newNPC.SetField("IsNeedHelp", false);
+                    newNPC.SetField("ActionId", 1);
                     newNPC.SetField("isTanChaUnlock", false);
                     newNPC.SetField("exp", 15000);
                     newNPC.SetField(
                         "xiuLianSpeed",
                         __instance.getXiuLianSpeed(newNPC["staticSkills"], (float)newNPC["ziZhi"].I)
                     );
+                    WriteToShittyLog("10");
                     newNPC.SetField("yuanying", newNPCLeiXingJson["yuanying"].I);
                     newNPC.SetField("IsRefresh", 0);
                     newNPC.SetField("dropType", 0);
@@ -597,6 +672,7 @@ namespace MCSAllNPCsSpawn
                         "XinQuType",
                         jsonData.instance.AvatarJsonData[idx]["XinQuType"].I
                     );
+                    WriteToShittyLog("11");
                     newNPC.SetField("gudingjiage", 0);
                     newNPC.SetField("sellPercent", 0);
                     newNPC.SetField("useItem", new JSONObject());
@@ -605,8 +681,9 @@ namespace MCSAllNPCsSpawn
                     __instance.UpNpcWuDaoByTag(randomNPCTagAndXingge["RandomNPCTag"], newNPC);
 
                     //Add it to the JSON!
-                    jsonData.instance.AvatarJsonData.SetField(newNPC["id"].Str, newNPC);
-                    WriteToShittyLog(newNPC.Print(true));
+                    // jsonData.instance.AvatarJsonData.SetField(newNPC["id"].Str, newNPC);
+                    // WriteToShittyLog(newNPC.Print());
+                    return newNPC;
                 }
                 catch (Exception ex)
                 {
@@ -625,436 +702,12 @@ namespace MCSAllNPCsSpawn
                                     ex.StackTrace.Length - ex.StackTrace.LastIndexOf("\\") - 1
                                 ),
                                 "\n",
-                                newNPC.Print(false),
-                                "\n\n"
+                                newNPC.Print(false)
                             }
                         )
                     );
                 }
-            }
-        }
-
-        // [HarmonyPostfix]
-        // [HarmonyPatch(typeof(NPCFactory), "firstCreateNpcs")]
-        private static void NPCFactory_FirstCreateNpcs_Postfix_Old(NPCFactory __instance)
-        {
-            bool flag = MCSAllNPCsSpawn.enableAllNPCsSpawn.Value;
-            if (flag)
-            {
-                List<string> item = new List<string>();
-                List<List<string>> list = new List<List<string>>
-                {
-                    item,
-                    item,
-                    item,
-                    item,
-                    item,
-                    item,
-                    item,
-                    item,
-                    item,
-                    item,
-                    item,
-                    item,
-                    item,
-                    item,
-                    item,
-                    item,
-                    item,
-                    item
-                };
-                for (int i = 0; i < jsonData.instance.NPCLeiXingDate.Count; i++)
-                {
-                    bool flag2 = jsonData.instance.NPCLeiXingDate[i]["NPCTag"].Count == 2;
-                    if (flag2)
-                    {
-                        int i2 = jsonData.instance.NPCLeiXingDate[i]["Level"].I;
-                        list[i2].Add(jsonData.instance.NPCLeiXingDate[i].ToString());
-                    }
-                }
-                List<string> list2 = new List<string>();
-                List<string> list3 = new List<string>();
-                for (int j = 0; j < jsonData.instance.NPCImportantDate.Count; j++)
-                {
-                    list2.Add(jsonData.instance.NPCImportantDate[j]["id"].I.ToString());
-                    list3.Add(
-                        ToolsEx.ToCN(
-                            jsonData.instance.AvatarJsonData[
-                                jsonData.instance.NPCImportantDate[j]["id"].I.ToString()
-                            ]["Name"].Str
-                        )
-                    );
-                }
-                List<int> list4 = new List<int>();
-                List<string> list5 = new List<string>();
-                List<string> list6 = new List<string>();
-                for (int k = 0; k < jsonData.instance.NPCChengHaoData.Count; k++)
-                {
-                    list4.Add(jsonData.instance.NPCChengHaoData[k]["id"].I);
-                    list5.Add(ToolsEx.ToCN(jsonData.instance.NPCChengHaoData[k]["ChengHao"].Str));
-                    list6.Add(jsonData.instance.NPCChengHaoData[k]["NPCType"].I.ToString());
-                }
-                int count = jsonData.instance.AvatarJsonData.Count;
-
-                for (int l = 0; l < count; l++)
-                {
-                    string text = jsonData.instance.AvatarJsonData[l]["id"].I.ToString();
-                    int i3 = jsonData.instance.AvatarJsonData[l]["id"].I;
-                    string npcname = ToolsEx.ToCN(jsonData.instance.AvatarJsonData[l]["Name"].Str);
-                    bool flag3 =
-                        jsonData.instance.AvatarJsonData[l]["Title"].Str != ""
-                        && i3 < 20000
-                        && jsonData.instance.AvatarJsonData[l]["MoneyType"].I <= 10
-                        && jsonData.instance.AvatarJsonData[l]["MoneyType"].I > 0;
-                    if (flag3)
-                    {
-                        bool flag4 = i3 > 20000;
-                        if (flag4)
-                        {
-                            break;
-                        }
-                        int i5 = jsonData.instance.AvatarJsonData[l]["AvatarType"].I;
-                        bool isValidAvatarType = MCSAllNPCsSpawn.onlyHumans.Value ? i5 == 1 : true;
-                        bool passesMinMoney =
-                            jsonData.instance.AvatarJsonData[l]["MoneyType"].I
-                            >= MCSAllNPCsSpawn.spawnMinMoney.Value;
-                        bool passesMaxMoney =
-                            jsonData.instance.AvatarJsonData[l]["MoneyType"].I
-                            <= MCSAllNPCsSpawn.spawnMaxMoney.Value;
-                        bool passesMinCultivation =
-                            jsonData.instance.AvatarJsonData[l]["Level"].I
-                            >= MCSAllNPCsSpawn.spawnMinCultivationLevel.Value;
-                        bool passesMaxCultivation =
-                            jsonData.instance.AvatarJsonData[l]["Level"].I
-                            <= MCSAllNPCsSpawn.spawnMaxCultivationLevel.Value;
-                        bool passesConfigChecks =
-                            isValidAvatarType
-                            && passesMinMoney
-                            && passesMaxMoney
-                            && passesMinCultivation
-                            && passesMaxCultivation;
-                        bool flag5 = (
-                            !(npcname != "")
-                            || list3.FindIndex((string xxt) => xxt == npcname) <= -1
-                        );
-                        if (flag5 && passesConfigChecks)
-                        {
-                            int i4 = jsonData.instance.AvatarJsonData[l]["Level"].I;
-                            string npctitle = ToolsEx.ToCN(
-                                jsonData.instance.AvatarJsonData[l]["Title"].Str
-                            );
-                            int num2 = list5.FindIndex((string xxt) => xxt == npctitle);
-                            bool flag6 = num2 > -1;
-                            int num3;
-                            string text2;
-                            int num4;
-                            if (flag6)
-                            {
-                                num3 = list4[num2];
-                                text2 = list6[num2];
-                                num4 = 0;
-                            }
-                            else
-                            {
-                                num3 = 418;
-                                text2 = "10";
-                                num4 = i3;
-                            }
-                            JSONObject jsonobject = null;
-                            for (int m = 0; m < list[i4].Count - 1; m++)
-                            {
-                                JSONObject jsonobject2 = new JSONObject(
-                                    list[i4][m].ToString(),
-                                    -2,
-                                    false,
-                                    false
-                                );
-                                bool flag7 =
-                                    jsonobject2["Type"].I.ToString() == text2
-                                    && (
-                                        jsonobject2["AvatarType"].I == i5
-                                        || jsonobject2["AvatarType"].I == 1
-                                        || (i5 == 1 && jsonobject2["AvatarType"].I == 3)
-                                    );
-                                if (flag7)
-                                {
-                                    jsonobject = jsonobject2;
-                                    break;
-                                }
-                            }
-                            bool flag8 = jsonobject == null;
-                            if (flag8)
-                            {
-                                WriteToShittyLog("flag8");
-                                WriteToShittyLog(
-                                    string.Concat(new string[] { text, "|", text2, "\n" })
-                                );
-                            }
-                            bool flag10 = jsonobject != null;
-                            if (flag10)
-                            {
-                                try
-                                {
-                                    Tools.instance.getPlayer();
-                                    JSONObject jsonobject3 = new JSONObject();
-                                    jsonobject3.SetField("id", 100000 + i3);
-                                    JSONObject jsonobject4 = new JSONObject();
-                                    jsonobject4.SetField("StatusId", 1);
-                                    jsonobject4.SetField("StatusTime", 60000);
-                                    jsonobject3.SetField("Status", jsonobject4);
-                                    jsonobject3.SetField("isImportant", false);
-                                    jsonobject3.SetField("Name", npcname);
-                                    jsonobject3.SetField("IsTag", false);
-                                    jsonobject3.SetField("FirstName", "");
-                                    jsonobject3.SetField(
-                                        "face",
-                                        jsonData.instance.AvatarJsonData[l]["face"].I
-                                    );
-                                    jsonobject3.SetField(
-                                        "fightFace",
-                                        jsonData.instance.AvatarJsonData[l]["fightFace"].I
-                                    );
-                                    int random;
-                                    do
-                                    {
-                                        random = __instance.getRandom(
-                                            jsonobject["NPCTag"][0].I,
-                                            jsonobject["NPCTag"][1].I
-                                        );
-                                    } while (
-                                        random <= 0
-                                        || random == 2
-                                        || random == 3
-                                        || random == 22
-                                        || random == 23
-                                    );
-                                    jsonobject3.SetField(
-                                        "XingGe",
-                                        __instance.getRandomXingGe(
-                                            jsonData.instance.NPCTagDate[random.ToString()][
-                                                "zhengxie"
-                                            ].I
-                                        )
-                                    );
-                                    jsonobject3.SetField("NPCTag", random);
-                                    jsonobject3.SetField("ActionId", 1);
-                                    jsonobject3.SetField("IsKnowPlayer", false);
-                                    jsonobject3.SetField(
-                                        "HuaShenLingYu",
-                                        jsonobject["HuaShenLingYu"].I
-                                    );
-                                    jsonobject3.SetField("QingFen", 0);
-                                    jsonobject3.SetField("CyList", JSONObject.arr);
-                                    jsonobject3.SetField("TuPoMiShu", JSONObject.arr);
-                                    jsonobject3.SetField(
-                                        "Title",
-                                        ToolsEx.ToCN(
-                                            jsonData.instance.AvatarJsonData[l]["Title"].Str
-                                        )
-                                    );
-                                    jsonobject3.SetField("ChengHaoID", num3);
-                                    jsonobject3.SetField("GongXian", 0);
-                                    jsonobject3.SetField(
-                                        "SexType",
-                                        jsonData.instance.AvatarJsonData[l]["SexType"].I
-                                    );
-                                    jsonobject3.SetField("AvatarType", i5);
-                                    jsonobject3.SetField("Level", i4);
-                                    jsonobject3.SetField("WuDaoValue", 0);
-                                    jsonobject3.SetField("WuDaoValueLevel", 0);
-                                    jsonobject3.SetField("EWWuDaoDian", 0);
-                                    jsonobject3.SetField("IsNeedHelp", false);
-                                    jsonobject3.SetField(
-                                        "HP",
-                                        jsonData.instance.AvatarJsonData[l]["HP"].I
-                                    );
-                                    jsonobject3.SetField(
-                                        "dunSu",
-                                        jsonData.instance.AvatarJsonData[l]["dunSu"].I
-                                    );
-                                    jsonobject3.SetField(
-                                        "ziZhi",
-                                        jsonData.instance.AvatarJsonData[l]["ziZhi"].I
-                                    );
-                                    jsonobject3.SetField(
-                                        "wuXin",
-                                        jsonData.instance.AvatarJsonData[l]["wuXin"].I
-                                    );
-                                    jsonobject3.SetField(
-                                        "shengShi",
-                                        jsonData.instance.AvatarJsonData[l]["shengShi"].I
-                                    );
-                                    jsonobject3.SetField("shaQi", 0);
-                                    int num5 = i4 * 200 + 200;
-                                    bool flag11 =
-                                        jsonData.instance.AvatarJsonData[l]["shouYuan"].I < num5;
-                                    if (flag11)
-                                    {
-                                        jsonobject3.SetField("shouYuan", num5);
-                                    }
-                                    else
-                                    {
-                                        jsonobject3.SetField(
-                                            "shouYuan",
-                                            jsonData.instance.AvatarJsonData[l]["shouYuan"].I + 200
-                                        );
-                                    }
-                                    jsonobject3.SetField(
-                                        "age",
-                                        jsonData.instance.AvatarJsonData[l]["age"].I * 12
-                                    );
-                                    jsonobject3.SetField("exp", 15000);
-                                    bool flag12 = i4 <= 14;
-                                    if (flag12)
-                                    {
-                                        jsonobject3.SetField(
-                                            "NextExp",
-                                            jsonData.instance.NPCChuShiShuZiDate[
-                                                (i4 + 1).ToString()
-                                            ]["xiuwei"].I
-                                        );
-                                    }
-                                    else
-                                    {
-                                        jsonobject3.SetField("NextExp", 0);
-                                    }
-                                    jsonobject3.SetField("equipList", new JSONObject());
-                                    bool flag13 =
-                                        jsonData.instance.AvatarJsonData[l]["skills"].Count == 7
-                                        && jsonData.instance.AvatarJsonData[l]["skills"][0].I == 1
-                                        && jsonData.instance.AvatarJsonData[l]["skills"][1].I == 201
-                                        && jsonData.instance.AvatarJsonData[l]["skills"][2].I == 101
-                                        && jsonData.instance.AvatarJsonData[l]["skills"][3].I == 301
-                                        && jsonData.instance.AvatarJsonData[l]["skills"][4].I == 401
-                                        && jsonData.instance.AvatarJsonData[l]["skills"][5].I == 501
-                                        && jsonData.instance.AvatarJsonData[l]["skills"][6].I == 504
-                                        && jsonData.instance.AvatarJsonData[l]["staticSkills"].Count
-                                            <= 1;
-                                    if (flag13)
-                                    {
-                                        jsonobject3.SetField("skills", jsonobject["skills"]);
-                                        jsonobject3.SetField(
-                                            "staticSkills",
-                                            jsonobject["staticSkills"]
-                                        );
-                                    }
-                                    else
-                                    {
-                                        jsonobject3.SetField(
-                                            "skills",
-                                            jsonData.instance.AvatarJsonData[l]["skills"]
-                                        );
-                                        jsonobject3.SetField(
-                                            "staticSkills",
-                                            jsonData.instance.AvatarJsonData[l]["staticSkills"]
-                                        );
-                                    }
-                                    jsonobject3.SetField("JinDanType", jsonobject["JinDanType"]);
-                                    jsonobject3.SetField("LingGen", jsonobject["LingGen"]);
-                                    jsonobject3.SetField(
-                                        "equipWeapon",
-                                        jsonobject["equipWeapon"].I
-                                    );
-                                    jsonobject3.SetField(
-                                        "equipClothing",
-                                        jsonobject["equipClothing"].I
-                                    );
-                                    jsonobject3.SetField("equipRing", jsonobject["equipRing"].I);
-                                    jsonobject3.SetField("Type", jsonobject["Type"]);
-                                    jsonobject3.SetField("LiuPai", jsonobject["LiuPai"]);
-                                    jsonobject3.SetField("MenPai", jsonobject["MengPai"]);
-                                    jsonobject3.SetField(
-                                        "equipWeaponPianHao",
-                                        jsonobject["equipWeapon"]
-                                    );
-                                    jsonobject3.SetField(
-                                        "equipWeapon2PianHao",
-                                        jsonobject["equipWeapon"]
-                                    );
-                                    jsonobject3.SetField(
-                                        "equipClothingPianHao",
-                                        jsonobject["equipClothing"]
-                                    );
-                                    jsonobject3.SetField(
-                                        "equipRingPianHao",
-                                        jsonobject["equipRing"]
-                                    );
-                                    jsonobject3.SetField("yuanying", jsonobject["yuanying"]);
-                                    jsonobject3.SetField(
-                                        "canjiaPaiMai",
-                                        jsonobject["canjiaPaiMai"].I
-                                    );
-                                    jsonobject3.SetField("paimaifenzu", jsonobject["paimaifenzu"]);
-                                    jsonobject3.SetField("wudaoType", jsonobject["wudaoType"]);
-                                    jsonobject3.SetField(
-                                        "xiuLianSpeed",
-                                        __instance.getXiuLianSpeed(
-                                            jsonobject["staticSkills"],
-                                            (float)jsonobject3["ziZhi"].I
-                                        )
-                                    );
-                                    jsonobject3.SetField(
-                                        "MoneyType",
-                                        jsonData.instance.AvatarJsonData[l]["MoneyType"].I
-                                    );
-                                    jsonobject3.SetField("IsRefresh", 0);
-                                    jsonobject3.SetField("dropType", 0);
-                                    jsonobject3.SetField("wudaoType", jsonobject["wudaoType"]);
-                                    jsonobject3.SetField("XinQuType", jsonobject["XinQuType"]);
-                                    jsonobject3.SetField("gudingjiage", 0);
-                                    jsonobject3.SetField("sellPercent", 0);
-                                    jsonobject3.SetField("useItem", new JSONObject());
-                                    jsonobject3.SetField("NoteBook", new JSONObject());
-                                    __instance.SetNpcWuDao(
-                                        i4,
-                                        jsonobject["wudaoType"].I,
-                                        jsonobject3
-                                    );
-                                    __instance.UpNpcWuDaoByTag(
-                                        jsonobject3["NPCTag"].I,
-                                        jsonobject3
-                                    );
-                                    bool flag14 = num4 > 0;
-                                    if (flag14)
-                                    {
-                                        jsonobject3.SetField("mybangding", num4);
-                                    }
-                                    jsonData.instance.AvatarJsonData.SetField(
-                                        (100000 + i3).ToString(),
-                                        jsonobject3
-                                    );
-                                }
-                                catch (Exception ex)
-                                {
-                                    WriteToShittyLog(
-                                        string.Concat(
-                                            new object[]
-                                            {
-                                                ex.Message,
-                                                "\n",
-                                                ex.Source,
-                                                "\n",
-                                                ex.TargetSite,
-                                                "\n",
-                                                ex.StackTrace.Substring(
-                                                    ex.StackTrace.LastIndexOf("\\") + 1,
-                                                    ex.StackTrace.Length
-                                                        - ex.StackTrace.LastIndexOf("\\")
-                                                        - 1
-                                                ),
-                                                "\n",
-                                                i3,
-                                                "\n",
-                                                jsonobject.Print(false),
-                                                "\n\n\n"
-                                            }
-                                        )
-                                    );
-                                }
-                            }
-                        }
-                    }
-                }
+                return null;
             }
         }
 
