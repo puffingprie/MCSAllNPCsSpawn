@@ -60,11 +60,11 @@ namespace MCSAllNPCsSpawn
                 1000,
                 "Controls the max amount of extra NPCs that spawn - Increase this number at your own risk. Personally I have a potato of a computer and it's always entertaining when I can barely move on the map because there are 80,000 NPCs."
             );
-            MCSAllNPCsSpawn.createRandomNamesWhenSpawning = base.Config.Bind<bool>(
+            MCSAllNPCsSpawn.useRandomNamesWhenSpawning = base.Config.Bind<bool>(
                 "MCSAllNPCsSpawnConfig",
-                "CreateRandomNamesWhenSpawning",
+                "UseRandomNamesWhenSpawning",
                 true,
-                "Whether to create random names for NPCs when they spawn. If false, NPCs will spawn with their default names."
+                "Whether to use random names for NPCs when they spawn. If false, NPCs will spawn with their default names."
             );
             MCSAllNPCsSpawn.spawnImportantNPCs = base.Config.Bind<bool>(
                 "MCSAllNPCsSpawnConfig",
@@ -305,38 +305,18 @@ namespace MCSAllNPCsSpawn
                 return true;
             }
             //Psuedo random name generator
-            string createRandomName(int idx, bool genderMatters = true)
+            string getRandomName(int genderType)
             {
-                string name = jsonData.instance.AvatarJsonData[idx]["Name"].Str;
-                int randomNum = generateRandomInt(0, jsonData.instance.AvatarJsonData.Count - 1);
-                if (genderMatters)
+                if (genderType == 1)
                 {
-                    while (
-                        jsonData.instance.AvatarJsonData[idx]["SexType"].I
-                        != jsonData.instance.AvatarJsonData[randomNum]["SexType"].I
-                    )
-                    {
-                        randomNum = generateRandomInt(
-                            0,
-                            jsonData.instance.AvatarJsonData.Count - 1
-                        );
-                    }
+                    int randomNum = generateRandomInt(0, Names.maleNames.Count);
+                    return Names.maleNames[randomNum];
                 }
-                string randomName = jsonData.instance.AvatarJsonData[randomNum]["Name"].Str;
-                // Take surname of `name` and firstname of `randomName`
-                // Make sure there's a valid name and randomName? If not just leave name as original.
-                if (name.Length >= 1 && randomName.Length >= 1)
+                else
                 {
-                    if (name.Length >= 4)
-                    {
-                        name = name.Substring(0, 2) + randomName.Substring(2);
-                    }
-                    else
-                    {
-                        name = name.Substring(0, 1) + randomName.Substring(1);
-                    }
+                    int randomNum = generateRandomInt(0, Names.femaleNames.Count);
+                    return Names.femaleNames[randomNum];
                 }
-                return ToolsEx.ToCN(name);
             }
             Dictionary<string, int> getRandomNPCTagAndXingge(int idx, List<int> validNPCTags = null)
             {
@@ -487,9 +467,9 @@ namespace MCSAllNPCsSpawn
                     newNPCStatusJson.SetField("StatusId", 1);
                     newNPCStatusJson.SetField("StatusTime", 60000);
                     newNPC.SetField("Status", newNPCStatusJson);
-                    if (createRandomNamesWhenSpawning.Value)
+                    if (useRandomNamesWhenSpawning.Value)
                     {
-                        newNPC.SetField("Name", createRandomName(idx));
+                        newNPC.SetField("Name", getRandomName(avatarJsonData[idx]["SexType"].I));
                     }
                     else
                     {
@@ -568,12 +548,14 @@ namespace MCSAllNPCsSpawn
                                 new List<int>() { initVals["HP"][0].I, initVals["HP"][1].I }
                             )
                         );
-                        newNPC.SetField(
-                            "age",
-                            generateRandomIntFromRange(
-                                new List<int>() { initVals["age"][0].I, initVals["age"][1].I }
-                            )
+                        int initAge = generateRandomIntFromRange(
+                            new List<int>() { initVals["age"][0].I, initVals["age"][1].I }
                         );
+                        if (initAge < newNPCLevel * 5)
+                        {
+                            initAge = newNPCLevel * 5;
+                        }
+                        newNPC.SetField("age", initAge);
                         int newNPCShouyuan = generateRandomIntFromRange(
                             new List<int>() { initVals["shouYuan"][0].I, initVals["shouYuan"][1].I }
                         );
@@ -698,7 +680,7 @@ namespace MCSAllNPCsSpawn
         public static MCSAllNPCsSpawn Inst;
         public static ConfigEntry<bool> enableAllNPCsSpawn;
         public static ConfigEntry<int> maxSpawnCount;
-        public static ConfigEntry<bool> createRandomNamesWhenSpawning;
+        public static ConfigEntry<bool> useRandomNamesWhenSpawning;
         public static ConfigEntry<bool> spawnImportantNPCs;
         public static ConfigEntry<bool> useNPCFactoryInitValuesToSpawn;
         public static ConfigEntry<int> minNPCLifeSpan;

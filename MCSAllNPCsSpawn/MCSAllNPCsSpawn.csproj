@@ -72,6 +72,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Names.cs" />
     <Compile Include="MCSAllNPCsSpawn.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
