@@ -584,6 +584,10 @@ namespace MCSAllNPCsSpawn
                 newNPC.SetField("NoteBook", new JSONObject());
                 __instance.SetNpcWuDao(newNPC["Level"].I, newNPC["wudaoType"].I, newNPC);
                 __instance.UpNpcWuDaoByTag(randomNPCTagAndXingge["RandomNPCTag"], newNPC);
+
+                //Add it to the JSON!
+                jsonData.instance.AvatarJsonData.SetField(newNPC["id"].Str, newNPC);
+                WriteToShittyLog(newNPC.ToString());
             }
         }
 
