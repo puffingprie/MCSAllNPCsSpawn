@@ -16,7 +16,7 @@ namespace MCSAllNPCsSpawn
     {
         public const string modGuid = "Arx.MCS.AllNpcsSpawn";
         public const string modName = "MCSAllNPCsSpawn";
-        public const string modVersion = "1.0.0.1";
+        public const string modVersion = "1.0.0.2";
 
         private static void WriteToShittyLog(string message, bool createNewOrOverwrite = false)
         {
@@ -305,18 +305,27 @@ namespace MCSAllNPCsSpawn
                 return true;
             }
             //Psuedo random name generator
-            string getRandomName(int genderType)
+            string getRandomName(int genderType, int npcType)
             {
-                if (genderType == 1)
+                int randomNum = generateRandomInt(0, Names.maleNames.Count);
+                if (Names.specialFamilyNames.ContainsKey(npcType))
                 {
-                    int randomNum = generateRandomInt(0, Names.maleNames.Count);
-                    return Names.maleNames[randomNum];
+                    switch (genderType)
+                    {
+                        case 1:
+                            return Names.specialFamilyNames[npcType] + Names.maleNames[randomNum];
+                        case 2:
+                            return Names.specialFamilyNames[npcType] + Names.femaleNames[randomNum];
+                    }
                 }
-                else
+                switch (genderType)
                 {
-                    int randomNum = generateRandomInt(0, Names.femaleNames.Count);
-                    return Names.femaleNames[randomNum];
+                    case 1:
+                        return Names.maleNames[randomNum];
+                    case 2:
+                        return Names.femaleNames[randomNum];
                 }
+                return "";
             }
             Dictionary<string, int> getRandomNPCTagAndXingge(int idx, List<int> validNPCTags = null)
             {
@@ -466,17 +475,21 @@ namespace MCSAllNPCsSpawn
                     newNPCStatusJson.SetField("StatusId", 1);
                     newNPCStatusJson.SetField("StatusTime", 60000);
                     newNPC.SetField("Status", newNPCStatusJson);
+                    newNPC.SetField("IsTag", false);
+                    newNPC.SetField("SexType", avatarJsonData[idx]["SexType"].I);
+                    newNPC.SetField("Type", newNPCLeiXingJson["Type"].I);
+                    newNPC.SetField("FirstName", "");
                     if (useRandomNamesWhenSpawning.Value)
                     {
-                        newNPC.SetField("Name", getRandomName(avatarJsonData[idx]["SexType"].I));
+                        newNPC.SetField(
+                            "Name",
+                            getRandomName(newNPC["SexType"].I, newNPC["Type"].I)
+                        );
                     }
                     else
                     {
-                        newNPC.SetField("Name", ToolsEx.ToCN(avatarJsonData[idx]["Name"].Str));
+                        newNPC.SetField("Name", ToolsEx.ToCN(newNPC["Name"].Str));
                     }
-
-                    newNPC.SetField("IsTag", false);
-                    newNPC.SetField("FirstName", "");
                     newNPC.SetField("face", avatarJsonData[idx]["face"].I);
                     newNPC.SetField("fightFace", avatarJsonData[idx]["fightFace"].I);
                     newNPC.SetField("isImportant", false);
@@ -501,8 +514,6 @@ namespace MCSAllNPCsSpawn
                     newNPC.SetField("Title", newNPCChengHao["ChengHao"]);
                     newNPC.SetField("ChengHaoID", newNPCChengHao["ChengHaoId"]);
                     newNPC.SetField("GongXian", 0);
-                    newNPC.SetField("SexType", avatarJsonData[idx]["SexType"].I);
-                    newNPC.SetField("Type", newNPCLeiXingJson["Type"].I);
                     newNPC.SetField("LiuPai", newNPCLeiXingJson["LiuPai"].I);
                     newNPC.SetField("MenPai", newNPCLeiXingJson["MengPai"].I); //到底为什么拼对真的很不懂，你这样我很头痛欸
                     newNPC.SetField("AvatarType", avatarJsonData[idx]["AvatarType"].I);

@@ -8,6 +8,14 @@ namespace MCSAllNPCsSpawn
 {
     public class Names
     {
+        public static Dictionary<int, string> specialFamilyNames = new Dictionary<int, string>()
+        {
+            //Type, Name
+            { 19, "倪" },
+            { 20, "林" },
+            { 21, "百里" },
+            { 22, "公孙" },
+        };
         public static List<string> maleNames = new List<string>()
         {
             "禹泰和",
