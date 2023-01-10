@@ -57,7 +57,7 @@ namespace MCSAllNPCsSpawn
                 "MCSAllNPCsSpawnConfig",
                 "MaxSpawnCount",
                 1000,
-                "多生成的NPC，测试了一下大概2000、2500以后游戏开始想死 / Controls the max amount of extra NPCs that spawn (Around 2000 seems to be the max before game goes bonkers)"
+                "多生成的NPC，测试了一下大概2000以后游戏开始想死 / Controls the max amount of extra NPCs that spawn (Around 2000 seems to be the max before game goes bonkers)"
             );
             MCSAllNPCsSpawn.useRandomNamesWhenSpawning = base.Config.Bind<bool>(
                 "MCSAllNPCsSpawnConfig",
@@ -583,9 +583,9 @@ namespace MCSAllNPCsSpawn
                         int initAge = generateRandomIntFromRange(
                             new List<int>() { initVals["age"][0].I, initVals["age"][1].I }
                         );
-                        if (initAge < newNPCLevel * 5)
+                        if (initAge < newNPCLevel * 10)
                         {
-                            initAge = newNPCLevel * 5;
+                            initAge = newNPCLevel * 10;
                         }
                         newNPC.SetField("age", initAge);
                         int newNPCShouyuan = generateRandomIntFromRange(
