@@ -156,7 +156,7 @@ namespace MCSAllNPCsSpawn
                 }
                 int numNPCsToSpawn = maxSpawnCount.Value;
                 int numSpawnedNPCs = 0;
-                int loopBreaker = 0;
+                int loopBreaker = 0; // this is used to prevent infinite loops, at least you'll be able to start the game even if something breaks
 
                 while (numSpawnedNPCs < numNPCsToSpawn)
                 {
@@ -385,14 +385,14 @@ namespace MCSAllNPCsSpawn
                     { "RandomXingge", randomXingge }
                 };
             }
-            void parseNPCLeiXing(bool disableSpecialLeiXings = true)
+            void parseNPCLeiXing(bool allowSpecialLeiXings = false)
             {
                 for (int i = 0; i < jsonData.instance.NPCLeiXingDate.Count; i++)
                 {
                     JSONObject leiXing = jsonData.instance.NPCLeiXingDate[i];
                     int leiXingId = leiXing["id"].I;
                     bool shouldAddLeiXing = true;
-                    if (disableSpecialLeiXings)
+                    if (!allowSpecialLeiXings)
                     {
                         foreach (List<int> leiXingRange in Constants.specialLeiXingIdRanges)
                         {

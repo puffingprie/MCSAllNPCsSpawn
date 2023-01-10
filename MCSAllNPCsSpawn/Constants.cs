@@ -18,7 +18,7 @@ namespace MCSAllNPCsSpawn
             new List<int>() { 376, 390 }, // 百里奇
             new List<int>() { 406, 420 }, // 公孙季
             new List<int>() { 976, 990 }, // 王登
-            new List<int>() { 1006, 1019 } // ??? Idk what this is but it has nothing in it so I'm removing it.
+            new List<int>() { 1006, 1020 } // ??? Idk what this is but it has nothing in it so I'm removing it.
         };
         public static Dictionary<int, string> specialFamilyNames = new Dictionary<int, string>()
         {
