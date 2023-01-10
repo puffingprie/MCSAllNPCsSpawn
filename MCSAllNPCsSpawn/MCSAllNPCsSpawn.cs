@@ -5,7 +5,6 @@ using System.Linq;
 using System.IO;
 using BepInEx;
 using BepInEx.Configuration;
-using BepInEx.Logging;
 using HarmonyLib;
 using UnityEngine;
 
@@ -52,67 +51,73 @@ namespace MCSAllNPCsSpawn
                 "MCSAllNPCsSpawnConfig",
                 "EnableAllNPCsSpawning",
                 true,
-                "Enable this mod / 启动本模组"
+                "启动本模组 / Enable this mod"
             );
             MCSAllNPCsSpawn.maxSpawnCount = base.Config.Bind<int>(
                 "MCSAllNPCsSpawnConfig",
                 "MaxSpawnCount",
                 1000,
-                "Controls the max amount of extra NPCs that spawn (Around 2000 seems to be the max before game goes bonkers) / 多生成的NPC，测试了一下大概2000、2500以后游戏开始想死."
+                "多生成的NPC，测试了一下大概2000、2500以后游戏开始想死 / Controls the max amount of extra NPCs that spawn (Around 2000 seems to be the max before game goes bonkers)"
             );
             MCSAllNPCsSpawn.useRandomNamesWhenSpawning = base.Config.Bind<bool>(
                 "MCSAllNPCsSpawnConfig",
                 "UseRandomNamesWhenSpawning",
                 true,
-                "Whether to use names from custom name list when spawning NPCs. Otherwise uses game's auto-generated names / NPC是否使用自定义名字列表生成"
+                "NPC是否使用自定义名字列表生成 / Whether to use names from custom name list when spawning NPCs. Otherwise uses game's auto-generated names"
             );
             MCSAllNPCsSpawn.spawnImportantNPCs = base.Config.Bind<bool>(
                 "MCSAllNPCsSpawnConfig",
                 "SpawnImportantNPCs",
                 false,
-                "Whether to spawn important NPCs (turn this off usually to avoid disruptions to storyline) / 是否生成重要NPC，不想路上遇到冒牌货副角就关了吧"
+                "是否生成重要NPC，不想路上遇到冒牌货副角就关了吧 / Whether to spawn important NPCs (turn this off usually to avoid disruptions to storyline)"
+            );
+            MCSAllNPCsSpawn.normalNPCsCanUseImportantNPCSkills = base.Config.Bind<bool>(
+                "MCSAllNPCsSpawnConfig",
+                "NormalNPCsCanUseImportantNPCSkills",
+                false,
+                "普通NPC是否可以使用重要角色的类型（技能、悟道等）。真的真的真的不建议开，不建议开，不建议开（说三次你要开随便你） / Normal NPCs can use important Character LeiXings (Skills, WuDao, etc.) I really don't recommend you turning this on."
             );
             MCSAllNPCsSpawn.useNPCFactoryInitValuesToSpawn = base.Config.Bind<bool>(
                 "MCSAllNPCsSpawnConfig",
                 "UseNPCFactoryInitValuesToSpawn",
                 true,
-                "Whether to use NPCFactory init values (NPCChuShiShuZiDate.json) to spawn NPCs. If false, NPCs will use values from default AvatarJsonData.json / 是否使用初始化数值（NPCChuShiShuZiDate.json）生成NPC，关闭就默认用AvatarJsonData.json"
+                "是否使用初始化数值（NPCChuShiShuZiDate.json）生成NPC，关闭就默认用AvatarJsonData.json / Whether to use NPCFactory init values (NPCChuShiShuZiDate.json) to spawn NPCs. If false, NPCs will use values from default AvatarJsonData.json"
             );
             MCSAllNPCsSpawn.minNPCLifeSpan = base.Config.Bind<int>(
                 "MCSAllNPCsSpawnConfig",
                 "MinNPCLifeSpan",
                 120,
-                "Minimum NPC lifespan when initially spawning / 控制生成NPC最短寿命，游戏里NPC任然有物品还是会给自己延长寿命"
+                "控制生成NPC最短寿命，游戏里NPC任然有物品还是会给自己延长寿命 / Minimum NPC lifespan when initially spawning"
             );
             MCSAllNPCsSpawn.onlyHumans = base.Config.Bind<bool>(
                 "MCSAllNPCsSpawnConfig",
                 "onlyHumans",
                 true,
-                "Only Humans Spawn / 只生成人类，要妖魔鬼怪的就关了吧"
+                "只生成人类，要妖魔鬼怪的就关了吧 / Only Humans Spawn"
             );
             MCSAllNPCsSpawn.spawnMinMoney = base.Config.Bind<int>(
                 "MCSAllNPCsSpawnConfig",
                 "SpawnMinMoney",
                 0,
-                "Limit NPC spawning to NPCs withh AT LEAST this wealth level (0-11), NPC entries outside this wealth level won't be spawned -> Greater than or equals / 控制生成最少富有度 （大于等于）"
+                "控制生成最少富有度 （大于等于） / Limit NPC spawning to NPCs with AT LEAST this wealth level (0-11), NPC entries outside this wealth level won't be spawned -> Greater than or equals"
             );
             MCSAllNPCsSpawn.spawnMaxMoney = base.Config.Bind<int>(
                 "MCSAllNPCsSpawnConfig",
                 "SpawnMaxMoney",
                 11,
-                "Limit NPC spawning to NPCs withh AT MOST this wealth level (0-11), NPC entries outside this wealth level won't be spawned -> Less than or equals / 控制生成最大富有度 （小于等于）"
+                "控制生成最大富有度 （小于等于） / Limit NPC spawning to NPCs with AT MOST this wealth level (0-11), NPC entries outside this wealth level won't be spawned -> Less than or equals"
             );
             MCSAllNPCsSpawn.spawnMinCultivationLevel = base.Config.Bind<int>(
                 "MCSAllNPCsSpawnConfig",
                 "SpawnMinCultivationLevel",
                 1,
-                "Limit NPC spawning to NPCs withh AT LEAST this amount of cultivation (0-15), NPC entries outside this cultivation level won't be spawned -> Greater than or equals / 控制生成最少修为 （大于等于）"
+                "控制生成最少修为 （大于等于） / Limit NPC spawning to NPCs with AT LEAST this amount of cultivation (0-15), NPC entries outside this cultivation level won't be spawned -> Greater than or equals"
             );
             MCSAllNPCsSpawn.spawnMaxCultivationLevel = base.Config.Bind<int>(
                 "MCSAllNPCsSpawnConfig",
                 "SpawnMaxCultivationLevel",
                 15,
-                "Limit NPC spawning to NPCs withh AT MOST this amount of cultivation (0-15), NPC entries outside this cultivation level won't be spawned -> Less than or equals / 控制生成最大修为 （小于等于）"
+                "控制生成最大修为 （小于等于） / Limit NPC spawning to NPCs with AT MOST this amount of cultivation (0-15), NPC entries outside this cultivation level won't be spawned -> Less than or equals"
             );
 
             Harmony.CreateAndPatchAll(typeof(MCSAllNPCsSpawn), null);
@@ -126,9 +131,11 @@ namespace MCSAllNPCsSpawn
             Dictionary<int, List<JSONObject>> npcChengHaos =
                 new Dictionary<int, List<JSONObject>>(); //Used for storing NPC ChengHao data
             JSONObject avatarJsonData = new JSONObject();
+            JSONObject npcLeiXingJsonData = new JSONObject();
             getInitialAvatarJsonToLoop();
             if (MCSAllNPCsSpawn.enableAllNPCsSpawn.Value)
             {
+                parseNPCLeiXing(normalNPCsCanUseImportantNPCSkills.Value);
                 parseNPCChengHao();
                 WriteToShittyLog("npcChengHaos has " + npcChengHaos.Count + " entries");
                 foreach (var pair in npcChengHaos)
@@ -139,6 +146,13 @@ namespace MCSAllNPCsSpawn
                     {
                         WriteToShittyLog(item.Print());
                     }
+                }
+                WriteToShittyLog("npcLeiXingJsonData has " + npcLeiXingJsonData.Count + " entries");
+                for (int i = 0; i < npcLeiXingJsonData.Count; i++)
+                {
+                    WriteToShittyLog(
+                        "npcLeiXingJsonData[" + i.ToString() + "]: " + npcLeiXingJsonData[i].Print()
+                    );
                 }
                 int numNPCsToSpawn = maxSpawnCount.Value;
                 int numSpawnedNPCs = 0;
@@ -265,14 +279,6 @@ namespace MCSAllNPCsSpawn
                             WriteToShittyLog("Avatar is important NPC, skipping...");
                             return false;
                         }
-                        // for (int i = 0; i < jsonData.instance.NPCImportantDate.Count; i++)
-                        // {
-                        //     if (jsonData.instance.NPCImportantDate[i]["Name"].HasField(idx.ToString()))
-                        //     {
-                        //         WriteToShittyLog("Avatar is important NPC, skipping...");
-                        //         return false;
-                        //     }
-                        // }
                     }
                     if (onlyHumans.Value && avatarJsonData[idx]["AvatarType"].I != 1)
                     {
@@ -307,23 +313,27 @@ namespace MCSAllNPCsSpawn
             //Psuedo random name generator
             string getRandomName(int genderType, int npcType)
             {
-                int randomNum = generateRandomInt(0, Names.maleNames.Count);
-                if (Names.specialFamilyNames.ContainsKey(npcType))
+                int randomNum = generateRandomInt(0, Constants.maleNames.Count);
+                if (Constants.specialFamilyNames.ContainsKey(npcType))
                 {
                     switch (genderType)
                     {
                         case 1:
-                            return Names.specialFamilyNames[npcType] + Names.maleNames[randomNum];
+                            string maleName = Constants.maleNames[randomNum];
+                            return Constants.specialFamilyNames[npcType]
+                                + maleName.Substring(maleName.Length - 2);
                         case 2:
-                            return Names.specialFamilyNames[npcType] + Names.femaleNames[randomNum];
+                            string femaleName = Constants.maleNames[randomNum];
+                            return Constants.specialFamilyNames[npcType]
+                                + femaleName.Substring(femaleName.Length - 2);
                     }
                 }
                 switch (genderType)
                 {
                     case 1:
-                        return Names.maleNames[randomNum];
+                        return Constants.maleNames[randomNum];
                     case 2:
-                        return Names.femaleNames[randomNum];
+                        return Constants.femaleNames[randomNum];
                 }
                 return "";
             }
@@ -375,14 +385,36 @@ namespace MCSAllNPCsSpawn
                     { "RandomXingge", randomXingge }
                 };
             }
+            void parseNPCLeiXing(bool disableSpecialLeiXings = true)
+            {
+                for (int i = 0; i < jsonData.instance.NPCLeiXingDate.Count; i++)
+                {
+                    JSONObject leiXing = jsonData.instance.NPCLeiXingDate[i];
+                    int leiXingId = leiXing["id"].I;
+                    bool shouldAddLeiXing = true;
+                    if (disableSpecialLeiXings)
+                    {
+                        foreach (List<int> leiXingRange in Constants.specialLeiXingIdRanges)
+                        {
+                            if (leiXingRange[0] <= leiXingId && leiXingId <= leiXingRange[1])
+                            {
+                                shouldAddLeiXing = false;
+                                break;
+                            }
+                        }
+                    }
+                    if (shouldAddLeiXing)
+                    {
+                        npcLeiXingJsonData.SetField(leiXingId.ToString(), leiXing);
+                    }
+                }
+            }
             void parseNPCChengHao()
             {
                 for (int i = 0; i < jsonData.instance.NPCChengHaoData.Count - 1; i++)
                 {
                     int npcType = jsonData.instance.NPCChengHaoData[i]["NPCType"].I;
-                    if (!npcChengHaos.ContainsKey(npcType)
-                    // && jsonData.instance.NPCChengHaoData[i]["id"].I < 500
-                    ) //<500 is a shitty solution to try and not pick up Chenghaos from mods but idc
+                    if (!npcChengHaos.ContainsKey(npcType))
                     {
                         npcChengHaos.Add(
                             npcType,
@@ -450,20 +482,9 @@ namespace MCSAllNPCsSpawn
                 try
                 {
                     JSONObject newNPCLeiXingJson = jsonData.instance.NPCLeiXingDate.GetField("441"); //Some random level 6 wandering cultivator LeiXing
-                    if (idxToUseForLeiXingJson + 1 > jsonData.instance.NPCLeiXingDate.Count)
+                    if (idxToUseForLeiXingJson + 1 > npcLeiXingJsonData.Count)
                     {
-                        idxToUseForLeiXingJson =
-                            idxToUseForLeiXingJson % jsonData.instance.NPCLeiXingDate.Count;
-                    }
-                    if (
-                        //Stupid ass JSON cant count arrays so im using this shitty method instead
-                        jsonData.instance.NPCLeiXingDate[idxToUseForLeiXingJson]["Type"].I != 24
-                        && jsonData.instance.NPCLeiXingDate[idxToUseForLeiXingJson]["id"].I <= 1035
-                    )
-                    {
-                        newNPCLeiXingJson = jsonData.instance.NPCLeiXingDate[
-                            idxToUseForLeiXingJson
-                        ];
+                        idxToUseForLeiXingJson = idxToUseForLeiXingJson % npcLeiXingJsonData.Count;
                     }
                     WriteToShittyLog("Leixing to use: " + newNPCLeiXingJson.Print());
                     WriteToShittyLog("AvatarJSON to use: " + avatarJsonData[idx].Print());
@@ -515,7 +536,7 @@ namespace MCSAllNPCsSpawn
                     newNPC.SetField("ChengHaoID", newNPCChengHao["ChengHaoId"]);
                     newNPC.SetField("GongXian", 0);
                     newNPC.SetField("LiuPai", newNPCLeiXingJson["LiuPai"].I);
-                    newNPC.SetField("MenPai", newNPCLeiXingJson["MengPai"].I); //到底为什么拼对真的很不懂，你这样我很头痛欸
+                    newNPC.SetField("MenPai", newNPCLeiXingJson["MengPai"].I); //到底为什么拼成这样真的很不懂，你这样我很头痛欸
                     newNPC.SetField("AvatarType", avatarJsonData[idx]["AvatarType"].I);
                     int newNPCLevel = newNPCLeiXingJson["Level"].I;
                     newNPC.SetField("Level", newNPCLevel);
@@ -692,6 +713,7 @@ namespace MCSAllNPCsSpawn
         public static ConfigEntry<int> maxSpawnCount;
         public static ConfigEntry<bool> useRandomNamesWhenSpawning;
         public static ConfigEntry<bool> spawnImportantNPCs;
+        public static ConfigEntry<bool> normalNPCsCanUseImportantNPCSkills;
         public static ConfigEntry<bool> useNPCFactoryInitValuesToSpawn;
         public static ConfigEntry<int> minNPCLifeSpan;
         public static ConfigEntry<bool> onlyHumans;

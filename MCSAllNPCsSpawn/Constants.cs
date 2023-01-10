@@ -6,15 +6,27 @@ using System.Threading.Tasks;
 
 namespace MCSAllNPCsSpawn
 {
-    public class Names
+    public class Constants
     {
+        public static List<List<int>> specialLeiXingIdRanges = new List<List<int>>()
+        {
+            new List<int>() { 46, 60 }, // 温杰
+            new List<int>() { 106, 120 }, // 徐凡
+            new List<int>() { 211, 225 }, // 焦飞
+            new List<int>() { 316, 330 }, // 倪旭欣
+            new List<int>() { 346, 360 }, // 林沐心
+            new List<int>() { 376, 390 }, // 百里奇
+            new List<int>() { 406, 420 }, // 公孙季
+            new List<int>() { 976, 990 }, // 王登
+            new List<int>() { 1006, 1019 } // ??? Idk what this is but it has nothing in it so I'm removing it.
+        };
         public static Dictionary<int, string> specialFamilyNames = new Dictionary<int, string>()
         {
             //Type, Name
-            { 19, "倪" },
-            { 20, "林" },
-            { 21, "百里" },
-            { 22, "公孙" },
+            { 6, "倪" },
+            { 7, "林" },
+            { 8, "百里" },
+            { 9, "公孙" },
         };
         public static List<string> maleNames = new List<string>()
         {
