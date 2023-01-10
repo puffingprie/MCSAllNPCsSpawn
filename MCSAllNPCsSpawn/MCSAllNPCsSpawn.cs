@@ -52,67 +52,67 @@ namespace MCSAllNPCsSpawn
                 "MCSAllNPCsSpawnConfig",
                 "EnableAllNPCsSpawning",
                 true,
-                "Enable this mod (enable all npcs spawning)"
+                "Enable this mod / 启动本模组"
             );
             MCSAllNPCsSpawn.maxSpawnCount = base.Config.Bind<int>(
                 "MCSAllNPCsSpawnConfig",
                 "MaxSpawnCount",
                 1000,
-                "Controls the max amount of extra NPCs that spawn - Increase this number at your own risk. Personally I have a potato of a computer and it's always entertaining when I can barely move on the map because there are 80,000 NPCs."
+                "Controls the max amount of extra NPCs that spawn (Around 2000 seems to be the max before game goes bonkers) / 多生成的NPC，测试了一下大概2000、2500以后游戏开始想死."
             );
             MCSAllNPCsSpawn.useRandomNamesWhenSpawning = base.Config.Bind<bool>(
                 "MCSAllNPCsSpawnConfig",
                 "UseRandomNamesWhenSpawning",
                 true,
-                "Whether to use random names for NPCs when they spawn. If false, NPCs will spawn with their default names."
+                "Whether to use names from custom name list when spawning NPCs. Otherwise uses game's auto-generated names / NPC是否使用自定义名字列表生成"
             );
             MCSAllNPCsSpawn.spawnImportantNPCs = base.Config.Bind<bool>(
                 "MCSAllNPCsSpawnConfig",
                 "SpawnImportantNPCs",
                 false,
-                "Whether to spawn important NPCs (turn this off usually to avoid disruptions to storyline)."
+                "Whether to spawn important NPCs (turn this off usually to avoid disruptions to storyline) / 是否生成重要NPC，不想路上遇到冒牌货副角就关了吧"
             );
             MCSAllNPCsSpawn.useNPCFactoryInitValuesToSpawn = base.Config.Bind<bool>(
                 "MCSAllNPCsSpawnConfig",
                 "UseNPCFactoryInitValuesToSpawn",
                 true,
-                "Whether to use NPCFactory init values (NPCChuShiShuZiDate.json) to spawn NPCs. If false, NPCs will use values from default AvatarJsonData.json"
+                "Whether to use NPCFactory init values (NPCChuShiShuZiDate.json) to spawn NPCs. If false, NPCs will use values from default AvatarJsonData.json / 是否使用初始化数值（NPCChuShiShuZiDate.json）生成NPC，关闭就默认用AvatarJsonData.json"
             );
             MCSAllNPCsSpawn.minNPCLifeSpan = base.Config.Bind<int>(
                 "MCSAllNPCsSpawnConfig",
                 "MinNPCLifeSpan",
                 120,
-                "Minimum NPC lifespan when initially spawning"
+                "Minimum NPC lifespan when initially spawning / 控制生成NPC最短寿命，游戏里NPC任然有物品还是会给自己延长寿命"
             );
             MCSAllNPCsSpawn.onlyHumans = base.Config.Bind<bool>(
                 "MCSAllNPCsSpawnConfig",
                 "onlyHumans",
                 true,
-                "Only Humans Spawn"
+                "Only Humans Spawn / 只生成人类，要妖魔鬼怪的就关了吧"
             );
             MCSAllNPCsSpawn.spawnMinMoney = base.Config.Bind<int>(
                 "MCSAllNPCsSpawnConfig",
                 "SpawnMinMoney",
                 0,
-                "Limit NPC spawning to NPCs withh AT LEAST this wealth level (0-11), NPC entries outside this wealth level won't be spawned -> Greater than or equals"
+                "Limit NPC spawning to NPCs withh AT LEAST this wealth level (0-11), NPC entries outside this wealth level won't be spawned -> Greater than or equals / 控制生成最少富有度 （大于等于）"
             );
             MCSAllNPCsSpawn.spawnMaxMoney = base.Config.Bind<int>(
                 "MCSAllNPCsSpawnConfig",
                 "SpawnMaxMoney",
                 11,
-                "Limit NPC spawning to NPCs withh AT MOST this wealth level (0-11), NPC entries outside this wealth level won't be spawned -> Less than or equals"
+                "Limit NPC spawning to NPCs withh AT MOST this wealth level (0-11), NPC entries outside this wealth level won't be spawned -> Less than or equals / 控制生成最大富有度 （小于等于）"
             );
             MCSAllNPCsSpawn.spawnMinCultivationLevel = base.Config.Bind<int>(
                 "MCSAllNPCsSpawnConfig",
                 "SpawnMinCultivationLevel",
                 1,
-                "Limit NPC spawning to NPCs withh AT LEAST this amount of cultivation (0-15), NPC entries outside this cultivation level won't be spawned -> Greater than or equals"
+                "Limit NPC spawning to NPCs withh AT LEAST this amount of cultivation (0-15), NPC entries outside this cultivation level won't be spawned -> Greater than or equals / 控制生成最少修为 （大于等于）"
             );
             MCSAllNPCsSpawn.spawnMaxCultivationLevel = base.Config.Bind<int>(
                 "MCSAllNPCsSpawnConfig",
                 "SpawnMaxCultivationLevel",
                 15,
-                "Limit NPC spawning to NPCs withh AT MOST this amount of cultivation (0-15), NPC entries outside this cultivation level won't be spawned -> Less than or equals"
+                "Limit NPC spawning to NPCs withh AT MOST this amount of cultivation (0-15), NPC entries outside this cultivation level won't be spawned -> Less than or equals / 控制生成最大修为 （小于等于）"
             );
 
             Harmony.CreateAndPatchAll(typeof(MCSAllNPCsSpawn), null);
@@ -683,7 +683,6 @@ namespace MCSAllNPCsSpawn
         public static ConfigEntry<bool> spawnImportantNPCs;
         public static ConfigEntry<bool> useNPCFactoryInitValuesToSpawn;
         public static ConfigEntry<int> minNPCLifeSpan;
-
         public static ConfigEntry<bool> onlyHumans;
         public static ConfigEntry<int> spawnMinMoney; //Greater than or equals
         public static ConfigEntry<int> spawnMaxMoney; //Less than or equals
