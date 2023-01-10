@@ -481,11 +481,12 @@ namespace MCSAllNPCsSpawn
                 JSONObject newNPC = new JSONObject();
                 try
                 {
-                    JSONObject newNPCLeiXingJson = jsonData.instance.NPCLeiXingDate.GetField("441"); //Some random level 6 wandering cultivator LeiXing
+                    // JSONObject newNPCLeiXingJson = jsonData.instance.NPCLeiXingDate.GetField("441"); //Some random level 6 wandering cultivator LeiXing
                     if (idxToUseForLeiXingJson + 1 > npcLeiXingJsonData.Count)
                     {
                         idxToUseForLeiXingJson = idxToUseForLeiXingJson % npcLeiXingJsonData.Count;
                     }
+                    JSONObject newNPCLeiXingJson = npcLeiXingJsonData[idxToUseForLeiXingJson];
                     WriteToShittyLog("Leixing to use: " + newNPCLeiXingJson.Print());
                     WriteToShittyLog("AvatarJSON to use: " + avatarJsonData[idx].Print());
 
